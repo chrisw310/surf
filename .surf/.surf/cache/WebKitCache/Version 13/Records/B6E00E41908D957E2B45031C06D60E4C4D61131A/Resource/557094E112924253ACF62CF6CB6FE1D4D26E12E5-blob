@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Zsh - ArchWiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Zsh","wgTitle":"Zsh","wgCurRevisionId":559035,"wgRevisionId":559035,"wgArticleId":1386,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages or sections flagged with Template:Out of date","Command shells"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Zsh","wgRelevantArticleId":1386,"wgRequestId":"a9bdca6995be112ff3fc5ed1","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","zzz.ext.archLinux.styles":"ready","skins.vector.styles.responsive":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.tokens@1pa52qv",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cskins.vector.styles.responsive%7Czzz.ext.archLinux.styles&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="ArchWiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.archlinux.org/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<link rel="alternate" type="application/atom+xml" title="ArchWiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Zsh rootpage-Zsh skin-vector action-view"><div id="archnavbar" class="noprint">
+    <div id="archnavbarlogo">
+        <p><a id="logo" href="https://www.archlinux.org/"></a></p>
+    </div>
+    <div id="archnavbarmenu">
+        <ul id="archnavbarlist">
+                        <li id="anb-home"><a href="https://www.archlinux.org/">Home</a></li>            <li id="anb-packages"><a href="https://www.archlinux.org/packages/">Packages</a></li>            <li id="anb-forums"><a href="https://bbs.archlinux.org/">Forums</a></li>            <li id="anb-wiki" class="anb-selected"><a href="https://wiki.archlinux.org/">Wiki</a></li>            <li id="anb-bugs"><a href="https://bugs.archlinux.org/">Bugs</a></li>            <li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li>            <li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li>            <li id="anb-download"><a href="https://www.archlinux.org/download/">Download</a></li>        </ul>
+    </div>
+</div>
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">Zsh</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From ArchWiki</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p><a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Intro/intro_1.html">Zsh</a> is a powerful <a href="/index.php/Shell" class="mw-redirect" title="Shell">shell</a> that operates as both an interactive shell and as a scripting language interpreter. While being compatible with <a href="/index.php/Bash" title="Bash">Bash</a> (not by default, only if issuing <code>emulate sh</code>), it offers advantages such as improved <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Guide/zshguide06.html">tab completion</a> and <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Doc/Release/Expansion.html">globbing</a>.
+</p><p>The <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/FAQ/zshfaq01.html#l4">Zsh FAQ</a> offers more reasons to use Zsh.
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Installation"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Initial_configuration"><span class="tocnumber">1.1</span> <span class="toctext">Initial configuration</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Making_Zsh_your_default_shell"><span class="tocnumber">1.2</span> <span class="toctext">Making Zsh your default shell</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-4"><a href="#Startup/Shutdown_files"><span class="tocnumber">2</span> <span class="toctext">Startup/Shutdown files</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Configure_Zsh"><span class="tocnumber">3</span> <span class="toctext">Configure Zsh</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Simple_.zshrc"><span class="tocnumber">3.1</span> <span class="toctext">Simple .zshrc</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Configuring_$PATH"><span class="tocnumber">3.2</span> <span class="toctext">Configuring $PATH</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Command_completion"><span class="tocnumber">3.3</span> <span class="toctext">Command completion</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Key_bindings"><span class="tocnumber">3.4</span> <span class="toctext">Key bindings</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#History_search"><span class="tocnumber">3.5</span> <span class="toctext">History search</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Prompts"><span class="tocnumber">3.6</span> <span class="toctext">Prompts</span></a>
+<ul>
+<li class="toclevel-3 tocsection-12"><a href="#Prompt_themes"><span class="tocnumber">3.6.1</span> <span class="toctext">Prompt themes</span></a>
+<ul>
+<li class="toclevel-4 tocsection-13"><a href="#Manually_installing_prompt_themes"><span class="tocnumber">3.6.1.1</span> <span class="toctext">Manually installing prompt themes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-14"><a href="#Customized_prompt"><span class="tocnumber">3.6.2</span> <span class="toctext">Customized prompt</span></a>
+<ul>
+<li class="toclevel-4 tocsection-15"><a href="#Colors"><span class="tocnumber">3.6.2.1</span> <span class="toctext">Colors</span></a></li>
+<li class="toclevel-4 tocsection-16"><a href="#Example"><span class="tocnumber">3.6.2.2</span> <span class="toctext">Example</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-17"><a href="#Sample_.zshrc_files"><span class="tocnumber">3.7</span> <span class="toctext">Sample .zshrc files</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Configuration_Frameworks"><span class="tocnumber">3.8</span> <span class="toctext">Configuration Frameworks</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Tips_and_tricks"><span class="tocnumber">4</span> <span class="toctext">Tips and tricks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-20"><a href="#Autostart_X_at_login"><span class="tocnumber">4.1</span> <span class="toctext">Autostart X at login</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#The_&quot;command_not_found&quot;_hook"><span class="tocnumber">4.2</span> <span class="toctext">The "command not found" hook</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#The_ttyctl_command"><span class="tocnumber">4.3</span> <span class="toctext">The ttyctl command</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Remembering_recent_directories"><span class="tocnumber">4.4</span> <span class="toctext">Remembering recent directories</span></a>
+<ul>
+<li class="toclevel-3 tocsection-24"><a href="#Dirstack"><span class="tocnumber">4.4.1</span> <span class="toctext">Dirstack</span></a></li>
+<li class="toclevel-3 tocsection-25"><a href="#cdr"><span class="tocnumber">4.4.2</span> <span class="toctext">cdr</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-26"><a href="#Help_command"><span class="tocnumber">4.5</span> <span class="toctext">Help command</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Fish-like_syntax_highlighting"><span class="tocnumber">4.6</span> <span class="toctext">Fish-like syntax highlighting</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Persistent_rehash"><span class="tocnumber">4.7</span> <span class="toctext">Persistent rehash</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Bind_key_to_ncurses_application"><span class="tocnumber">4.8</span> <span class="toctext">Bind key to ncurses application</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#File_manager_key_binds"><span class="tocnumber">4.9</span> <span class="toctext">File manager key binds</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#xterm_title"><span class="tocnumber">4.10</span> <span class="toctext">xterm title</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#Uninstallation"><span class="tocnumber">5</span> <span class="toctext">Uninstallation</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#See_also"><span class="tocnumber">6</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<p>Before starting, users may want to see what shell is currently being used:
+</p>
+<pre>$ echo $SHELL
+</pre>
+<p><a href="/index.php/Install" class="mw-redirect" title="Install">Install</a> the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=zsh">zsh</a></span> package. For additional completion definitions, install the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=zsh-completions">zsh-completions</a></span> package as well.
+</p>
+<h3><span class="mw-headline" id="Initial_configuration">Initial configuration</span></h3>
+<p>Make sure that Zsh has been installed correctly by running the following in a terminal:
+</p>
+<pre>$ zsh
+</pre>
+<p>You should now see <i>zsh-newuser-install</i>, which will walk you through some basic configuration. If you want to skip this, press <code>q</code>. If you did not see it, you can invoke it manually with
+</p>
+<pre>$ zsh /usr/share/zsh/functions/Newuser/zsh-newuser-install -f
+</pre>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Make sure your terminal's size is at least 72×15 otherwise <i>zsh-newuser-install</i> will not run.</div>
+<h3><span class="mw-headline" id="Making_Zsh_your_default_shell">Making Zsh your default shell</span></h3>
+<p>See <a href="/index.php/Command-line_shell#Changing_your_default_shell" title="Command-line shell">Command-line shell#Changing your default shell</a>.
+</p>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> If replacing <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=bash">bash</a></span>, users may want to move some code from <code>~/.bashrc</code> to <code>~/.zshrc</code> (e.g. the prompt and the <a href="/index.php/Bash#Aliases" title="Bash">aliases</a>) and from <code>~/.bash_profile</code> to <code>~/.zprofile</code> (e.g. <a href="/index.php/Xinit#Autostart_X_at_login" title="Xinit">the code that starts the X Window System</a>).</div>
+<h2><span id="Startup.2FShutdown_files"></span><span class="mw-headline" id="Startup/Shutdown_files">Startup/Shutdown files</span></h2>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> See <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Guide/zshguide02.html">A User's Guide to the Z-Shell</a> for explanation on interactive and login shells, and what to put in your startup files.</div>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> 
+<ul><li>If <code>$ZDOTDIR</code> is not set, <code>$HOME</code> is used instead.</li>
+<li>If option <code>RCS</code> is unset in any of the files, no configuration files will be sourced after that file.</li>
+<li>If option <code>GLOBAL_RCS</code> is unset in any of the files, no global configuration files (<code>/etc/zsh/*</code>) will be sourced after that file.</li></ul>
+</div>
+<p>When starting Zsh, it will source the following files in this order by default:
+</p>
+<ul><li><code>/etc/zsh/zshenv</code> Used for setting system-wide <a href="/index.php/Environment_variables" title="Environment variables">environment variables</a>; it should not contain commands that produce output or assume the shell is attached to a tty. This file will <i><b>always</b></i> be sourced, this cannot be overridden.</li>
+<li><code>$ZDOTDIR/.zshenv</code> Used for setting user's environment variables; it should not contain commands that produce output or assume the shell is attached to a tty. This file will <i><b>always</b></i> be sourced.</li>
+<li><code>/etc/zsh/zprofile</code> Used for executing commands at start, will be sourced when starting as a <i><b>login shell</b></i>. Please note that on Arch Linux, by default it contains <a rel="nofollow" class="external text" href="https://projects.archlinux.org/svntogit/packages.git/tree/trunk/zprofile?h=packages/zsh">one line</a> which source the <code>/etc/profile</code>.
+<ul><li><code>/etc/profile</code> This file should be sourced by all Bourne-compatible shells upon login: it sets up <code>$PATH</code> and other environment variables and application-specific (<code>/etc/profile.d/*.sh</code>) settings upon login.</li></ul></li>
+<li><code>$ZDOTDIR/.zprofile</code> Used for executing user's commands at start, will be sourced when starting as a <i><b>login shell</b></i>.</li>
+<li><code>/etc/zsh/zshrc</code> Used for setting interactive shell configuration and executing commands, will be sourced when starting as an <i><b>interactive shell</b></i>.</li>
+<li><code>$ZDOTDIR/.zshrc</code> Used for setting user's interactive shell configuration and executing commands, will be sourced when starting as an <i><b>interactive shell</b></i>.</li>
+<li><code>/etc/zsh/zlogin</code> Used for executing commands at ending of initial progress, will be sourced when starting as a <i><b>login shell</b></i>.</li>
+<li><code>$ZDOTDIR/.zlogin</code> Used for executing user's commands at ending of initial progress, will be sourced when starting as a <i><b>login shell</b></i>.</li>
+<li><code>$ZDOTDIR/.zlogout</code> Will be sourced when a <i><b>login shell</b></i> <b>exits</b>.</li>
+<li><code>/etc/zsh/zlogout</code> Will be sourced when a <i><b>login shell</b></i> <b>exits</b>.</li></ul>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> 
+<ul><li>The paths used in Arch's <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=zsh">zsh</a></span> package are different from the default ones used in the <a href="/index.php/Man_page" title="Man page">man pages</a> (<a rel="nofollow" class="external text" href="https://bugs.archlinux.org/task/48992">FS#48992</a>).</li></ul>
+<div class="noprint archwiki-template-message">
+<p><a href="/index.php/File:Tango-view-refresh-red.png" class="image"><img alt="Tango-view-refresh-red.png" src="/images/2/28/Tango-view-refresh-red.png" width="48" height="48" /></a><b>This article or section is out of date.</b><a href="/index.php/File:Tango-view-refresh-red.png" class="image"><img alt="Tango-view-refresh-red.png" src="/images/2/28/Tango-view-refresh-red.png" width="48" height="48" /></a></p>
+<div><b>Reason:</b> <code>/etc/profile</code> does not overwrite <code>$PATH</code> anymore, it appends Arch default path to <code>$PATH</code>. (Discuss in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Talk:Zsh">Talk:Zsh#</a>)</div>
+</div>
+<ul><li><code>/etc/profile</code> is not a part of the regular list of startup files run for Zsh, but is sourced from <code>/etc/zsh/zprofile</code> in the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=zsh">zsh</a></span> package. Users should take note that <code>/etc/profile</code> sets the <code>$PATH</code> variable which will overwrite any <code>$PATH</code> variable set in <code>$ZDOTDIR/.zshenv</code>. To prevent this, please <a href="#Configuring_$PATH">set the $PATH variable</a> in <code>$ZDOTDIR/.zprofile</code>.</li></ul>
+</div>
+<div class="archwiki-template-box archwiki-template-box-warning"><strong>Warning:</strong> It is not recommended to replace the default <a rel="nofollow" class="external text" href="https://projects.archlinux.org/svntogit/packages.git/tree/trunk/zprofile?h=packages/zsh">one line</a> in <code>/etc/zsh/zprofile</code> with something other, it will break the integrity of other packages which provide some scripts in <code>/etc/profile.d/</code>.</div>
+<h2><span class="mw-headline" id="Configure_Zsh">Configure Zsh</span></h2>
+<p>Although Zsh is usable out of the box, it is almost certainly not set up the way most users would like to use it, but due to the sheer amount of customization available in Zsh, configuring Zsh can be a daunting and time-consuming experience.
+</p>
+<h3><span class="mw-headline" id="Simple_.zshrc">Simple .zshrc</span></h3>
+<p>Included below is a sample configuration file, it provides a decent set of default options as well as giving examples of many ways that Zsh can be customized. In order to use this configuration save it as a file named <code>.zshrc</code>.
+</p>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> Apply the changes without needing to logout and then back in by running <code>source ~/.zshrc</code>.</div>
+<p>Here is a simple <code>.zshrc</code>:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">autoload -Uz compinit promptinit
+compinit
+promptinit
+
+# This will set the default prompt to the walters theme
+prompt walters
+</pre>
+<h3><span id="Configuring_.24PATH"></span><span class="mw-headline" id="Configuring_$PATH">Configuring $PATH</span></h3>
+<p>See <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Guide/zshguide02.html#l24">A User's Guide to the Z-Shell</a> and also the note in <a href="#Startup/Shutdown_files">#Startup/Shutdown files</a> for details.
+</p><p>The incantation <code>typeset -U path</code>, where the <code>-U</code> stands for unique, tells the shell that it should not add anything to <code>$PATH</code> if it's there already:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshenv</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">typeset -U path
+path=(<i>~/.local/bin</i> <i>/other/things/in/path</i> $path[@])</pre>
+<h3><span class="mw-headline" id="Command_completion">Command completion</span></h3>
+<p>Perhaps the most compelling feature of Zsh is its advanced autocompletion abilities. At the very least, enable autocompletion in <code>.zshrc</code>. To enable autocompletion, add the following to your <code>~/.zshrc</code>:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">autoload -Uz compinit
+compinit
+</pre>
+<p>The above configuration includes ssh/scp/sftp hostnames completion but in order for this feature to work, users must not enable ssh's hostname hashing (i.e. option <code>HashKnownHosts</code> in ssh client configuration).
+</p><p>For autocompletion with an arrow-key driven interface, add the following to:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">zstyle ':completion:*' menu select
+</pre>
+<p>To activate the menu, press <code>Tab</code> twice.
+</p><p>For autocompletion of command line switches for aliases, add the following to:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">setopt COMPLETE_ALIASES
+</pre>
+<p>For enabling autocompletion of privileged environments in privileged commands (e.g. if you complete a command starting with <a href="/index.php/Sudo" title="Sudo">sudo</a>, completion scripts will also try to determine your completions with sudo), include:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">zstyle ':completion::complete:*' gain-privileges 1
+</pre>
+<div class="archwiki-template-box archwiki-template-box-warning"><strong>Warning:</strong> This will let zsh completion scripts run commands with sudo privileges. You should not enable this if you use untrusted autocompletion scripts.</div>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> This special kind of context-aware completion is only available for a small number of commands.</div>
+<h3><span class="mw-headline" id="Key_bindings">Key bindings</span></h3>
+<p>Zsh does not use <a href="/index.php/Readline" title="Readline">readline</a>, instead it uses its own and more powerful Zsh Line Editor, ZLE. It does not read <code>/etc/inputrc</code> or <code>~/.inputrc</code>.
+</p><p>ZLE has an <a href="/index.php/Emacs" title="Emacs">emacs</a> mode and a <a href="/index.php/Vi" class="mw-redirect" title="Vi">vi</a> mode. If one of the <code>$VISUAL</code> or <code>$EDITOR</code> <a href="/index.php/Environment_variables" title="Environment variables">environment variables</a> contain the string <code>vi</code> then vi mode will be used; otherwise, it will default to emacs mode. Set the mode explicitly with <code>bindkey -e</code> or <code>bindkey -v</code> respectively for emacs mode or vi mode.
+</p><p>See <a rel="nofollow" class="external text" href="http://zshwiki.org/home/zle/bindkeys">ZshWiki: zle:bindkeys</a> for instructions on keybinding setup.
+</p>
+<h3><span class="mw-headline" id="History_search">History search</span></h3>
+<p>You need to set up <a href="#Key_bindings">#Key bindings</a> to use this. To enable history search add these lines to <code>.zshrc</code> file:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+[[ -n "$key[Up]"   ]] &amp;&amp; bindkey -- "$key[Up]"   up-line-or-beginning-search
+[[ -n "$key[Down]" ]] &amp;&amp; bindkey -- "$key[Down]" down-line-or-beginning-search
+</pre>
+<p>By doing this, only the past commands matching the current line up to the current cursor position will be shown when <code>Up</code> or <code>Down</code> keys are pressed.
+</p>
+<h3><span class="mw-headline" id="Prompts">Prompts</span></h3>
+<p>Zsh supports:
+</p>
+<ul><li>left side prompts: <code>PS1</code> (or <code>PROMPT</code>), <code>PS2</code>, <code>PS3</code>, <code>PS4</code>.</li>
+<li>right side prompts: <code>RPS1</code> (or <code>RPROMPT</code>), <code>RPS2</code> (or <code>RPROMPT2</code>).</li></ul>
+<p>See <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Doc/Release/Parameters.html#Parameters-Used-By-The-Shell">Parameters Used By The Shell</a> or <span class="plainlinks archwiki-template-man" title="$ man 1 zshparam"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/zshparam.1">zshparam(1)</a></span> for their explanation.
+</p>
+<h4><span class="mw-headline" id="Prompt_themes">Prompt themes</span></h4>
+<p>There is a quick and easy way to set up a colored prompt in Zsh. Make sure that prompt theme system is set to autoload in <code>.zshrc</code>. This can be done by adding these lines to:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">autoload -Uz promptinit
+promptinit
+</pre>
+<p>Available prompt themes are listed by running the command:
+</p>
+<pre>$ prompt -l
+</pre>
+<p>For example, to use the <code>walters</code> theme, enter:
+</p>
+<pre>$ prompt walters
+</pre>
+<p>To preview all available themes, use this command:
+</p>
+<pre>$ prompt -p
+</pre>
+<h5><span class="mw-headline" id="Manually_installing_prompt_themes">Manually installing prompt themes</span></h5>
+<p>It is possible to install themes manually, without external configuration manager tools. For a local installation, first create a folder and add it to the <code>fpath</code> array, eg:
+</p>
+<pre>$ mkdir ~/.zprompts &amp;&amp; fpath=( "$HOME/.zprompts" $fpath )
+</pre>
+<p>Now create a symbolic link of your theme file in this folder:
+</p>
+<pre>$ ln -s mytheme.zsh ~/.zprompts/prompt_mytheme_setup
+</pre>
+<p>If instead you wish to install a theme globally, do:
+</p>
+<pre># ln -s mytheme.zsh /usr/share/zsh/functions/Prompts/prompt_mytheme_setup
+</pre>
+<p>Now you should be able to activate it using:
+</p>
+<pre>$ prompt mytheme
+</pre>
+<p>If everything works, you can edit your <code>.zshrc</code> accordingly.
+</p>
+<h4><span class="mw-headline" id="Customized_prompt">Customized prompt</span></h4>
+<p>For users who are dissatisfied with the prompt themes mentioned above (or want to expand their usefulness), Zsh offers the possibility to build a custom prompt. Zsh supports a left- and right-sided prompt additional to the single, left-sided prompt that is common to all shells. Customize it by using <code>PROMPT=</code> with prompt escapes.
+</p><p>See <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html">Prompt Expansion</a> for a list of prompt variables and conditional substrings, or take a look at the <span class="plainlinks archwiki-template-man" title="$ man 1 zshmisc"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/zshmisc.1">zshmisc(1)</a></span> manpage.
+</p>
+<h5><span class="mw-headline" id="Colors">Colors</span></h5>
+<p>Zsh sets colors differently than <a href="/index.php/Color_Bash_Prompt" class="mw-redirect" title="Color Bash Prompt">Bash</a>. See <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html#Visual-effects">Visual effects</a> or <span class="plainlinks archwiki-template-man" title="$ man 1 zshmisc"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/zshmisc.1">zshmisc(1)</a></span> for prompt escapes to set foreground color, background color and other visual effects.
+</p><p><a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/FAQ/zshfaq03.html#l42">Colors</a> can be specified by numeric color code or by name. Most terminals support the following colors by name<a rel="nofollow" class="external autonumber" href="http://zsh.sourceforge.net/Doc/Release/Zsh-Line-Editor.html#Character-Highlighting">[1]</a>:
+</p>
+<table class="wikitable">
+
+<tbody><tr>
+<th colspan="2">Possible color values
+</th></tr>
+<tr>
+<td><code>black</code> or <code>0</code></td>
+<td><code>red</code> or <code>1</code>
+</td></tr>
+<tr>
+<td><code>green</code> or <code>2</code></td>
+<td><code>yellow</code> or <code>3</code>
+</td></tr>
+<tr>
+<td><code>blue</code> or <code>4</code></td>
+<td><code>magenta</code> or <code>5</code>
+</td></tr>
+<tr>
+<td><code>cyan</code> or <code>6</code></td>
+<td><code>white</code> or <code>7</code>
+</td></tr></tbody></table>
+<p>See <a rel="nofollow" class="external text" href="https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg">xterm-256color chart</a> for color codes supported by terminal emulators compatible with xterm 256 colors.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Many terminal emulators display bold with a brighter color.</div>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> Prompt escapes can be tested with command <code>print -P <i>"prompt escapes"</i></code>, for example:
+<pre>$ print -P '%B%F{red}co%F{green}lo%F{blue}rs%f%b'
+</pre>
+</div>
+<h5><span class="mw-headline" id="Example">Example</span></h5>
+<p>This is an example of a two-sided prompt:
+</p>
+<pre>PROMPT='%F{red}%n%f@%F{blue}%m%f&#160;%F{yellow}%1~%f&#160;%# '
+RPROMPT='[%F{yellow}%?%f]'
+</pre>
+<p>And here is how it will be displayed:
+</p>
+<pre>username@host ~&#160;%                                                         [0]
+</pre>
+<h3><span class="mw-headline" id="Sample_.zshrc_files">Sample .zshrc files</span></h3>
+<ul><li>To get the same setup as the <a rel="nofollow" class="external text" href="https://www.archlinux.org/download/">monthly ISO releases</a> (which use Zsh by default), install <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=grml-zsh-config">grml-zsh-config</a></span>. It includes the many tweaks and advanced optimizations from <a rel="nofollow" class="external text" href="https://grml.org/zsh/">grml</a>.</li>
+<li><a rel="nofollow" class="external free" href="https://github.com/MrElendig/dotfiles-alice/blob/master/.zshrc">https://github.com/MrElendig/dotfiles-alice/blob/master/.zshrc</a> - basic setup, with dynamic prompt and window title/hardinfo.</li>
+<li><a rel="nofollow" class="external free" href="https://github.com/slashbeast/conf-mgmt/blob/master/roles/user_configs/files/DOTzshrc">https://github.com/slashbeast/conf-mgmt/blob/master/roles/user_configs/files/DOTzshrc</a> - zshrc with multiple features, be sure to check out comments into it. Notable features: confirm function to ensure that user want to run poweroff, reboot or hibernate, support for GIT in prompt (done without vcsinfo), tab completion with menu, printing current executed command into window's title bar and more.</li></ul>
+<p>See <a href="/index.php/Dotfiles#Repositories" title="Dotfiles">dotfiles#Repositories</a> for more.
+</p>
+<h3><span class="mw-headline" id="Configuration_Frameworks">Configuration Frameworks</span></h3>
+<ul><li><b>Antigen</b> &#8212; A plugin manager for zsh, inspired by oh-my-zsh and vundle.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/zsh-users/antigen">https://github.com/zsh-users/antigen</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/antigen-git/">antigen-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>Antibody</b> &#8212; A performance-focused plugin manager similar to Antigen.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/getantibody/antibody">https://github.com/getantibody/antibody</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/antibody/">antibody</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>oh-my-zsh</b> &#8212; A popular, community-driven framework for managing your Zsh configuration. It comes bundled with a ton of helpful functions, helpers, plugins, themes.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/robbyrussell/oh-my-zsh">https://github.com/robbyrussell/oh-my-zsh</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/oh-my-zsh-git/">oh-my-zsh-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>Prezto</b> &#8212; A configuration framework for Zsh. It comes with modules, enriching the command line interface environment with sane defaults, aliases, functions, auto completion, and prompt themes.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/sorin-ionescu/prezto">https://github.com/sorin-ionescu/prezto</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/prezto-git/">prezto-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>ZIM</b> &#8212; A configuration framework with blazing speed and modular extensions. Zim is very easy to customize, and comes with a rich set of modules and features without compromising on speed or functionality.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://github.com/zimfw/zimfw">https://github.com/zimfw/zimfw</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/zsh-zim-git/">zsh-zim-git</a></span><sup><small>AUR</small></sup></dd></dl>
+<h2><span class="mw-headline" id="Tips_and_tricks">Tips and tricks</span></h2>
+<h3><span class="mw-headline" id="Autostart_X_at_login">Autostart X at login</span></h3>
+<p>See <a href="/index.php/Xinit#Autostart_X_at_login" title="Xinit">xinit#Autostart X at login</a>.
+</p>
+<h3><span id="The_.22command_not_found.22_hook"></span><span class="mw-headline" id="The_&quot;command_not_found&quot;_hook">The "command not found" hook</span></h3>
+<p><a href="/index.php/Pkgfile" title="Pkgfile">pkgfile</a> includes a "command not found" hook that will automatically search the official repositories, when entering an unrecognized command.
+</p><p>You need to <a href="/index.php/Source" class="mw-redirect" title="Source">source</a> the hook to enable it, for example:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">source /usr/share/doc/pkgfile/command-not-found.zsh
+</pre>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> The pkgfile database may need to be updated before this will work.  See <a href="/index.php/Pkgfile#Installation" title="Pkgfile">pkgfile#Installation</a> for details.</div>
+<h3><span class="mw-headline" id="The_ttyctl_command">The ttyctl command</span></h3>
+<p><a rel="nofollow" class="external autonumber" href="http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html#index-tty_002c-freezing">[2]</a> describes the <code>ttyctl</code> command in Zsh.
+This may be used to "freeze/unfreeze" the terminal.
+Many programs change the terminal state, and often do not restore terminal settings on exiting abnormally.
+To avoid the need to manually reset the terminal, use the following:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">ttyctl -f
+</pre>
+<h3><span class="mw-headline" id="Remembering_recent_directories">Remembering recent directories</span></h3>
+<h4><span class="mw-headline" id="Dirstack">Dirstack</span></h4>
+<p>Zsh can be configured to remember the DIRSTACKSIZE last visited folders. This can then be used to <i>cd</i> them very quickly. You need to add some lines to your configuration file:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">DIRSTACKFILE="$HOME/.cache/zsh/dirs"
+if [[ -f $DIRSTACKFILE ]] &amp;&amp; [[ $#dirstack -eq 0 ]]; then
+  dirstack=( ${(f)"$(&lt; $DIRSTACKFILE)"} )
+  [[ -d $dirstack[1] ]] &amp;&amp; cd $dirstack[1]
+fi
+chpwd() {
+  print -l $PWD ${(u)dirstack} &gt;$DIRSTACKFILE
+}
+
+DIRSTACKSIZE=20
+
+setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME
+
+## Remove duplicate entries
+setopt PUSHD_IGNORE_DUPS
+
+## This reverts the +/- operators.
+setopt PUSHD_MINUS
+</pre>
+<p>Now use
+</p>
+<pre>$ dirs -v
+</pre>
+<p>to print the dirstack. Use <code>cd -&lt;NUM&gt;</code> to go back to a visited folder. Use autocompletion after the dash. This proves very handy if using the autocompletion menu.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> This will not work if you have more than one <i>zsh</i> session open, and attempt to <code>cd</code>, due to a conflict in both sessions writing to the same file.</div>
+<h4><span class="mw-headline" id="cdr">cdr</span></h4>
+<p>cdr allows you to change the working directory to a previous working directory from a list maintained automatically. It stores all entries in files that are maintained across sessions and (by default) between terminal emulators in the current session.
+</p><p>See <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Recent-Directories">Remembering Recent Directories</a> or <span class="plainlinks archwiki-template-man" title="$ man 1 zshcontrib"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/zshcontrib.1">zshcontrib(1)</a></span>.
+</p>
+<h3><span class="mw-headline" id="Help_command">Help command</span></h3>
+<p>Zsh <code>help</code> command is called <code>run-help</code>. Unlike <a href="/index.php/Bash" title="Bash">bash</a>, <i>zsh</i> does not enable it by default. To use <code>help</code> in zsh, add following to your <code>zshrc</code>:
+</p>
+<pre>autoload -Uz run-help
+unalias run-help
+alias help=run-help</pre>
+<p><code>run-help</code> will invoke <i>man</i> for external commands. Default keyboard shortcut is <code>Alt+h</code> or <code>Esc+h</code>.
+</p><p><code>run-help</code> has helper functions, they need to be enabled separately:
+</p>
+<pre>autoload -Uz run-help-git
+autoload -Uz run-help-ip
+autoload -Uz run-help-openssl
+autoload -Uz run-help-p4
+autoload -Uz run-help-sudo
+autoload -Uz run-help-svk
+autoload -Uz run-help-svn</pre>
+<p>For example <code>run-help git commit</code> command will now open the <a href="/index.php/Man_page" title="Man page">man page</a> <span class="plainlinks archwiki-template-man" title="$ man 1 git-commit"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/git-commit.1">git-commit(1)</a></span> instead of <span class="plainlinks archwiki-template-man" title="$ man 1 git"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/git.1">git(1)</a></span>.
+</p>
+<h3><span class="mw-headline" id="Fish-like_syntax_highlighting">Fish-like syntax highlighting</span></h3>
+<p><a href="/index.php/Fish" title="Fish">Fish</a> provides a very powerful shell syntax highlighting. To use this in zsh, you can install <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=zsh-syntax-highlighting">zsh-syntax-highlighting</a></span> from offical repository and add following to your zshrc:
+</p>
+<pre>source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+</pre>
+<h3><span class="mw-headline" id="Persistent_rehash">Persistent rehash</span></h3>
+<p>Typically, compinit will not automatically find new executables in the <code>$PATH</code>. For example, after you install a new package, the files in <code>/usr/bin/</code> would not be immediately or automatically included in the completion. Thus, to have these new executables included, one would run:
+</p>
+<pre>$ rehash
+</pre>
+<p>This 'rehash' can be set to happen automatically.<a rel="nofollow" class="external autonumber" href="https://github.com/robbyrussell/oh-my-zsh/issues/3440">[3]</a> Simply include the following in your <code>zshrc</code>:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">zstyle ':completion:*' rehash true
+</pre>
+<h3><span class="mw-headline" id="Bind_key_to_ncurses_application">Bind key to ncurses application</span></h3>
+<p>Bind a ncurses application to a keystroke, but it will not accept interaction. Use <code>BUFFER</code> variable to make it work. The following example lets users open ncmpcpp using <code>Alt+\</code>:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">ncmpcppShow() { BUFFER="ncmpcpp"; zle accept-line; }
+zle -N ncmpcppShow
+bindkey '^[\' ncmpcppShow</pre>
+<p>An alternate method, that will keep everything you entered in the line before calling application:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">ncmpcppShow() { ncmpcpp &lt;$TTY; zle redisplay; }
+zle -N ncmpcppShow
+bindkey '^[\' ncmpcppShow</pre>
+<h3><span class="mw-headline" id="File_manager_key_binds">File manager key binds</span></h3>
+<p>Key binds like those used in graphic file managers may come handy. The first comes back in directory history (<code>Alt+Left</code>), the second let the user go to the parent directory (<code>Alt+Up</code>). They also display the directory content.
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">cdUndoKey() {
+  popd
+  zle       reset-prompt
+  echo
+  ls
+  zle       reset-prompt
+}
+
+cdParentKey() {
+  pushd ..
+  zle      reset-prompt
+  echo
+  ls
+  zle       reset-prompt
+}
+
+zle -N                 cdParentKey
+zle -N                 cdUndoKey
+bindkey '^[[1;3A'      cdParentKey
+bindkey '^[[1;3D'      cdUndoKey
+</pre>
+<h3><span class="mw-headline" id="xterm_title">xterm title</span></h3>
+<p>If your terminal emulator supports it you can set its title from Zsh. This allows dynamically changing the the title to display relevant information about the shell state, for example showing the user name and current directory or the currently executing command.
+</p><p>xterm title is set with <a rel="nofollow" class="external text" href="https://www.tldp.org/HOWTO/Xterm-Title-3.html#ss3.1">xterm escape sequences</a>. For example:
+</p>
+<pre>$ print -n '\e]2;My xterm title\a'
+</pre>
+<p>will set the title to
+</p>
+<pre>My xterm title
+</pre>
+<p>An simple way to have a dynamic title is to set the title in a hook functions <code>precmd</code> and <code>preexec</code>. See <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Doc/Release/Functions.html#Hook-Functions">Hook Functions</a> or <span class="plainlinks archwiki-template-man" title="$ man 1 zshmisc"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/zshmisc.1">zshmisc(1)</a></span>.
+</p><p>By using <code>print -P</code> you can take advantage of prompt escapes.
+</p>
+<div class="archwiki-template-box archwiki-template-box-tip"><strong>Tip:</strong> Title printing can be split up in multiple commands as long as they are sequential.</div>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> 
+<ul><li>Do not use <code>-P</code> option of <code>print</code> when printing variables to prevent them from being parsed as prompt escapes.</li>
+<li>Use <code>q</code> <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion-Flags">parameter expansion flag</a> when printing variables to prevent them from being parsed as escape sequences.</li></ul>
+</div>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.zshrc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">autoload -Uz add-zsh-hook
+
+function xterm_title_precmd () {
+	print -Pn '\e]2;%n@%m %1~\a'
+}
+
+function xterm_title_preexec () {
+	print -Pn '\e]2;%n@%m %1~ %# '
+	print -n "${(q)1}\a"
+}
+
+if [[ "$TERM" == (screen*|xterm*|rxvt*) ]]; then
+	add-zsh-hook -Uz precmd xterm_title_precmd
+	add-zsh-hook -Uz preexec xterm_title_preexec
+fi
+</pre>
+<h2><span class="mw-headline" id="Uninstallation">Uninstallation</span></h2>
+<p>Change the default shell before removing the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=zsh">zsh</a></span> package.
+</p>
+<div class="archwiki-template-box archwiki-template-box-warning"><strong>Warning:</strong> Failure to follow the below procedure may result in users no longer having access to a working shell.</div>
+<p>Run following command:
+</p>
+<pre>$ chsh -s /bin/bash <i>user</i>
+</pre>
+<p>Use it for every user with <i>zsh</i> set as their login shell (including root if needed). When completed, the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=zsh">zsh</a></span> package can be removed.
+</p><p>Alternatively, change the default shell back to Bash by editing <code>/etc/passwd</code> as root.
+</p>
+<div class="archwiki-template-box archwiki-template-box-warning"><strong>Warning:</strong> It is strongly recommended to use <span class="plainlinks archwiki-template-man" title="$ man 8 vipw"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/vipw.8">vipw(8)</a></span> when editing <code>/etc/passwd</code> as it helps prevent invalid entries and/or syntax errors.</div>
+<p>For example, change the following:
+</p>
+<pre><i>username</i>:x:1000:1000:<i>Full Name</i>,,,:/home/<i>username</i>:/bin/zsh
+</pre>
+<p>To this:
+</p>
+<pre><i>username</i>:x:1000:1000:<i>Full Name</i>,,,:/home/<i>username</i>:/bin/bash
+</pre>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Guide/zshguide.html">A User's Guide to ZSH</a></li>
+<li><a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Doc/Release/index-frame.html">The Z Shell Manual</a> (different format available <a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/Doc/">here</a>)</li>
+<li><a rel="nofollow" class="external text" href="http://zsh.sourceforge.net/FAQ/zshfaq01.html">Zsh FAQ</a></li>
+<li><a rel="nofollow" class="external text" href="http://zshwiki.org/home/">Zsh Wiki</a></li>
+<li><span class="plainlinks archwiki-template-man" title="$ man 1 zsh-lovers"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/zsh-lovers.1">zsh-lovers(1)</a></span> (available as <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=zsh-lovers">zsh-lovers</a></span> package)</li>
+<li><a href="https://wiki.gentoo.org/wiki/Zsh/Guide" class="extiw" title="gentoo:Zsh/Guide">Gentoo: Zsh/Guide</a></li>
+<li><a rel="nofollow" class="external text" href="http://www.bash2zsh.com/zsh_refcard/refcard.pdf">Bash2Zsh Reference Card</a></li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20181222125409
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.128 seconds
+Real time usage: 0.135 seconds
+Preprocessor visited node count: 1633/1000000
+Preprocessor generated node count: 4574/1000000
+Post‐expand include size: 18695/2097152 bytes
+Template argument size: 8843/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 1362/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   54.813      1 -total
+ 25.41%   13.931    115 Template:Ic
+ 17.57%    9.631      8 Template:Note
+  9.68%    5.304      9 Template:Man
+  7.62%    4.176      5 Template:App
+  7.27%    3.986     16 Template:Hc
+  6.19%    3.393      1 Template:Out_of_date
+  5.06%    2.773     10 Template:Pkg
+  4.91%    2.692      5 Template:Tip
+  4.10%    2.245      4 Template:Warning
+-->
+</div>
+<!-- Saved in parser cache with key archwiki:pcache:idhash:1386-0!canonical and timestamp 20181222125409 and revision id 559035
+ -->
+</div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://wiki.archlinux.org/index.php?title=Zsh&amp;oldid=559035">https://wiki.archlinux.org/index.php?title=Zsh&amp;oldid=559035</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/index.php/Special:Categories" title="Special:Categories">Category</a>: <ul><li><a href="/index.php/Category:Command_shells" title="Category:Command shells">Command shells</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden category: <ul><li><a href="/index.php/Category:Pages_or_sections_flagged_with_Template:Out_of_date" title="Category:Pages or sections flagged with Template:Out of date">Pages or sections flagged with Template:Out of date</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="/index.php?title=Special:CreateAccount&amp;returnto=Zsh" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=Zsh" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/index.php/Zsh" title="View the content page [c]" accesskey="c">Page</a></span></li><li id="ca-talk"><span><a href="/index.php/Talk:Zsh" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/index.php/Zsh">Read</a></span></li><li id="ca-viewsource" class="collapsible"><span><a href="/index.php?title=Zsh&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li><li id="ca-history" class="collapsible"><span><a href="/index.php?title=Zsh&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search ArchWiki" title="Search ArchWiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/index.php/Main_page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/index.php/Main_page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-Table-of-contents"><a href="/index.php/Table_of_contents">Table of contents</a></li><li id="n-portal"><a href="/index.php/Getting_involved" title="Various ways Archers can contribute to the community">Getting involved</a></li><li id="n-currentevents"><a href="/index.php/ArchWiki:News" title="The latest lowdown on the wiki">Wiki news</a></li><li id="n-randompage"><a href="/index.php/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Interaction" aria-labelledby="p-Interaction-label">
+			<h3 id="p-Interaction-label">Interaction</h3>
+			<div class="body">
+								<ul>
+					<li id="n-help"><a href="/index.php/Category:Help" title="Wiki navigation, reading, and editing help">Help</a></li><li id="n-Contributing"><a href="/index.php/ArchWiki:Contributing">Contributing</a></li><li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-Recent-talks"><a href="https://wiki.archlinux.org/index.php/Special:RecentChanges?namespace=0&amp;invert=1" rel="nofollow">Recent talks</a></li><li id="n-newpages"><a href="/index.php/Special:NewPages">New pages</a></li><li id="n-Statistics"><a href="/index.php/ArchWiki:Statistics">Statistics</a></li><li id="n-Requests"><a href="/index.php/ArchWiki:Requests">Requests</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/Zsh" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/Zsh" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/index.php?title=Zsh&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/index.php?title=Zsh&amp;oldid=559035" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/index.php?title=Zsh&amp;action=info" title="More information about this page">Page information</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">In other languages</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-cs"><a href="https://wiki.archlinux.org/index.php/Zsh_(%C4%8Cesky)" title="Zsh – čeština" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://wiki.archlinux.de/title/Zsh" title="Zsh – Deutsch" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://wiki.archlinux.org/index.php/Zsh_(Espa%C3%B1ol)" title="Zsh – español" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fa"><a href="https://wiki.archusers.ir/index.php/Zsh" title="Zsh – فارسی" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fr"><a href="https://wiki.archlinux.fr/Zsh" title="Zsh – français" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-ja"><a href="https://wiki.archlinux.jp/index.php/Zsh" title="Zsh – 日本語" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ru"><a href="https://wiki.archlinux.org/index.php/Zsh_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)" title="Zsh – русский" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh-hans"><a href="https://wiki.archlinux.org/index.php/Zsh_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" title="Zsh – 中文（简体）‎" lang="zh-Hans" hreflang="zh-Hans" class="interlanguage-link-target">中文（简体）‎</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 13 December 2018, at 21:59.</li>
+								<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3 or later</a> unless otherwise noted.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="/index.php/ArchWiki:Privacy_policy" class="mw-redirect" title="ArchWiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="/index.php/ArchWiki:About" title="ArchWiki:About">About ArchWiki</a></li>
+								<li id="footer-places-disclaimer"><a href="/index.php/ArchWiki:General_disclaimer" title="ArchWiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+											</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.128","walltime":"0.135","ppvisitednodes":{"value":1633,"limit":1000000},"ppgeneratednodes":{"value":4574,"limit":1000000},"postexpandincludesize":{"value":18695,"limit":2097152},"templateargumentsize":{"value":8843,"limit":2097152},"expansiondepth":{"value":6,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":1362,"limit":5000000},"timingprofile":["100.00%   54.813      1 -total"," 25.41%   13.931    115 Template:Ic"," 17.57%    9.631      8 Template:Note","  9.68%    5.304      9 Template:Man","  7.62%    4.176      5 Template:App","  7.27%    3.986     16 Template:Hc","  6.19%    3.393      1 Template:Out_of_date","  5.06%    2.773     10 Template:Pkg","  4.91%    2.692      5 Template:Tip","  4.10%    2.245      4 Template:Warning"]},"cachereport":{"timestamp":"20181222125409","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":43});});</script>
+	</body>
+<!-- Cached/compressed 20181223041542 -->
+</html>

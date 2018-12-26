@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>vis editor - asciinema</title>
+    <link rel="stylesheet" href="/css/app2-ca44d9fac61b6a815b4925ecb7c00216.css?vsn=d">
+    <link rel="shortcut icon" href="/images/favicon-2d62dafa447cf018340b7121007568e3.png?vsn=d">
+<!-- oEmbed -->
+<link rel="alternate" type="application/json+oembed" href="https://asciinema.org/oembed?url=https%3A%2F%2Fasciinema.org%2Fa%2F41361&amp;format=json" />
+<link rel="alternate" type="text/xml+oembed" href="https://asciinema.org/oembed?url=https%3A%2F%2Fasciinema.org%2Fa%2F41361&amp;format=xml" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="vis editor" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://asciinema.org/a/41361" />
+<meta property="og:image" content="https://asciinema.org/a/41361.png" />
+<meta property="og:description" content="Recorded by martanne" />
+<meta property="og:site_name" content="asciinema.org" />
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@asciinema" />
+<meta name="twitter:title" content="vis editor" />
+<meta name="twitter:url" content="https://asciinema.org/a/41361" />
+<meta name="twitter:description" content="Recorded by martanne" />
+<meta name="twitter:image" content="https://asciinema.org/a/41361.png" />
+
+<!-- application/x-asciicast -->
+<link rel="alternate" type="application/asciicast+json" href="https://asciinema.org/a/41361.json">
+
+  </head>
+
+  <body class="l-app c-asciicast a-show">
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="/images/logo-red-949d10005bb389d1ae900a13b5ac53d7.svg?vsn=d">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/explore">Watch</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/docs/getting-started">Record</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/docs/how-it-works">Docs</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="http://blog.asciinema.org">Blog</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav navbar-right session-info">
+            <li class="nav-item">
+              <a class="nav-link" href="/login/new" id="log-in">Log in / Sign up</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+
+
+    <main role="main" class="">
+<section class="cinema">
+<asciinema-player author="martanne" author-img-url="//gravatar.com/avatar/a0579562eb690c14e499efbd93287d7a?s=128&amp;d=retro" author-url="https://asciinema.org/~martanne" cols="90" id="player" poster="data:application/json;base64,W1tbInN0YXRpYyIseyJiZyI6NywiZmciOjY0fV0sWyIgYm9vbCBjbWRfaW5zZXJ0Iix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIoIix7ImJnIjo3LCJmZyI6NjR9XSxbIlZpcyAiLHsiYmciOjcsImZnIjoyNDR9XSxbIioiLHsiYmciOjcsImZnIjo2NH1dLFsidmlzIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIsIix7ImJnIjo3LCJmZyI6NjR9XSxbIiBXaW4gIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIqIix7ImJnIjo3LCJmZyI6NjR9XSxbIndpbiIseyJiZyI6NywiZmciOjI0NH1dLFsiLCIseyJiZyI6NywiZmciOjY0fV0sWyIgQ29tbWFuZCAiLHsiYmciOjcsImZnIjoyNDR9XSxbIioiLHsiYmciOjcsImZnIjo2NH1dLFsiY21kIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIsIix7ImJnIjo3LCJmZyI6NjR9XSxbIiAiLHsiYmciOjcsImZnIjoyNDR9XSxbImNvbnN0Iix7ImJnIjo3LCJmZyI6NjR9XSxbIiAiLHsiYmciOjcsImZnIjoyNDR9XSxbImNoYXIiLHsiYmciOjcsImZnIjoxMzZ9XSxbIiAiLHsiYmciOjcsImZnIjoyNDR9XSxbIioiLHsiYmciOjcsImZnIjo2NH1dLFsiYXJndiIseyJiZyI6NywiZmciOjI0NH1dLFsiW10sIix7ImJnIjo3LCJmZyI6NjR9XSxbIiBDdXJzb3IgIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIqIix7ImJnIjo3LCJmZyI6NjR9XSxbImN1ciIseyJiZyI6NywiZmciOjI0NH1dLFsiLCIseyJiZyI6NywiZmciOjY0fV0sWyIgIix7ImJnIjo3LCJmZyI6MjQ0fV1dLFtbIkZpbGVyYW5nZSAiLHsiYmciOjcsImZnIjoyNDR9XSxbIioiLHsiYmciOjcsImZnIjo2NH1dLFsicmFuZ2UiLHsiYmciOjcsImZnIjoyNDR9XSxbIikiLHsiYmciOjcsImZnIjo2NH1dLFsiICIseyJiZyI6NywiZmciOjI0NH1dLFsieyIseyJiZyI6MjQ0LCJibGluayI6dHJ1ZSwiZmciOjIzNH1dLFsiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiLHsiYmciOjIzNCwiZmciOjI0NH1dXSxbWyIgICAgICAgIHNpemVfdCBsZW4gIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIj0iLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgc3RybGVuIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIigiLHsiYmciOjIzNCwiZmciOjY0fV0sWyJhcmd2Iix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIlsiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIxIix7ImJnIjoyMzQsImZnIjozN31dLFsiXSk7Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiLHsiYmciOjIzNCwiZmciOjI0NH1dXSxbWyIgICAgICAgIGJvb2wgcmV0ICIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyI9Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsiIHRleHRfaW5zZXJ0Iix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIigiLHsiYmciOjIzNCwiZmciOjY0fV0sWyJ3aW4iLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiLT4iLHsiYmciOjIzNCwiZmciOjY0fV0sWyJmaWxlIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIi0+Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsidGV4dCIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIsIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiIHJhbmdlIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIi0+Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsic3RhcnQiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiLCIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiBhcmd2Iix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIlsiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIxIix7ImJnIjoyMzQsImZnIjozN31dLFsiXSwiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgbGVuIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIik7Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsiICAgICAgICAgICAgICAiLHsiYmciOjIzNCwiZmciOjI0NH1dXSxbWyIgIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIiAgICAgICBpZiIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiKCIseyJiZyI6MjM0LCJmZyI6NjR9XSxbInJldCIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIpIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiLHsiYmciOjIzNCwiZmciOjI0NH1dXSxbWyIgICAgICAgICAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiICAgICAgICoiLHsiYmciOjIzNCwiZmciOjY0fV0sWyJyYW5nZSAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiPSIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiB0ZXh0X3JhbmdlX25ldyIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIoIix7ImJnIjoyMzQsImZnIjo2NH1dLFsicmFuZ2UiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiLT4iLHsiYmciOjIzNCwiZmciOjY0fV0sWyJzdGFydCIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIsIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiIHJhbmdlIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIi0+Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsic3RhcnQgIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIisiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgbGVuIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIik7Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsiICAgICAgICAgICAgICAgICIseyJiZyI6MjM0LCJmZyI6MjQ0fV1dLFtbIiAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiICAgICAgIHJldHVybiIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiByZXQiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiOyIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIix7ImJnIjoyMzQsImZnIjoyNDR9XV0sW1sifSIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIix7ImJnIjoyMzQsImZnIjoyNDR9XV0sW1siICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIix7ImJnIjoyMzQsImZnIjoyNDR9XV0sW1sic3RhdGljIix7ImJnIjo3LCJmZyI6NjR9XSxbIiBib29sIGNtZF9hcHBlbmQiLHsiYmciOjcsImZnIjoyNDR9XSxbIigiLHsiYmciOjcsImZnIjo2NH1dLFsiVmlzICIseyJiZyI6NywiZmciOjI0NH1dLFsiKiIseyJiZyI6NywiZmciOjY0fV0sWyJ2aXMiLHsiYmciOjcsImZnIjoyNDR9XSxbIiwiLHsiYmciOjcsImZnIjo2NH1dLFsiIFdpbiAiLHsiYmciOjcsImZnIjoyNDR9XSxbIioiLHsiYmciOjcsImZnIjo2NH1dLFsid2luIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIsIix7ImJnIjo3LCJmZyI6NjR9XSxbIiBDb21tYW5kICIseyJiZyI6NywiZmciOjI0NH1dLFsiKiIseyJiZyI6NywiZmciOjY0fV0sWyJjbWQiLHsiYmciOjcsImZnIjoyNDR9XSxbIiwiLHsiYmciOjcsImZnIjo2NH1dLFsiICIseyJiZyI6NywiZmciOjI0NH1dLFsiY29uc3QiLHsiYmciOjcsImZnIjo2NH1dLFsiICIseyJiZyI6NywiZmciOjI0NH1dLFsiY2hhciIseyJiZyI6NywiZmciOjEzNn1dLFsiICIseyJiZyI6NywiZmciOjI0NH1dLFsiKiIseyJiZyI6NywiZmciOjY0fV0sWyJhcmd2Iix7ImJnIjo3LCJmZyI6MjQ0fV0sWyJbXSwiLHsiYmciOjcsImZnIjo2NH1dLFsiIEN1cnNvciAiLHsiYmciOjcsImZnIjoyNDR9XSxbIioiLHsiYmciOjcsImZnIjo2NH1dLFsiY3VyIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIsIix7ImJnIjo3LCJmZyI6NjR9XSxbIiAiLHsiYmciOjcsImZnIjoyNDR9XV0sW1siRmlsZXJhbmdlICIseyJiZyI6NywiZmciOjI0NH1dLFsiKiIseyJiZyI6NywiZmciOjY0fV0sWyJyYW5nZSIseyJiZyI6NywiZmciOjI0NH1dLFsiKSIseyJiZyI6NywiZmciOjY0fV0sWyIgIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyJ7Iix7ImJnIjoyNDQsImZnIjoyMzR9XSxbIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIix7ImJnIjoyMzQsImZnIjoyNDR9XV0sW1siICAgICAgICBzaXplX3QgbGVuICIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyI9Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsiIHN0cmxlbiIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIoIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiYXJndiIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyJbIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiMSIseyJiZyI6MjM0LCJmZyI6Mzd9XSxbIl0pOyIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIix7ImJnIjoyMzQsImZnIjoyNDR9XV0sW1siICAgICAgICBib29sIHJldCAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiPSIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiB0ZXh0X2luc2VydCIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIoIix7ImJnIjoyMzQsImZnIjo2NH1dLFsid2luIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIi0+Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsiZmlsZSIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyItPiIseyJiZyI6MjM0LCJmZyI6NjR9XSxbInRleHQiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiLCIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiByYW5nZSIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyItPiIseyJiZyI6MjM0LCJmZyI6NjR9XSxbImVuZCIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIsIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiIGFyZ3YiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiWyIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIjEiLHsiYmciOjIzNCwiZmciOjM3fV0sWyJdLCIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiBsZW4iLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiKTsiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgICAgICAgICAgICAgICAgIix7ImJnIjoyMzQsImZnIjoyNDR9XV0sW1siICIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIgICAgICAgaWYiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIigiLHsiYmciOjIzNCwiZmciOjY0fV0sWyJyZXQiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiKSIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIix7ImJnIjoyMzQsImZnIjoyNDR9XV0sW1siICAgICAgICAgIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIiAgICAgICAqIix7ImJnIjoyMzQsImZnIjo2NH1dLFsicmFuZ2UgIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIj0iLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgdGV4dF9yYW5nZV9uZXciLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiKCIseyJiZyI6MjM0LCJmZyI6NjR9XSxbInJhbmdlIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIi0+Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsiZW5kIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIiwiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgcmFuZ2UiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiLT4iLHsiYmciOjIzNCwiZmciOjY0fV0sWyJlbmQgIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIisiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgbGVuIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIik7Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsiICAgICAgICAgICAgICAgICAgICAiLHsiYmciOjIzNCwiZmciOjI0NH1dXSxbWyIgIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIiAgICAgICByZXR1cm4iLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgcmV0Iix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIjsiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICIseyJiZyI6MjM0LCJmZyI6MjQ0fV1dLFtbIn0iLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICIseyJiZyI6MjM0LCJmZyI6MjQ0fV1dLFtbIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICIseyJiZyI6MjM0LCJmZyI6MjQ0fV1dLFtbInN0YXRpYyIseyJiZyI6NywiZmciOjY0fV0sWyIgYm9vbCBjbWRfY2hhbmdlIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIoIix7ImJnIjo3LCJmZyI6NjR9XSxbIlZpcyAiLHsiYmciOjcsImZnIjoyNDR9XSxbIioiLHsiYmciOjcsImZnIjo2NH1dLFsidmlzIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIsIix7ImJnIjo3LCJmZyI6NjR9XSxbIiBXaW4gIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIqIix7ImJnIjo3LCJmZyI6NjR9XSxbIndpbiIseyJiZyI6NywiZmciOjI0NH1dLFsiLCIseyJiZyI6NywiZmciOjY0fV0sWyIgQ29tbWFuZCAiLHsiYmciOjcsImZnIjoyNDR9XSxbIioiLHsiYmciOjcsImZnIjo2NH1dLFsiY21kIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIsIix7ImJnIjo3LCJmZyI6NjR9XSxbIiAiLHsiYmciOjcsImZnIjoyNDR9XSxbImNvbnN0Iix7ImJnIjo3LCJmZyI6NjR9XSxbIiAiLHsiYmciOjcsImZnIjoyNDR9XSxbImNoYXIiLHsiYmciOjcsImZnIjoxMzZ9XSxbIiAiLHsiYmciOjcsImZnIjoyNDR9XSxbIioiLHsiYmciOjcsImZnIjo2NH1dLFsiYXJndiIseyJiZyI6NywiZmciOjI0NH1dLFsiW10sIix7ImJnIjo3LCJmZyI6NjR9XSxbIiBDdXJzb3IgIix7ImJnIjo3LCJmZyI6MjQ0fV0sWyIqIix7ImJnIjo3LCJmZyI6NjR9XSxbImN1ciIseyJiZyI6NywiZmciOjI0NH1dLFsiLCIseyJiZyI6NywiZmciOjY0fV0sWyIgIix7ImJnIjo3LCJmZyI6MjQ0fV1dLFtbIkZpbGVyYW5nZSAiLHsiYmciOjcsImZnIjoyNDR9XSxbIioiLHsiYmciOjcsImZnIjo2NH1dLFsicmFuZ2UiLHsiYmciOjcsImZnIjoyNDR9XSxbIikiLHsiYmciOjcsImZnIjo2NH1dLFsiICIseyJiZyI6NywiZmciOjI0NH1dLFsieyIseyJiZyI6MjQ0LCJmZyI6MjM0fV0sWyIgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICIseyJiZyI6MjM0LCJmZyI6MjQ0fV1dLFtbIiAgICAgICAgVGV4dCAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiKiIseyJiZyI6MjM0LCJmZyI6NjR9XSxbInR4dCAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiPSIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiB3aW4iLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiLT4iLHsiYmciOjIzNCwiZmciOjY0fV0sWyJmaWxlIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIi0+Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsidGV4dCIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyI7Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIix7ImJnIjoyMzQsImZnIjoyNDR9XV0sW1siICAgICAgICBzaXplX3QgbGVuICIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyI9Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsiIHN0cmxlbiIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIoIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiYXJndiIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyJbIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiMSIseyJiZyI6MjM0LCJmZyI6Mzd9XSxbIl0pOyIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIix7ImJnIjoyMzQsImZnIjoyNDR9XV0sW1siICAgICAgICBib29sIHJldCAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiPSIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiB0ZXh0X2RlbGV0ZSIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIoIix7ImJnIjoyMzQsImZnIjo2NH1dLFsidHh0Iix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIiwiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgcmFuZ2UiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiLT4iLHsiYmciOjIzNCwiZmciOjY0fV0sWyJzdGFydCIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIsIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiIHRleHRfcmFuZ2Vfc2l6ZSIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIoIix7ImJnIjoyMzQsImZnIjo2NH1dLFsicmFuZ2UiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiKSkiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIiYmIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiICAgICAgICAgICAgICAiLHsiYmciOjIzNCwiZmciOjI0NH1dXSxbWyIgICAgICAgICAgICAgIHRleHRfaW5zZXJ0Iix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIigiLHsiYmciOjIzNCwiZmciOjY0fV0sWyJ0eHQiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiLCIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiByYW5nZSIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyItPiIseyJiZyI6MjM0LCJmZyI6NjR9XSxbInN0YXJ0Iix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIiwiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgYXJndiIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyJbIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiMSIseyJiZyI6MjM0LCJmZyI6Mzd9XSxbIl0sIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiIGxlbiIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIpOyIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiLHsiYmciOjIzNCwiZmciOjI0NH1dXSxbWyIgIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIiAgICAgICBpZiIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiKCIseyJiZyI6MjM0LCJmZyI6NjR9XSxbInJldCIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIpIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAiLHsiYmciOjIzNCwiZmciOjI0NH1dXSxbWyIgICAgICAgICAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiICAgICAgICoiLHsiYmciOjIzNCwiZmciOjY0fV0sWyJyYW5nZSAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiPSIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiB0ZXh0X3JhbmdlX25ldyIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIoIix7ImJnIjoyMzQsImZnIjo2NH1dLFsicmFuZ2UiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiLT4iLHsiYmciOjIzNCwiZmciOjY0fV0sWyJzdGFydCIseyJiZyI6MjM0LCJmZyI6MjQ0fV0sWyIsIix7ImJnIjoyMzQsImZnIjo2NH1dLFsiIHJhbmdlIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIi0+Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsic3RhcnQgIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIisiLHsiYmciOjIzNCwiZmciOjY0fV0sWyIgbGVuIix7ImJnIjoyMzQsImZnIjoyNDR9XSxbIik7Iix7ImJnIjoyMzQsImZnIjo2NH1dLFsiICAgICAgICAgICAgICAgICIseyJiZyI6MjM0LCJmZyI6MjQ0fV1dLFtbIiAiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiICAgICAgIHJldHVybiIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiByZXQiLHsiYmciOjIzNCwiZmciOjI0NH1dLFsiOyIseyJiZyI6MjM0LCJmZyI6NjR9XSxbIiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIix7ImJnIjoyMzQsImZnIjoyNDR9XV0sW1siLS1WSVNVQUwtLSBzYW0uYyBbK10gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgNzgzLCAxMDkgIix7ImJvbGQiOnRydWUsImludmVyc2UiOnRydWV9XV1d" rows="28" src="https://s3-eu-west-1.amazonaws.com/asciinema-bb-eu/uploads/asciicast/file/41361/asciicast.json?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAI2DOCAQ34YNJM3GA%2F20181224%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20181224T131114Z&amp;X-Amz-Expires=3600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=b743f864c0d13de13ec6a864d51feeccccd10235a165860752a9ffbbd64f40a0" theme="asciinema" title="vis editor" preload></asciinema-player></section>
+
+<section class="even info">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-xs-12">
+        <span class="author-avatar">
+<a href="/~martanne" title="martanne">            <img class="avatar" src="//gravatar.com/avatar/a0579562eb690c14e499efbd93287d7a?s=128&amp;d=retro">
+</a>        </span>
+
+        <h2>
+vis editor        </h2>
+
+        <small>
+          by <a href="/~martanne">martanne</a>
+<time datetime="2016-04-05T16:24:00.93131Z" title="Tue, 05 Apr 2016 16:24:00 Z">2 years ago</time>
+
+        </small>
+      </div>
+
+      <div class="col-md-4 col-xs-12 text-right actions">
+        <div class="dropdown actions-dropdown pull-right">
+<a class="btn btn-sm btn-secondary" data-target="#share-modal" data-toggle="modal" href="#" id="share-link">Share</a>
+            <a class="btn btn-sm btn-secondary" data-target="#download-modal" data-toggle="modal" href="#" id="download-link">Download</a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="odd meta">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-xs-12">
+        <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIDAgNDUuOTk5IDQ1Ljk5OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDUuOTk5IDQ1Ljk5OTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zOS4yNjQsNi43MzZjLTguOTgyLTguOTgxLTIzLjU0NS04Ljk4Mi0zMi41MjgsMGMtOC45ODIsOC45ODItOC45ODEsMjMuNTQ1LDAsMzIuNTI4YzguOTgyLDguOTgsMjMuNTQ1LDguOTgxLDMyLjUyOCwwICAgIEM0OC4yNDUsMzAuMjgxLDQ4LjI0NCwxNS43MTksMzkuMjY0LDYuNzM2eiBNMjUuOTk5LDMzYzAsMS42NTctMS4zNDMsMy0zLDNzLTMtMS4zNDMtMy0zVjIxYzAtMS42NTcsMS4zNDMtMywzLTNzMywxLjM0MywzLDNWMzN6ICAgICBNMjIuOTQ2LDE1Ljg3MmMtMS43MjgsMC0yLjg4LTEuMjI0LTIuODQ0LTIuNzM1Yy0wLjAzNi0xLjU4NCwxLjExNi0yLjc3MSwyLjg3OS0yLjc3MWMxLjc2NCwwLDIuODgsMS4xODgsMi45MTcsMi43NzEgICAgQzI1Ljg5NywxNC42NDgsMjQuNzQ2LDE1Ljg3MiwyMi45NDYsMTUuODcyeiIgZmlsbD0iIzZjNzU3ZCIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+
+          <code>OS=linux</code>
+
+          <code>SHELL=bash</code>
+
+          <code>TERM=st-256color</code>
+
+        <code>VIEWS=46973</code>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="modal fade" id="share-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Share this recording</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h2>Link</h2>
+
+        <p>
+          <input data-behavior="auto-select" readonly="" value="https://asciinema.org/a/41361" type="text">
+        </p>
+
+        <p>
+          <span>Append <code>?t=30 </code>to start the playback at 30s, <code>?t=3:20 </code>to start the playback at 3m 20s. </span>
+        </p>
+
+        <h2>Embed image link</h2>
+
+        <p>Use snippets below to display a screenshot linking to this recording.<br>
+          Useful in places where scripts are not allowed (e.g. in a project's README file).</p>
+
+        <p>
+          <span>HTML:</span>
+          <br>
+          <input data-behavior="auto-select" readonly="" value="<a href=&quot;https://asciinema.org/a/41361&quot; target=&quot;_blank&quot;><img src=&quot;https://asciinema.org/a/41361.svg&quot; /></a>" type="text">
+        </p>
+
+        <p>
+          <span>Markdown:</span>
+          <br>
+          <input data-behavior="auto-select" readonly="" value="[![asciicast](https://asciinema.org/a/41361.svg)](https://asciinema.org/a/41361)" type="text">
+        </p>
+
+        <h2>Embed the player</h2>
+
+        <p>If you're embedding on your own page or on a site which permits script tags,
+          you can use the full player widget:</p>
+
+        <p>
+          <input data-behavior="auto-select" readonly="" value="&lt;script id=&quot;asciicast-41361&quot; src=&quot;https://asciinema.org/a/41361.js&quot; async&gt;&lt;/script&gt;" type="text">
+        </p>
+
+        <p>Paste the above script tag where you want the player to be displayed on your page.</p>
+
+        <hr>
+
+        <p>See <a href="/docs/embedding">Sharing &amp; embedding</a> for additional options.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="download-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Download this recording</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <p>
+
+              You can download this recording in <a href="https://github.com/asciinema/asciinema/blob/master/doc/asciicast-v1.md">asciicast v1 format</a>, as a .json file.
+
+        </p>
+
+        <a href="https://asciinema.org/a/41361.json?dl=1" class="btn btn-primary" download="41361.json" rel="nofollow">Download</a>
+
+        <h2>Replay in terminal</h2>
+
+        <p>
+          You can replay this recording in your terminal with <code>asciinema play</code> command:
+        </p>
+
+        <pre><code>asciinema play 41361.json</code></pre>
+
+        <p>
+          If you don't have asciinema cli installed then <a href="/docs/installation">see installation instructions</a>.
+        </p>
+
+        <h2>Use with stand-alone player on your website</h2>
+
+        <p>
+          Download asciinema player from <a href="https://github.com/asciinema/asciinema-player/releases">player's releases page</a>
+          (you only need <code>.js</code> and <code>.css</code> file), then use it like this:
+        </p>
+
+        <pre><code>&lt;html>
+&lt;head>
+  &lt;link rel="stylesheet" type="text/css" href="/asciinema-player.css" />
+&lt;/head>
+&lt;body>
+  &lt;asciinema-player src="/41361.json" cols="90" rows="28">&lt;/asciinema-player>
+  ...
+  &lt;script src="/asciinema-player.js">&lt;/script>
+&lt;/body>
+&lt;/html></code></pre>
+
+        <p>See <a href="https://github.com/asciinema/asciinema-player">asciinema player README</a> for full usage instructions.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+<!-- app2 layout's footer -->
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-xs-12">
+        <ul class="links">
+          <li><a href="/contributing">Contributing</a></li>
+          <li><a href="/tos">Terms of Service</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 col-xs-12 text-center">
+        <span>
+          Sponsored by
+          <br/>
+          <a class="brightbox-logo" href="http://brightbox.com/" rel="nofollow">
+            <img src="/images/brightbox-78fa1dc42e5065bdbcc77f48e38b6dd3.png?vsn=d" />
+          </a>
+        </span>
+      </div>
+
+      <div class="col-md-4 col-xs-12">
+        <ul class="links float-right">
+          <li>
+            <b>forum:</b> <a href="https://discourse.asciinema.org">discourse.asciinema.org</a>
+          </li>
+          <li>
+            <b>irc:</b> <a href="https://kiwiirc.com/nextclient/irc.freenode.net/#asciinema">#asciinema on freenode</a>
+          </li>
+          <li>
+              <b>matrix:</b> <a href="https://matrix.to/#/#asciinema:matrix.org">#asciinema:matrix.org</a>
+          </li>
+
+          <li>
+            <b>twitter:</b> <a href="https://twitter.com/asciinema" title="Follow @asciinema on Twitter">@asciinema</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/asciinema-player-e90dd959bf7df7e1608c08ac419fca67.js?vsn=d"></script>
+    <script src="/js/app2-2a2a6b3256ef0e8c3f758fddff759d6a.js?vsn=d"></script>
+  </body>
+</html>

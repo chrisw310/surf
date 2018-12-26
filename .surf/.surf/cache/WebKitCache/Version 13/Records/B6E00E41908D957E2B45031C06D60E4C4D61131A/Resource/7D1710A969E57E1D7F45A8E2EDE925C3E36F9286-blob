@@ -1,0 +1,536 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>[SOLVED] DWM - how do you apply patches with patch? / Newbie Corner / Arch Linux Forums</title>
+<link rel="stylesheet" type="text/css" href="style/ArchLinux.css" />
+<link rel="canonical" href="viewtopic.php?id=131480" title="Page 1" />
+<link rel="alternate" type="application/atom+xml" href="extern.php?action=feed&amp;tid=131480&amp;type=atom" title="Atom topic feed" />
+    <link rel="stylesheet" media="screen" href="style/ArchLinux/arch.css?v=4"/>
+        <link rel="stylesheet" media="screen" href="style/ArchLinux/archnavbar.css?v=4"/>
+    
+<link rel="shortcut icon" href="style/ArchLinux/favicon.ico" />
+</head>
+
+<body>
+<div id="archnavbar" class="anb-forum">
+	<div id="archnavbarlogo"><h1><a href="http://www.archlinux.org/">Arch Linux</a></h1></div>
+	<div id="archnavbarmenu">
+		<ul id="archnavbarlist">
+			<li id="anb-home"><a href="http://www.archlinux.org/">Home</a></li><li id="anb-packages"><a href="http://www.archlinux.org/packages/">Packages</a></li><li id="anb-forums" class="anb-selected"><a href="https://bbs.archlinux.org/">Forums</a></li><li id="anb-wiki"><a href="https://wiki.archlinux.org/">Wiki</a></li><li id="anb-bugs"><a href="https://bugs.archlinux.org/">Bugs</a></li><li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li><li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li><li id="anb-download"><a href="http://www.archlinux.org/download/">Download</a></li>		</ul>
+	</div>
+</div>
+
+
+<div id="punviewtopic" class="pun">
+<div class="top-box"></div>
+<div class="punwrap">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdmenu" class="inbox">
+			<ul>
+				<li id="navindex" class="isactive"><a href="index.php">Index</a></li>
+				<li id="navrules"><a href="misc.php?action=rules">Rules</a></li>
+				<li id="navsearch"><a href="search.php">Search</a></li>
+				<li id="navregister"><a href="register.php">Register</a></li>
+				<li id="navlogin"><a href="login.php">Login</a></li>
+			</ul>
+		</div>
+		<div id="brdwelcome" class="inbox">
+			<p class="conl">You are not logged in.</p>
+			<ul class="conr">
+				<li><span>Topics: <a href="search.php?action=show_recent" title="Find topics with recent posts.">Active</a> | <a href="search.php?action=show_unanswered" title="Find topics with no replies.">Unanswered</a></span></li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="brdmain">
+<div class="linkst">
+	<div class="inbox crumbsplus">
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=23">Newbie Corner</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=131480">[SOLVED] DWM - how do you apply patches with patch?</a></strong></li>
+		</ul>
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="p1025316" class="blockpost rowodd firstpost blockpost1">
+	<h2><span><span class="conr">#1</span> <a href="viewtopic.php?pid=1025316#p1025316">2011-12-06 11:05:07</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>roygbiv</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2011-05-18</span></dd>
+						<dd><span>Posts: 204</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>[SOLVED] DWM - how do you apply patches with patch?</h3>
+					<div class="postmsg">
+						<p>I&#039;m totally new to dwm (it&#039;s working great by the way) and patching. I&#039;m having problems understanding how to use the patch program. The basic usage on dwm site says basically:</p><div class="codebox"><pre><code>patch -p1 &lt; path/to/patch.diff</code></pre></div><p> Great, now I have the patch file ~/builds/dwn/patch/<a href="http://pastebin.com/4fFqnZyz" rel="nofollow">dwm-5.9-statuscolors.diff</a> and my altered ~/builds/dwn/config.h. Here&#039;s what I did</p><div class="codebox"><pre class="vscroll"><code>herman@sam ~/builds/dwm $ patch -p1 &lt;patch/dwm-5.9-statuscolors.diff
+can&#039;t find file to patch at input line 4
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|diff -up dwm-5.9/config.def.h dwm-5.9-colors/config.def.h
+|--- dwm-5.9/config.def.h       2011-07-10 16:24:25.000000000 -0400
+|+++ dwm-5.9-colors/config.def.h        2011-08-18 02:02:47.033830823 -0400
+--------------------------
+File to patch: config.def.h
+config.def.h: No such file or directory
+Skip this patch? [y] 
+Skipping patch.
+2 out of 2 hunks ignored
+can&#039;t find file to patch at input line 41
+Perhaps you used the wrong -p or --strip option?
+The text leading up to this was:
+--------------------------
+|Only in dwm-5.9: config.h
+|Only in dwm-5.9: dwm
+|diff -up dwm-5.9/dwm.c dwm-5.9-colors/dwm.c
+|--- dwm-5.9/dwm.c      2011-07-10 16:24:25.000000000 -0400
+|+++ dwm-5.9-colors/dwm.c       2011-08-18 02:07:20.788935100 -0400
+--------------------------
+File to patch: dwm.c
+dwm.c: No such file or directory
+Skip this patch? [y] 
+Skipping patch.
+12 out of 12 hunks ignored</code></pre></div><p> and it asks me for the filename it didn&#039;t find at line 4. Looking at the patch, I see it&#039;s a diff on config.def.h so I suppose this is the file to be patched and that I should supply this filename and the same with dwm.c? I&#039;m not new to C coding but fresh out when it comes to diffing and patching, how do I actually go forward from here?</p><p>Edit: <br />More info&#160; - I used the description using ABS to download the PKGBUILD for dwm and making dwm. My files</p><div class="codebox"><pre class="vscroll"><code>herman@sam ~/builds/dwm $ ls -R
+.:
+PKGBUILD  config.h  dwm-5.9-2-x86_64.pkg.tar.xz  dwm-5.9.tar.gz  dwm.desktop  dwm.install  patch  pkg  src
+
+./patch:
+dwm-5.9-statuscolors.diff
+
+./pkg:
+usr
+
+./pkg/usr:
+bin  share
+
+./pkg/usr/bin:
+dwm
+
+./pkg/usr/share:
+doc  licenses  man  xsessions
+
+./pkg/usr/share/doc:
+dwm
+
+./pkg/usr/share/doc/dwm:
+README
+
+./pkg/usr/share/licenses:
+dwm
+
+./pkg/usr/share/licenses/dwm:
+LICENSE
+
+./pkg/usr/share/man:
+man1
+
+./pkg/usr/share/man/man1:
+dwm.1.gz
+
+./pkg/usr/share/xsessions:
+dwm.desktop
+
+./src:
+config.h  dwm-5.9  dwm-5.9.tar.gz  dwm.desktop
+
+./src/dwm-5.9:
+LICENSE  Makefile  README  config.def.h  config.def.h.orig  config.def.h.rej  config.h  config.mk  dwm  dwm.1  dwm.c  dwm.o</code></pre></div>
+						<p class="postedit"><em>Last edited by roygbiv (2011-12-06 20:37:40)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1025402" class="blockpost roweven">
+	<h2><span><span class="conr">#2</span> <a href="viewtopic.php?pid=1025402#p1025402">2011-12-06 15:05:54</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>iTwenty</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/43530.png?m=1341034341" width="69" height="69" alt="" /></dd>
+						<dd><span>From: India</span></dd>
+						<dd><span>Registered: 2010-10-24</span></dd>
+						<dd><span>Posts: 63</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="http://www.cannibalcandy.wordpress.com" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] DWM - how do you apply patches with patch?</h3>
+					<div class="postmsg">
+						<p>The patch file and the source files that the patch modifies should be in same directory. For dwm, I have found that installing via AUR is more trouble than it&#039;s worth. I have the source files of dwm in $HOME and just run <strong>make clean install</strong> inside this directory whenever I modify my config.h</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>“Twenty years from now you will be more disappointed by the things that you didn&#039;t do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.” - Mark Twain</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1025421" class="blockpost rowodd">
+	<h2><span><span class="conr">#3</span> <a href="viewtopic.php?pid=1025421#p1025421">2011-12-06 16:05:11</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>bohoomil</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2010-09-04</span></dd>
+						<dd><span>Posts: 2,376</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="http://bohoomil.com" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] DWM - how do you apply patches with patch?</h3>
+					<div class="postmsg">
+						<div class="quotebox"><blockquote><div><p>I have the source files of dwm in $HOME and just run make clean install inside this directory whenever I modify my config.h</p></div></blockquote></div><p>That&#039;s my way, too. Don&#039;t forget to modify the config.mk so that it meets your system&#039;s specs, though.</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>:: Registered Linux User No. 223384</p><p>:: <a href="https://github.com/bohoomil" rel="nofollow">github</a><br />:: <a href="http://bohoomil.com" rel="nofollow">infinality-bundle+fonts</a>: good looking fonts made easy</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1025425" class="blockpost roweven">
+	<h2><span><span class="conr">#4</span> <a href="viewtopic.php?pid=1025425#p1025425">2011-12-06 16:23:21</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>roygbiv</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2011-05-18</span></dd>
+						<dd><span>Posts: 204</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] DWM - how do you apply patches with patch?</h3>
+					<div class="postmsg">
+						<div class="quotebox"><cite>iTwenty wrote:</cite><blockquote><div><p>The patch file and the source files that the patch modifies should be in same directory. For dwm, I have found that installing via AUR is more trouble than it&#039;s worth. I have the source files of dwm in $HOME and just run <strong>make clean install</strong> inside this directory whenever I modify my config.h</p></div></blockquote></div><p>Do you have all your files directly in your home folder? That&#039;s kinda messy?<br />Thanks bro! Ran the patch command in the dwm source dir:</p><div class="codebox"><pre><code>herman@sam ~/build/dwm/src/dwm-5.9 $ patch &lt; dwm-5.9-statuscolors.diff 
+patching file config.def.h
+patching file dwm.c
+Reversed (or previously applied) patch detected!  Assume -R? [n] y</code></pre></div><p>The files are modified according to the .diff patch file, so assuming this went well i should just recompile? I&#039;m using makepkg -i for now, because it&#039;s kind of convenient for me right know. By the way, what is the difference between that and doing a standard make install in this case? I believe I got the PKGBUILD from [communty] not the AUR by the way. </p><div class="quotebox"><cite>bohoomil wrote:</cite><blockquote><div><p>That&#039;s my way, too. Don&#039;t forget to modify the config.mk so that it meets your system&#039;s specs, though.</p></div></blockquote></div><p> Is this necessary each time I patch or just one time?</p>
+						<p class="postedit"><em>Last edited by roygbiv (2011-12-06 16:24:09)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1025432" class="blockpost rowodd">
+	<h2><span><span class="conr">#5</span> <a href="viewtopic.php?pid=1025432#p1025432">2011-12-06 16:45:44</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>bohoomil</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2010-09-04</span></dd>
+						<dd><span>Posts: 2,376</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="http://bohoomil.com" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] DWM - how do you apply patches with patch?</h3>
+					<div class="postmsg">
+						<p>No, this is a one time operation. You&#039;ll see several paths there -- just make them point the right things in the right places. That&#039;s it. <img src="https://bbs.archlinux.org/img/smilies/smile.png" width="15" height="15" alt="smile" /></p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>:: Registered Linux User No. 223384</p><p>:: <a href="https://github.com/bohoomil" rel="nofollow">github</a><br />:: <a href="http://bohoomil.com" rel="nofollow">infinality-bundle+fonts</a>: good looking fonts made easy</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1025484" class="blockpost roweven">
+	<h2><span><span class="conr">#6</span> <a href="viewtopic.php?pid=1025484#p1025484">2011-12-06 20:00:45</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>roygbiv</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2011-05-18</span></dd>
+						<dd><span>Posts: 204</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] DWM - how do you apply patches with patch?</h3>
+					<div class="postmsg">
+						<p>Ok thanks but I&#039;m confused again (I know..). I managed to patch the files config.def.h and dwm.c in the source dir and noticed there is yet another config.h file there as well. Now, the in the top level dir with the PKGBUILD I also have a config.h, which is the one I do my config changes. I&#039;m confused because I now have these three header files (2x config.h + config.def.h) which are supposed to have the same source code? I&#039;ve read around on the net, but haven&#039;t gotten any further answers yet. What are the purpose of each config and how should I use/update/manage them when recompiling? This is my situation:</p><div class="codebox"><pre class="vscroll"><code>herman@sam ~/build/dwm $ tree .
+.
+├── PKGBUILD
+├── config.h &lt;----------------------------------------------------- this one
+├── dwm-5.9-2-x86_64.pkg.tar.xz
+├── dwm-5.9.tar.gz
+├── dwm.desktop
+├── dwm.install
+├── pkg
+│   └── usr
+│       ├── bin
+│       │   └── dwm
+│       └── share
+│           ├── doc
+│           │   └── dwm
+│           │       └── README
+│           ├── licenses
+│           │   └── dwm
+│           │       └── LICENSE
+│           ├── man
+│           │   └── man1
+│           │       └── dwm.1.gz
+│           └── xsessions
+│               └── dwm.desktop
+└── src
+    ├── config.h -&gt; /home/herman/build/dwm/config.h
+    ├── dwm-5.9
+    │   ├── LICENSE
+    │   ├── Makefile
+    │   ├── README
+    │   ├── config.def.h &lt;-----------------------------------------------------this one
+    │   ├── config.def.h.orig
+    │   ├── config.h &lt;----------------------------------------------------------this one
+    │   ├── config.mk
+    │   ├── dwm
+    │   ├── dwm-5.9-statuscolors.diff
+    │   ├── dwm.1
+    │   ├── dwm.c
+    │   ├── dwm.c.orig
+    │   └── dwm.o
+    ├── dwm-5.9.tar.gz -&gt; /home/herman/build/dwm/dwm-5.9.tar.gz
+    └── dwm.desktop -&gt; /home/herman/build/dwm/dwm.desktop
+ </code></pre></div><p>Thanks guys!</p>
+						<p class="postedit"><em>Last edited by roygbiv (2011-12-06 20:06:10)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1025485" class="blockpost rowodd">
+	<h2><span><span class="conr">#7</span> <a href="viewtopic.php?pid=1025485#p1025485">2011-12-06 20:05:38</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>jasonwryan</strong></dt>
+						<dd class="usertitle"><strong>Anarchist</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/25579.png?m=1386831523" width="80" height="69" alt="" /></dd>
+						<dd><span>From: .nz</span></dd>
+						<dd><span>Registered: 2009-05-09</span></dd>
+						<dd><span>Posts: 26,297</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="http://jasonwryan.com/" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] DWM - how do you apply patches with patch?</h3>
+					<div class="postmsg">
+						<p>config.def.h in src/dwm-5.9-2/ is the template - you copy this to your top level directory (as config.h) and make changes to that...</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://www.flickr.com/photos/jasonwryan/9333810442/lightbox/" rel="nofollow">Arch + dwm</a>&#160; &#160;•&#160; &#160;<a href="http://bitbucket.jasonwryan.com/" rel="nofollow">Mercurial repos</a>&#160; •&#160; &#160;<a href="https://github.com/jasonwryan/" rel="nofollow">Github</a></p><p>Registered Linux User #482438</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><strong>Online</strong></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1025486" class="blockpost roweven">
+	<h2><span><span class="conr">#8</span> <a href="viewtopic.php?pid=1025486#p1025486">2011-12-06 20:11:53</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>roygbiv</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2011-05-18</span></dd>
+						<dd><span>Posts: 204</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] DWM - how do you apply patches with patch?</h3>
+					<div class="postmsg">
+						<p>Ok! So config.def.h is copied each time since it gets modified after patching, right. What about the src/dwm-5.9-2/config.h file?</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p1025488" class="blockpost rowodd">
+	<h2><span><span class="conr">#9</span> <a href="viewtopic.php?pid=1025488#p1025488">2011-12-06 20:19:30</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>jasonwryan</strong></dt>
+						<dd class="usertitle"><strong>Anarchist</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/25579.png?m=1386831523" width="80" height="69" alt="" /></dd>
+						<dd><span>From: .nz</span></dd>
+						<dd><span>Registered: 2009-05-09</span></dd>
+						<dd><span>Posts: 26,297</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="http://jasonwryan.com/" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] DWM - how do you apply patches with patch?</h3>
+					<div class="postmsg">
+						<p>Ignore it: the PKGBUILD copies it to the top dir</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://www.flickr.com/photos/jasonwryan/9333810442/lightbox/" rel="nofollow">Arch + dwm</a>&#160; &#160;•&#160; &#160;<a href="http://bitbucket.jasonwryan.com/" rel="nofollow">Mercurial repos</a>&#160; •&#160; &#160;<a href="https://github.com/jasonwryan/" rel="nofollow">Github</a></p><p>Registered Linux User #482438</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><strong>Online</strong></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="postlinksb">
+	<div class="inbox crumbsplus">
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=23">Newbie Corner</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=131480">[SOLVED] DWM - how do you apply patches with patch?</a></strong></li>
+		</ul>
+		<div class="clearer"></div>
+	</div>
+</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Board footer</span></h2>
+	<div class="box">
+		<div id="brdfooternav" class="inbox">
+			<div class="conl">
+				<form id="qjump" method="get" action="viewforum.php">
+					<div><label><span>Jump to<br /></span>
+					<select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Technical Issues and Assistance">
+							<option value="23" selected="selected">Newbie Corner</option>
+							<option value="17">Installation</option>
+							<option value="22">Kernel &amp; Hardware</option>
+							<option value="18">Applications &amp; Desktop Environments</option>
+							<option value="31">Laptop Issues</option>
+							<option value="8">Networking, Server, and Protection</option>
+							<option value="32">Multimedia and Games</option>
+							<option value="50">System Administration</option>
+							<option value="35">Other Architectures</option>
+						</optgroup>
+						<optgroup label="Arch-centric">
+							<option value="24">Announcements, Package &amp; Security Advisories</option>
+							<option value="1">Arch Discussion</option>
+							<option value="13">Forum &amp; Wiki discussion</option>
+						</optgroup>
+						<optgroup label="Pacman Upgrades, Packaging &amp; AUR">
+							<option value="44">Pacman &amp; Package Upgrade Issues</option>
+							<option value="49">[testing] Repo Forum</option>
+							<option value="4">Creating &amp; Modifying Packages</option>
+							<option value="38">AUR Issues, Discussion &amp; PKGBUILD Requests</option>
+						</optgroup>
+						<optgroup label="Contributions &amp; Discussion">
+							<option value="20">GNU/Linux Discussion</option>
+							<option value="27">Community Contributions</option>
+							<option value="33">Programming &amp; Scripting</option>
+							<option value="30">Other Languages</option>
+							<option value="47">Artwork and Screenshots</option>
+						</optgroup>
+					</select></label>
+					<input type="submit" value=" Go " accesskey="g" />
+					</div>
+				</form>
+			</div>
+			<div class="conr">
+				<p id="feedlinks"><span class="atom"><a href="extern.php?action=feed&amp;tid=131480&amp;type=atom">Atom topic feed</a></span></p>
+				<p id="poweredby">Powered by <a href="http://fluxbb.org/">FluxBB</a></p>
+			</div>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+</div>
+<div class="end-box"></div>
+</div>
+
+</body>
+</html>

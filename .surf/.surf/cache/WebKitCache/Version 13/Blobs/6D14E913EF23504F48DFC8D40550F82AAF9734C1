@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Firefox - ArchWiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Firefox","wgTitle":"Firefox","wgCurRevisionId":559230,"wgRevisionId":559230,"wgArticleId":3157,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Pages or sections flagged with Template:Merge","Web browser","Mozilla"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Firefox","wgRelevantArticleId":3157,"wgRequestId":"4630dd7589d496af0e5ef520","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","zzz.ext.archLinux.styles":"ready","skins.vector.styles.responsive":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.tokens@1pa52qv",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cskins.vector.styles.responsive%7Czzz.ext.archLinux.styles&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="ArchWiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.archlinux.org/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<link rel="alternate" type="application/atom+xml" title="ArchWiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Firefox rootpage-Firefox skin-vector action-view"><div id="archnavbar" class="noprint">
+    <div id="archnavbarlogo">
+        <p><a id="logo" href="https://www.archlinux.org/"></a></p>
+    </div>
+    <div id="archnavbarmenu">
+        <ul id="archnavbarlist">
+                        <li id="anb-home"><a href="https://www.archlinux.org/">Home</a></li>            <li id="anb-packages"><a href="https://www.archlinux.org/packages/">Packages</a></li>            <li id="anb-forums"><a href="https://bbs.archlinux.org/">Forums</a></li>            <li id="anb-wiki" class="anb-selected"><a href="https://wiki.archlinux.org/">Wiki</a></li>            <li id="anb-bugs"><a href="https://bugs.archlinux.org/">Bugs</a></li>            <li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li>            <li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li>            <li id="anb-download"><a href="https://www.archlinux.org/download/">Download</a></li>        </ul>
+    </div>
+</div>
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">Firefox</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From ArchWiki</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="archwiki-template-meta-related-articles-start"><p>Related articles</p><ul>
+<li><a href="/index.php/Browser_plugins" title="Browser plugins">Browser plugins</a></li>
+<li><a href="/index.php/Firefox/Tweaks" title="Firefox/Tweaks">Firefox/Tweaks</a></li>
+<li><a href="/index.php/Firefox/Profile_on_RAM" title="Firefox/Profile on RAM">Firefox/Profile on RAM</a></li>
+<li><a href="/index.php/Firefox/Privacy" title="Firefox/Privacy">Firefox/Privacy</a></li>
+<li><a href="/index.php/Chromium" title="Chromium">Chromium</a></li>
+<li><a href="/index.php/Opera" title="Opera">Opera</a></li>
+</ul></div>
+<p><a rel="nofollow" class="external text" href="https://www.mozilla.org/firefox">Firefox</a> is a popular open source graphical web browser from <a rel="nofollow" class="external text" href="https://www.mozilla.org">Mozilla</a>.
+</p>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Installing"><span class="tocnumber">1</span> <span class="toctext">Installing</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Add-ons"><span class="tocnumber">2</span> <span class="toctext">Add-ons</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Adding_search_engines"><span class="tocnumber">2.1</span> <span class="toctext">Adding search engines</span></a>
+<ul>
+<li class="toclevel-3 tocsection-4"><a href="#arch-firefox-search"><span class="tocnumber">2.1.1</span> <span class="toctext">arch-firefox-search</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Configuration"><span class="tocnumber">3</span> <span class="toctext">Configuration</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="#Multimedia_playback"><span class="tocnumber">3.1</span> <span class="toctext">Multimedia playback</span></a>
+<ul>
+<li class="toclevel-3 tocsection-7"><a href="#Open-with_extension"><span class="tocnumber">3.1.1</span> <span class="toctext">Open-with extension</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-8"><a href="#Spell_checking"><span class="tocnumber">3.2</span> <span class="toctext">Spell checking</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#KDE/GNOME_integration"><span class="tocnumber">3.3</span> <span class="toctext">KDE/GNOME integration</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Smooth_Scrolling"><span class="tocnumber">3.4</span> <span class="toctext">Smooth Scrolling</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#Plugins"><span class="tocnumber">4</span> <span class="toctext">Plugins</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#Tips_and_tricks"><span class="tocnumber">5</span> <span class="toctext">Tips and tricks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Dark_themes"><span class="tocnumber">5.1</span> <span class="toctext">Dark themes</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Screenshot_of_webpage"><span class="tocnumber">5.2</span> <span class="toctext">Screenshot of webpage</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#Window_manager_rules"><span class="tocnumber">5.3</span> <span class="toctext">Window manager rules</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-16"><a href="#Troubleshooting"><span class="tocnumber">6</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-17"><a href="#Firefox_startup_takes_very_long"><span class="tocnumber">6.1</span> <span class="toctext">Firefox startup takes very long</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Font_troubleshooting"><span class="tocnumber">6.2</span> <span class="toctext">Font troubleshooting</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Setting_an_email_client"><span class="tocnumber">6.3</span> <span class="toctext">Setting an email client</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#File_association"><span class="tocnumber">6.4</span> <span class="toctext">File association</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Firefox_keeps_creating_~/Desktop_even_when_this_is_not_desired"><span class="tocnumber">6.5</span> <span class="toctext">Firefox keeps creating ~/Desktop even when this is not desired</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Make_plugins_respect_blocked_pop-ups"><span class="tocnumber">6.6</span> <span class="toctext">Make plugins respect blocked pop-ups</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Middle-click_behavior"><span class="tocnumber">6.7</span> <span class="toctext">Middle-click behavior</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Backspace_does_not_work_as_the_&#39;Back&#39;_button"><span class="tocnumber">6.8</span> <span class="toctext">Backspace does not work as the 'Back' button</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Firefox_does_not_remember_login_information"><span class="tocnumber">6.9</span> <span class="toctext">Firefox does not remember login information</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#&quot;Do_you_want_Firefox_to_save_your_tabs_for_the_next_time_it_starts?&quot;_dialog_does_not_appear"><span class="tocnumber">6.10</span> <span class="toctext">"Do you want Firefox to save your tabs for the next time it starts?" dialog does not appear</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Silently_fails_when_installing_desktop_apps_from_marketplace"><span class="tocnumber">6.11</span> <span class="toctext">Silently fails when installing desktop apps from marketplace</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Firefox_detects_the_wrong_version_of_my_plugin"><span class="tocnumber">6.12</span> <span class="toctext">Firefox detects the wrong version of my plugin</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Javascript_context_menu_does_not_appear_on_some_sites"><span class="tocnumber">6.13</span> <span class="toctext">Javascript context menu does not appear on some sites</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#Firefox_does_not_remember_default_spell_check_language"><span class="tocnumber">6.14</span> <span class="toctext">Firefox does not remember default spell check language</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#Some_MathML_symbols_are_missing"><span class="tocnumber">6.15</span> <span class="toctext">Some MathML symbols are missing</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="#Tearing_video_in_fullscreen_mode"><span class="tocnumber">6.16</span> <span class="toctext">Tearing video in fullscreen mode</span></a></li>
+<li class="toclevel-2 tocsection-33"><a href="#Firefox_WebRTC_module_cannot_detect_a_microphone"><span class="tocnumber">6.17</span> <span class="toctext">Firefox WebRTC module cannot detect a microphone</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-34"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installing">Installing</span></h2>
+<p>Firefox can be <a href="/index.php/Install" class="mw-redirect" title="Install">installed</a> with the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=firefox">firefox</a></span> package.
+</p><p>Other alternatives include:
+</p>
+<ul><li><b>Firefox Developer Edition</b> &#8212; for developers</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://www.mozilla.org/firefox/developer/">https://www.mozilla.org/firefox/developer/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=firefox-developer-edition">firefox-developer-edition</a></span></dd></dl>
+<ul><li><b>Firefox Extended Support Release</b> &#8212; long-term supported version</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://www.mozilla.org/firefox/organizations/">https://www.mozilla.org/firefox/organizations/</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/firefox-esr/">firefox-esr</a></span><sup><small>AUR</small></sup> or <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/firefox-esr-bin/">firefox-esr-bin</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>Firefox Beta</b> &#8212; cutting-edge version</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://www.mozilla.org/firefox/channel/desktop/#beta">https://www.mozilla.org/firefox/channel/desktop/#beta</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/firefox-beta/">firefox-beta</a></span><sup><small>AUR</small></sup> or <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/firefox-beta-bin/">firefox-beta-bin</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>Firefox Nightly</b> &#8212; nightly builds for testing (<a rel="nofollow" class="external text" href="https://developer.mozilla.org/Firefox/Experimental_features">experimental features</a>)</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://www.mozilla.org/firefox/channel/desktop/#nightly">https://www.mozilla.org/firefox/channel/desktop/#nightly</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/firefox-nightly/">firefox-nightly</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li><b>Firefox KDE</b> &#8212; Version of Firefox that incorporates an OpenSUSE patch for better <a href="#KDE/GNOME_integration">KDE integration</a> than is possible through simple Firefox plugins.</li></ul>
+<dl><dd><a rel="nofollow" class="external free" href="https://build.opensuse.org/package/show/mozilla:Factory/MozillaFirefox">https://build.opensuse.org/package/show/mozilla:Factory/MozillaFirefox</a> || <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/firefox-kde-opensuse/">firefox-kde-opensuse</a></span><sup><small>AUR</small></sup></dd></dl>
+<ul><li>On top of the different Mozilla build channels, a number of forks exist with more or less special features; see <a href="/index.php/List_of_applications#Gecko-based" title="List of applications">List of applications#Gecko-based</a>.</li></ul>
+<p>A number of language packs are available for Firefox, other than the standard English. Language packs are usually named as <code>firefox-i18n-<i>languagecode</i></code> (where <code><i>languagecode</i></code> can be any language code, such as <b>de</b>, <b>ja</b>, <b>fr</b>, etc.). For a list of available language packs see <a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/extra/any/firefox-i18n/">firefox-i18n</a> for <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=firefox">firefox</a></span> and <a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/community/any/firefox-developer-edition-i18n/">firefox-developer-edition-i18n</a> for <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=firefox-developer-edition">firefox-developer-edition</a></span>.
+</p>
+<h2><span class="mw-headline" id="Add-ons">Add-ons</span></h2>
+<p>Firefox is well known for its large library of add-ons which can be used to add new features or modify the behavior of existing features. Firefox's "Add-ons Manager" is used to manage installed add-ons or find new ones. 
+</p><p>For a list of popular add-ons, see <a rel="nofollow" class="external text" href="https://addons.mozilla.org/firefox/extensions/?sort=popular">Mozilla's add-on list sorted by popularity</a>. See also <a href="https://en.wikipedia.org/wiki/List_of_Firefox_extensions" class="extiw" title="wikipedia:List of Firefox extensions">List of Firefox extensions</a> on Wikipedia.
+</p>
+<h3><span class="mw-headline" id="Adding_search_engines">Adding search engines</span></h3>
+<p>Search engines can be added to Firefox through normal add-ons, see <a rel="nofollow" class="external text" href="https://addons.mozilla.org/firefox/search-tools/">this page</a> for a list of available search engines.
+</p><p>A very extensive list of search engines can be found at the <a rel="nofollow" class="external text" href="http://mycroftproject.com/">Mycroft Project</a>.
+</p><p>Also, you can use the <a rel="nofollow" class="external text" href="https://firefox.maltekraus.de/extensions/add-to-search-bar">add-to-searchbar</a> extension to add a search to your search bar from any web site, by simply right clicking on the site's search field and selecting <i>Add to Search Bar...</i>
+</p>
+<h4><span class="mw-headline" id="arch-firefox-search">arch-firefox-search</span></h4>
+<p><a href="/index.php/Install" class="mw-redirect" title="Install">Install</a> the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=arch-firefox-search">arch-firefox-search</a></span> package to add Arch-specific searches (AUR, wiki, forum, etc, as specified by user) to the Firefox search toolbar.
+</p>
+<h2><span class="mw-headline" id="Configuration">Configuration</span></h2>
+<p>Firefox exposes a number of configuration options. To examine them, enter in the Firefox address bar:
+</p>
+<pre>about:config
+</pre>
+<p>Once set, these affect the user's current profile, and may be synchronized across all devices via <a rel="nofollow" class="external text" href="https://www.mozilla.org/firefox/sync/">Firefox Sync</a>. Please note that only a subset of the <code>about:config</code> entries are synchronized by this method, and the exact subset may be found by searching for <code>services.sync.prefs</code> in <code>about:config</code>. Additional preferences and third party preferences may be synchronized by creating new boolean entries prepending the config value with <code>services.sync.prefs.sync</code> (<a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Firefox_Sync/Syncing_custom_preferences">documentation</a> is still applicable.) To synchronize the whitelist for the extension <a rel="nofollow" class="external text" href="https://addons.mozilla.org/firefox/addon/noscript/">NoScript</a>:
+</p>
+<pre>services.sync.prefs.sync.capability.policy.maonoscript.sites
+</pre>
+<p>The boolean <code>noscript.sync.enabled</code> must be set to <code>true</code> to synchronize the remainder of NoScript's preferences via Firefox Sync.
+</p><p>Firefox also allows configuration for a profile via a <code>user.js</code> file: <a rel="nofollow" class="external text" href="http://kb.mozillazine.org/User.js_file">user.js</a> kept in the profile folder, usually <code>~/.mozilla/firefox/<i>xxxxxxxx</i>.default/</code>. For a useful starting point, see e.g <a rel="nofollow" class="external text" href="https://github.com/pyllyukko/user.js">custom user.js</a> which is targeted at privacy/security conscious users.
+</p><p>One drawback of the above approach is that it is not applied system-wide. Furthermore, this is not useful as a "pre-configuration", since the profile directory is created after first launch of the browser. You can, however, let <i>firefox</i> create a new profile and, after closing it again, <a rel="nofollow" class="external text" href="https://support.mozilla.org/en-US/kb/back-and-restore-information-firefox-profiles#w_restoring-a-profile-backup">copy the contents</a> of an already created profile folder into it. 
+</p><p>Sometimes it may be desired to lock certain settings, a feature useful in widespread deployments of customized Firefox. In order to create a system-wide configuration, follow the steps outlined in <a rel="nofollow" class="external text" href="http://kb.mozillazine.org/Locking_preferences">Locking preferences</a>:
+</p><p>1. Create <code>/usr/lib/firefox/defaults/pref/local-settings.js</code>:
+</p>
+<pre>pref("general.config.obscure_value", 0);
+pref("general.config.filename", "mozilla.cfg");
+</pre>
+<p>2. Create <code>/usr/lib/firefox/mozilla.cfg</code> (this stores the actual configuration):
+</p>
+<pre>//
+//...your settings...
+// e.g to disable Pocket, uncomment the following line
+// lockPref("browser.pocket.enabled", false);
+</pre>
+<p>Please note that the first line must contain exactly <code>//</code>. The syntax of the file is similar to that of <code>user.js</code>.
+</p>
+<h3><span class="mw-headline" id="Multimedia_playback">Multimedia playback</span></h3>
+<p>Firefox uses <a href="/index.php/FFmpeg" title="FFmpeg">FFmpeg</a> for playing multimedia inside HTML5 <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements. Go to <a rel="nofollow" class="external text" href="https://www.youtube.com/html5">YouTube's HTML5 page</a>, <a rel="nofollow" class="external text" href="https://www.quirksmode.org/html5/tests/video.html">video-test page</a> or <a rel="nofollow" class="external text" href="https://hpr.dogphilosophy.net/test/">audio-test page</a> to check which formats are actually supported.
+</p><p>HTML5 DRM playback is supported by the Google Widevine CDM, it is however not enabled by default. See <i>Preferences &gt; General &gt; Digital Rights Management (DRM) Content</i> if you want to learn more.
+</p><p>See <a href="/index.php/Firefox/Tweaks#Enable_additional_media_codecs" title="Firefox/Tweaks">Firefox/Tweaks#Enable additional media codecs</a> for advanced configuration and enabling support for Widevine (Netflix, Amazon Video, etc.).
+</p><p>Firefox uses <a href="/index.php/PulseAudio" title="PulseAudio">PulseAudio</a> for audio playback and capture. For sound to work, you need to install the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=pulseaudio">pulseaudio</a></span> package.
+</p><p>In case, for whatever reason, <a href="/index.php/PulseAudio" title="PulseAudio">PulseAudio</a> is not an option for you, you can use <a href="/index.php/Advanced_Linux_Sound_Architecture#PulseAudio_compatibility" title="Advanced Linux Sound Architecture">apulse</a> instead. To make this work, it is necessary to exclude <code>/dev/snd/</code> from Firefox' sandboxing by adding it to the comma-separated list in <code>about:config</code>:
+</p>
+<pre>security.sandbox.content.write_path_whitelist
+</pre>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> The trailing slash on <code>/dev/snd/</code> is important, otherwise <i>apulse</i> will report "Permission denied" errors.</div>
+<p>If you have no audio even when using <i>apulse</i>, try adding <code>16</code> to <code>security.sandbox.content.syscall_whitelist</code> in <code>about:config</code>.
+</p>
+<h4><span class="mw-headline" id="Open-with_extension">Open-with extension</span></h4>
+<ol><li>Install <a rel="nofollow" class="external text" href="https://addons.mozilla.org/firefox/addon/open-with/">Open-with</a> add-on.</li>
+<li>Open <code>about:openwith</code>, select <i>Add...</i></li>
+<li>In the dialog select a video streaming capable player (e.g. <a href="/index.php/Mpv" title="Mpv">/usr/bin/mpv</a>).</li>
+<li>(Optional step) Add needed arguments to the player (e.g. you may want <code>--force-window --ytdl</code> for <i>mpv</i>)</li>
+<li>(Optional step) Choose how to display the dialogs using the left panel.</li>
+<li>Right click on links or visit pages containing videos. If the site is supported, the player will open as expected.</li></ol>
+<p>The same procedure can be used to associate video downloaders such as <i>youtube-dl</i>.
+</p>
+<h3><span class="mw-headline" id="Spell_checking">Spell checking</span></h3>
+<p>Install the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=hunspell">hunspell</a></span> package. You also need to install dictionaries for your language, such as <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=hunspell-fr">hunspell-fr</a></span> (for the French language) or <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=hunspell-he">hunspell-he</a></span> (for Hebrew).
+</p><p>To enable spell checking for a specific language right click on any text field and check the <i>Check Spelling</i> box. To select a language for spell checking to you have right click again and select your language from the <i>Languages</i> sub-menu.
+</p><p>To get more languages just click <i>Add Dictionaries...</i> and select the dictionary you want to install from the list.
+</p><p>When your default language choice does not stick, see <a href="#Firefox_does_not_remember_default_spell_check_language">#Firefox does not remember default spell check language</a>.
+</p>
+<h3><span id="KDE.2FGNOME_integration"></span><span class="mw-headline" id="KDE/GNOME_integration">KDE/GNOME integration</span></h3>
+<ul><li>To bring the <a href="/index.php/KDE" title="KDE">KDE</a> look to GTK apps (including Firefox), install <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=breeze-gtk">breeze-gtk</a></span> and <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=kde-gtk-config">kde-gtk-config</a></span>. Afterwards, go to <i>System Settings &gt; Application Style &gt; GTK</i>. Be sure to choose 'Breeze' in 'Select a GTK2/GTK3 Theme' and check 'Show icons in GTK buttons' and 'Show icons in GTK'.</li>
+<li>To make the left mouse button warp the scrollbar instead of the middle one on KDE, go to <i>System Settings &gt; Application Style &gt; GTK</i> and set the checkbox for "Left mouse button warps scrollbar".</li>
+<li>To use the KDE file selection and print dialogs in Firefox 64 or newer:
+<ol><li>Install <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=xdg-desktop-portal">xdg-desktop-portal</a></span> and <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=xdg-desktop-portal-kde">xdg-desktop-portal-kde</a></span>,</li>
+<li>Copy the Firefox <a href="/index.php/Desktop_entry" class="mw-redirect" title="Desktop entry">desktop entry</a> <code>/usr/share/applications/firefox.desktop</code> to <code>~/.local/share/applications/firefox.desktop</code>,</li>
+<li>Edit <code>~/.local/share/applications/firefox.desktop</code> and add <code>GTK_USE_PORTAL=1</code> to all <code>Exec</code> lines before the actual command. E.g.: <code>Exec=GTK_USE_PORTAL=1 /usr/lib/firefox/firefox&#160;%u</code>.</li></ol></li>
+<li>For integration with <a href="/index.php/KDE" title="KDE">KDE</a> mime type system and file dialog, one can use <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/firefox-kde-opensuse/">firefox-kde-opensuse</a></span><sup><small>AUR</small></sup> variant from AUR with OpenSUSE’s patches applied.</li>
+<li>Extensions/add-ons may provide additional integration, such as:
+<ul><li>Browser integration in <a href="/index.php/Plasma" class="mw-redirect" title="Plasma">Plasma</a>: requires <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=plasma-browser-integration">plasma-browser-integration</a></span> and the <a rel="nofollow" class="external text" href="https://addons.mozilla.org/firefox/addon/plasma-integration/">plasma-integration add-on</a>.</li>
+<li><span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/mozilla-extension-gnome-keyring-git/">mozilla-extension-gnome-keyring-git</a></span><sup><small>AUR</small></sup> (all-JavaScript implementation) to integrate Firefox with <a href="/index.php/GNOME_Keyring" class="mw-redirect" title="GNOME Keyring">GNOME Keyring</a>. To make firefox-gnome-keyring use your login keychain, set <code>extensions.gnome-keyring.keyringName</code> to <code>login</code> in <code>about:config</code>. Note the lowercase 'l' despite the the keychain name having an uppercase 'L' in Seahorse.</li></ul></li></ul>
+<h3><span class="mw-headline" id="Smooth_Scrolling">Smooth Scrolling</span></h3>
+<div class="noprint archwiki-template-message">
+<p><a href="/index.php/File:Merge-arrows-2.png" class="image"><img alt="Merge-arrows-2.png" src="/images/c/c9/Merge-arrows-2.png" width="48" height="48" /></a><b>This article or section is a candidate for merging with <a href="/index.php/Firefox/Tweaks#Mouse_and_keyboard" title="Firefox/Tweaks">Firefox/Tweaks#Mouse and keyboard</a>.</b><a href="/index.php/File:Merge-arrows-2.png" class="image"><img alt="Merge-arrows-2.png" src="/images/c/c9/Merge-arrows-2.png" width="48" height="48" /></a></p>
+<div><b>Notes:</b> Keep similar things in one place. (Discuss in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Talk:Firefox">Talk:Firefox#</a>)</div>
+</div>
+<p>In order to get smooth physics-based scrolling in Firefox, the <code>general.smoothScroll.msdPhysics</code> configurations can be changed to emulate a snappier behaviour like in other web browsers. For a quicker configuration, append the following to <code>~/.mozilla/firefox/<b>your-profile</b>/user.js</code> (requires restart):
+</p>
+<pre>user_pref("general.smoothScroll.lines.durationMaxMS", 125);
+user_pref("general.smoothScroll.lines.durationMinMS", 125);
+user_pref("general.smoothScroll.mouseWheel.durationMaxMS", 200);
+user_pref("general.smoothScroll.mouseWheel.durationMinMS", 100);
+user_pref("general.smoothScroll.msdPhysics.enabled", true);
+user_pref("general.smoothScroll.other.durationMaxMS", 125);
+user_pref("general.smoothScroll.other.durationMinMS", 125);
+user_pref("general.smoothScroll.pages.durationMaxMS", 125);
+user_pref("general.smoothScroll.pages.durationMinMS", 125);
+</pre>
+<p>Additionally the mouse wheel scroll settings have to be changed to react in a smooth way as well:
+</p>
+<pre>user_pref("mousewheel.min_line_scroll_amount", 30);
+user_pref("mousewheel.system_scroll_override_on_root_content.enabled", true);
+user_pref("mousewheel.system_scroll_override_on_root_content.horizontal.factor", 175);
+user_pref("mousewheel.system_scroll_override_on_root_content.vertical.factor", 175);
+user_pref("toolkit.scrollbox.horizontalScrollDistance", 6);
+user_pref("toolkit.scrollbox.verticalScrollDistance", 2);
+</pre>
+<p>If you have troubles on machines with varying performance, try modifying the <code>mousewheel.min_line_scroll_amount</code> until it feels snappy enough.
+</p>
+<h2><span class="mw-headline" id="Plugins">Plugins</span></h2>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Firefox <a rel="nofollow" class="external text" href="https://support.mozilla.org/en-US/kb/npapi-plugins">has removed support</a> for <a href="https://en.wikipedia.org/wiki/NPAPI" class="extiw" title="w:NPAPI">NPAPI</a> plugins, except for Flash.</div>
+<p>See the main article: <a href="/index.php/Browser_plugins" title="Browser plugins">Browser plugins</a>
+</p><p>To find out what plugins are installed/enabled, enter:
+</p>
+<pre>about:plugins
+</pre>
+<p>in the Firefox address bar or go to the <i>Add-ons</i> entry in the Firefox Menu and select the <i>Plugins</i> tab.
+</p>
+<h2><span class="mw-headline" id="Tips_and_tricks">Tips and tricks</span></h2>
+<p>For general enhancements see <a href="/index.php/Firefox/Tweaks" title="Firefox/Tweaks">Firefox/Tweaks</a>, for privacy related enhancements see <a href="/index.php/Firefox/Privacy" title="Firefox/Privacy">Firefox/Privacy</a>.
+</p>
+<h3><span class="mw-headline" id="Dark_themes">Dark themes</span></h3>
+<p>If a dark <a href="/index.php/GTK" class="mw-redirect" title="GTK">GTK</a> theme is in use (e.g. Arc Dark), it is recommended to start Firefox with a brighter one (e.g. Adwaita). See <a href="/index.php/Firefox/Tweaks#Unreadable_input_fields_with_dark_GTK+_themes" title="Firefox/Tweaks">Firefox/Tweaks#Unreadable input fields with dark GTK+ themes</a> and <a href="/index.php/GTK#Themes" class="mw-redirect" title="GTK">GTK#Themes</a> for more information.
+</p>
+<h3><span class="mw-headline" id="Screenshot_of_webpage">Screenshot of webpage</span></h3>
+<p>You can <i>Take a Screenshot</i> by either clicking the <i>Page actions</i> button (the three horizontal dots) in the address bar or by right-clicking on the webpage. See <a rel="nofollow" class="external autonumber" href="https://support.mozilla.org/en-US/kb/firefox-screenshots">[1]</a> for more information.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> 
+<ul><li>The <i>Save</i> button misleadingly uploads your screenshot to a firefox.com subdomain. Set <code>extensions.screenshots.upload-disabled</code> to <code>true</code> to disable this behaviour. <a rel="nofollow" class="external autonumber" href="https://github.com/mozilla-services/screenshots/issues/3503">[2]</a></li>
+<li>If <a href="/index.php/Firefox/Privacy#Anti-fingerprinting" title="Firefox/Privacy">privacy.resistFingerprinting</a> is enabled, to take a screenshot of a website using the above method, you need to grant it <i>Extract Canvas Data</i> permission.</li></ul>
+</div>
+<p>As an alternative you can use the full-page screenshot button in the <i>Developer Tools</i>, which you can open with <code>F12</code> (you might need to enable the button first).
+</p>
+<h3><span class="mw-headline" id="Window_manager_rules">Window manager rules</span></h3>
+<p>To apply different configurations to Firefox windows, change the WM_CLASS string by using Firefox's <code>--class</code> option, to a custom one. <a rel="nofollow" class="external autonumber" href="https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options#X11_options">[3]</a>
+</p><p>To start new Firefox instances, multiple profiles are required. To create a new profile:
+</p>
+<pre>$ firefox --ProfileManager
+</pre>
+<p>Class can be specified when launching Firefox with a not-in-use profile:
+</p>
+<pre>$ firefox -P <i>profile_name</i> --class=<i>class_name</i>
+</pre>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<h3><span class="mw-headline" id="Firefox_startup_takes_very_long">Firefox startup takes very long</span></h3>
+<p>If Firefox takes much longer to start up than other browsers, it may be due to lacking configuration of the localhost in  <code>/etc/hosts</code>. See <a href="/index.php/Network_configuration#Local_network_hostname_resolution" title="Network configuration">Network configuration#Local network hostname resolution</a> on how to set it up. 
+</p>
+<h3><span class="mw-headline" id="Font_troubleshooting">Font troubleshooting</span></h3>
+<p>See <a href="/index.php/Font_configuration" title="Font configuration">Font configuration</a>.
+</p><p>Firefox has a setting which determines how many replacements it will allow from fontconfig. To allow it to use all your replacement-rules, change <code>gfx.font_rendering.fontconfig.max_generic_substitutions</code> to <code>127</code> (the highest possible value).
+</p>
+<h3><span class="mw-headline" id="Setting_an_email_client">Setting an email client</span></h3>
+<p>Inside the browser, <code>mailto</code> links by default are opened by a web application such as Gmail or Yahoo Mail. To set an external email program, go to <i>Preferences &gt; Applications</i> and modify the <i>action</i> corresponding to the <code>mailto</code> content type; the file path will need to be designated (e.g. <code>/usr/bin/kmail</code> for Kmail).
+</p><p>Outside the browser, <code>mailto</code> links are handled by the <code>x-scheme-handler/mailto</code> mime type, which can be easily configured with <a href="/index.php/Xdg-mime" class="mw-redirect" title="Xdg-mime">xdg-mime</a>. See <a href="/index.php/Default_applications" title="Default applications">Default applications</a> for details and alternatives.
+</p>
+<h3><span class="mw-headline" id="File_association">File association</span></h3>
+<p>See <a href="/index.php/Default_applications" title="Default applications">Default applications</a>.
+</p>
+<h3><span id="Firefox_keeps_creating_.7E.2FDesktop_even_when_this_is_not_desired"></span><span class="mw-headline" id="Firefox_keeps_creating_~/Desktop_even_when_this_is_not_desired">Firefox keeps creating ~/Desktop even when this is not desired</span></h3>
+<p>Firefox uses <code>~/Desktop</code> as the default place for download and upload files. To change it to another folder, set the <code>XDG_DESKTOP_DIR</code> option as explained in <a href="/index.php/XDG_user_directories" title="XDG user directories">XDG user directories</a>.
+</p>
+<h3><span class="mw-headline" id="Make_plugins_respect_blocked_pop-ups">Make plugins respect blocked pop-ups</span></h3>
+<p>Some plugins can misbehave and bypass the default settings, such as the Flash plugin. You can prevent this by doing the following:
+</p>
+<ol><li>Type <code>about:config</code> into the address bar.</li>
+<li>Right-click on the page and select <i>New &gt; Integer</i>.</li>
+<li>Name it <code>privacy.popups.disable_from_plugins</code>.</li>
+<li>Set the value to <code>2</code>.</li></ol>
+<p>The possible values are:
+</p>
+<ul><li><code><b>0</b></code>: Allow all popups from plugins.</li>
+<li><code><b>1</b></code>: Allow popups, but limit them to <code>dom.popup_maximum</code>.</li>
+<li><code><b>2</b></code>: Block popups from plugins.</li>
+<li><code><b>3</b></code>: Block popups from plugins, even on whitelisted sites.</li></ul>
+<h3><span class="mw-headline" id="Middle-click_behavior">Middle-click behavior</span></h3>
+<p>To use the middle mouse button to paste whatever text has been highlighted/added to the clipboard, as is common in UNIX-like operating systems, set either <code>middlemouse.contentLoadURL</code> or <code>middlemouse.paste</code> to <code>true</code> in <code>about:config</code>. Having <code>middlemouse.contentLoadURL</code> enabled was the default behaviour prior to Firefox 57.
+</p><p>To scroll on middle-click (default for Windows browsers) set <code>general.autoScroll</code> to <code>true</code>.
+</p>
+<h3><span id="Backspace_does_not_work_as_the_.27Back.27_button"></span><span class="mw-headline" id="Backspace_does_not_work_as_the_'Back'_button">Backspace does not work as the 'Back' button</span></h3>
+<p>According to <a rel="nofollow" class="external text" href="http://kb.mozillazine.org/Browser.backspace_action">mozillaZine</a>, the <code>Backspace</code> key was mapped based on which platform the browser was running on. As a compromise, this preference was created to allow the <code>Backspace</code> key to either go back/forward, scroll up/down a page, or do nothing.
+</p><p>To make <code>Backspace</code> behave like the back button and go back one page in the session history, set <code>browser.backspace_action</code> to <code>0</code> in <code>about:config</code>.
+</p><p>To have the <code>Backspace</code> key scroll up one page and <code>Shift+Backspace</code> scroll down one page, set <code>browser.backspace_action</code> to <code>1</code>. Setting this property to any other value will leave the key unmapped (Arch Linux defaults to <code>2</code>, in other words, it is unmapped by default).
+</p>
+<h3><span class="mw-headline" id="Firefox_does_not_remember_login_information">Firefox does not remember login information</span></h3>
+<p>It may be due to a corrupted <code>cookies.sqlite</code> file in <a rel="nofollow" class="external text" href="https://support.mozilla.org/t5/Firefox/Profiles-Where-Firefox-stores-your-bookmarks-passwords-and-other/ta-p/4608#w_how-do-i-find-my-profile">Firefox's profile</a> folder. In order to fix this, just rename or remove <code>cookie.sqlite</code> while Firefox is not running.
+</p><p>Open a terminal of choice and type the following:
+</p>
+<pre>$ rm -f ~/.mozilla/firefox/&lt;profile id&gt;.default/cookies.sqlite
+</pre>
+<p>The profile id is a random 8 character string.
+</p><p>Restart Firefox and see if it solved the problem.
+</p>
+<h3><span id=".22Do_you_want_Firefox_to_save_your_tabs_for_the_next_time_it_starts.3F.22_dialog_does_not_appear"></span><span class="mw-headline" id="&quot;Do_you_want_Firefox_to_save_your_tabs_for_the_next_time_it_starts?&quot;_dialog_does_not_appear">"Do you want Firefox to save your tabs for the next time it starts?" dialog does not appear</span></h3>
+<p>From the <a rel="nofollow" class="external text" href="https://support.mozilla.com/en-US/questions/767751">Mozilla support</a> site:
+</p>
+<ol><li>Type <code>about:config</code> in the address bar.</li>
+<li>Set <code>browser.warnOnQuit</code> to <code>true</code>.</li>
+<li>Set <code>browser.showQuitWarning</code> to <code>true</code>.</li></ol>
+<h3><span class="mw-headline" id="Silently_fails_when_installing_desktop_apps_from_marketplace">Silently fails when installing desktop apps from marketplace</span></h3>
+<p>Installation of apps from Firefox OS Marketplace will silently fail if there is no <code>~/.local/share/applications</code> folder.
+</p>
+<h3><span class="mw-headline" id="Firefox_detects_the_wrong_version_of_my_plugin">Firefox detects the wrong version of my plugin</span></h3>
+<p>When you close Firefox, the latter saves the current timestamp and version of your plugins inside <code>pluginreg.dat</code> located in your profile folder, typically in <code>~/.mozilla/firefox/<i>xxxxxxxx</i>.default/</code>.
+</p><p>If you upgraded your plugin when Firefox was still running, you will thus have the wrong information inside that file. The next time you will restart Firefox you will get that message <code>Firefox has prevented the outdated plugin "XXXX" from running on ...</code> when you will be trying to open content dedicated to that plugin on the web. This problem often appears with the official <a href="/index.php/Browser_plugins#Adobe_Flash_Player" title="Browser plugins">Adobe Flash Player plugin</a> which has been upgraded while Firefox was still running.
+</p><p>The solution is to remove the file <code>pluginreg.dat</code> from your profile and that is it. Firefox will not complain about the missing file as it will be recreated the next time Firefox will be closed. <a rel="nofollow" class="external autonumber" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1109795#c16">[4]</a>
+</p>
+<h3><span class="mw-headline" id="Javascript_context_menu_does_not_appear_on_some_sites">Javascript context menu does not appear on some sites</span></h3>
+<p>In <code>about:config</code>, unset the <code>dom.w3c_touch_events.enabled</code> setting.
+</p>
+<h3><span class="mw-headline" id="Firefox_does_not_remember_default_spell_check_language">Firefox does not remember default spell check language</span></h3>
+<p>The default spell checking language can be set as follows:
+</p>
+<ol><li>Type <code>about:config</code> in the address bar.</li>
+<li>Set <code>spellchecker.dictionary</code> to your language of choice, for instance <code>en_GB</code>.</li>
+<li>Notice that the for dictionaries installed as a Firefox plugin the notation is <code>en-GB</code>, and for <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=hunspell">hunspell</a></span> dictionaries the notation is <code>en_GB</code>.</li></ol>
+<p>When you only have system wide dictionaries installed with <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=hunspell">hunspell</a></span>, Firefox might not remember your default dictionary language settings. This can be fixed by having at least one <a rel="nofollow" class="external text" href="https://addons.mozilla.org/firefox/language-tools/">dictionary</a> installed as a Firefox plugin. Notice that now you will also have a tab <b>Dictionaries</b> in <b>add-ons</b>.
+</p><p>Related questions on the <b>StackExchange</b> platform: <a rel="nofollow" class="external autonumber" href="https://stackoverflow.com/questions/26936792/change-firefox-spell-check-default-language/29446115">[5]</a>, <a rel="nofollow" class="external autonumber" href="https://stackoverflow.com/questions/21542515/change-default-language-on-firefox/29446353">[6]</a>, <a rel="nofollow" class="external autonumber" href="https://askubuntu.com/questions/184300/how-can-i-change-firefoxs-default-dictionary/576877">[7]</a>
+</p><p>Related bug reports: <a rel="nofollow" class="external text" href="https://bugzilla.mozilla.org/show_bug.cgi?id=776028">Bugzilla 776028</a>, <a rel="nofollow" class="external text" href="https://bugs.launchpad.net/ubuntu/+source/firefox/+bug/1026869">Ubuntu bug 1026869</a>
+</p>
+<h3><span class="mw-headline" id="Some_MathML_symbols_are_missing">Some MathML symbols are missing</span></h3>
+<p>You need some Math fonts, namely Latin Modern Math and STIX (see this MDN page: <a rel="nofollow" class="external autonumber" href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Fonts#Linux">[8]</a>), to display MathML correctly.
+</p><p>In Arch Linux, these fonts are provided by <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=texlive-core">texlive-core</a></span> <b>and</b> <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=texlive-fontsextra">texlive-fontsextra</a></span>, but they are not available to fontconfig by default. See <a href="/index.php/TeX_Live#Making_fonts_available_to_Fontconfig" title="TeX Live">TeX Live#Making fonts available to Fontconfig</a> for details. You can also try other <a href="/index.php/Fonts#Math" title="Fonts">Math fonts</a>.
+</p>
+<h3><span class="mw-headline" id="Tearing_video_in_fullscreen_mode">Tearing video in fullscreen mode</span></h3>
+<p>If you are using the Xorg Intel or Nouveau drivers and experience tearing video in fullscreen mode, try <a href="/index.php/Firefox_tweaks#Enable_OpenGL_Off-Main-Thread_Compositing_(OMTC)" class="mw-redirect" title="Firefox tweaks">Firefox tweaks#Enable OpenGL Off-Main-Thread Compositing (OMTC)</a>.
+</p>
+<h3><span class="mw-headline" id="Firefox_WebRTC_module_cannot_detect_a_microphone">Firefox WebRTC module cannot detect a microphone</span></h3>
+<p>WebRTC applications for instance <a rel="nofollow" class="external text" href="https://mozilla.github.io/webrtc-landing/gum_test.html">Firefox WebRTC getUserMedia test page</a> say that microphone cannot be found. Issue is reproducible for both ALSA or Pulseaudio setup. Firefox debug logs show the following error:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">$ NSPR_LOG_MODULES=MediaManager:5,GetUserMedia:5 firefox</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">...
+[Unnamed thread 0x7fd7c0654340]: D/GetUserMedia  VoEHardware:GetRecordingDeviceName: Failed 1</pre>
+<p>You can try setting <code>media.navigator.audio.full_duplex</code> property to <code>false</code> at <code>about:config</code> Firefox page and restart Firefox.
+</p><p>This can also help if you are using the PulseAudio <a href="/index.php/PulseAudio/Troubleshooting#Enable_Echo/Noise-Cancellation" title="PulseAudio/Troubleshooting">module-echo-cancel</a>, and Firefox does not recognise the virtual echo canceling source.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://www.mozilla.org/firefox/">Official website</a></li>
+<li><a rel="nofollow" class="external text" href="https://www.mozilla.org/">Mozilla Foundation</a></li>
+<li><a href="https://wiki.mozilla.org/Firefox" class="extiw" title="mozillawiki:Firefox">MozillaWiki:Firefox</a></li>
+<li><a rel="nofollow" class="external text" href="https://addons.mozilla.org/">Firefox Add-ons</a></li>
+<li><a rel="nofollow" class="external text" href="https://addons.mozilla.org/firefox/themes/">Firefox themes</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mozilla_Firefox" class="extiw" title="wikipedia:Mozilla Firefox">Wikipedia:Mozilla Firefox</a></li>
+<li><a rel="nofollow" class="external text" href="http://forums.mozillazine.org/">mozillaZine</a> unofficial forums</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20181223192035
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.080 seconds
+Real time usage: 0.083 seconds
+Preprocessor visited node count: 1212/1000000
+Preprocessor generated node count: 3317/1000000
+Post‐expand include size: 11217/2097152 bytes
+Template argument size: 5518/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   27.421      1 -total
+ 25.46%    6.981     98 Template:Ic
+ 10.95%    3.004      5 Template:App
+  8.49%    2.329      1 Template:Merge
+  8.05%    2.207     18 Template:Pkg
+  6.07%    1.665      1 Template:Related_articles_start
+  4.94%    1.355      8 Template:AUR
+  4.45%    1.219      3 Template:Note
+  4.15%    1.138      1 Template:META_Message
+  3.60%    0.987      1 Template:Hc
+-->
+</div>
+<!-- Saved in parser cache with key archwiki:pcache:idhash:3157-0!canonical and timestamp 20181223192035 and revision id 559230
+ -->
+</div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://wiki.archlinux.org/index.php?title=Firefox&amp;oldid=559230">https://wiki.archlinux.org/index.php?title=Firefox&amp;oldid=559230</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/index.php/Category:Web_browser" title="Category:Web browser">Web browser</a></li><li><a href="/index.php/Category:Mozilla" title="Category:Mozilla">Mozilla</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden category: <ul><li><a href="/index.php/Category:Pages_or_sections_flagged_with_Template:Merge" title="Category:Pages or sections flagged with Template:Merge">Pages or sections flagged with Template:Merge</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="/index.php?title=Special:CreateAccount&amp;returnto=Firefox" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=Firefox" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/index.php/Firefox" title="View the content page [c]" accesskey="c">Page</a></span></li><li id="ca-talk"><span><a href="/index.php/Talk:Firefox" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/index.php/Firefox">Read</a></span></li><li id="ca-viewsource" class="collapsible"><span><a href="/index.php?title=Firefox&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li><li id="ca-history" class="collapsible"><span><a href="/index.php?title=Firefox&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search ArchWiki" title="Search ArchWiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/index.php/Main_page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/index.php/Main_page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-Table-of-contents"><a href="/index.php/Table_of_contents">Table of contents</a></li><li id="n-portal"><a href="/index.php/Getting_involved" title="Various ways Archers can contribute to the community">Getting involved</a></li><li id="n-currentevents"><a href="/index.php/ArchWiki:News" title="The latest lowdown on the wiki">Wiki news</a></li><li id="n-randompage"><a href="/index.php/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Interaction" aria-labelledby="p-Interaction-label">
+			<h3 id="p-Interaction-label">Interaction</h3>
+			<div class="body">
+								<ul>
+					<li id="n-help"><a href="/index.php/Category:Help" title="Wiki navigation, reading, and editing help">Help</a></li><li id="n-Contributing"><a href="/index.php/ArchWiki:Contributing">Contributing</a></li><li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-Recent-talks"><a href="https://wiki.archlinux.org/index.php/Special:RecentChanges?namespace=0&amp;invert=1" rel="nofollow">Recent talks</a></li><li id="n-newpages"><a href="/index.php/Special:NewPages">New pages</a></li><li id="n-Statistics"><a href="/index.php/ArchWiki:Statistics">Statistics</a></li><li id="n-Requests"><a href="/index.php/ArchWiki:Requests">Requests</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/Firefox" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/Firefox" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/index.php?title=Firefox&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/index.php?title=Firefox&amp;oldid=559230" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/index.php?title=Firefox&amp;action=info" title="More information about this page">Page information</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">In other languages</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-ar"><a href="https://wiki.archlinux.org/index.php/Firefox_(%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9)" title="Firefox – العربية" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-cs"><a href="https://wiki.archlinux.org/index.php/Firefox_(%C4%8Cesky)" title="Firefox – čeština" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://wiki.archlinux.de/title/Firefox" title="Firefox – Deutsch" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://wiki.archlinux.org/index.php/Firefox_(Espa%C3%B1ol)" title="Firefox – español" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://wiki.archlinux.fr/Firefox" title="Firefox – français" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-it"><a href="https://wiki.archlinux.org/index.php/Firefox_(Italiano)" title="Firefox – italiano" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://wiki.archlinux.jp/index.php/Firefox" title="Firefox – 日本語" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-ko"><a href="https://wiki.archlinux.org/index.php/Firefox_(%ED%95%9C%EA%B5%AD%EC%96%B4)" title="Firefox – 한국어" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-ru"><a href="https://wiki.archlinux.org/index.php/Firefox_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)" title="Firefox – русский" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh-hans"><a href="https://wiki.archlinux.org/index.php/Firefox_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" title="Firefox – 中文（简体）‎" lang="zh-Hans" hreflang="zh-Hans" class="interlanguage-link-target">中文（简体）‎</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 16 December 2018, at 14:01.</li>
+								<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3 or later</a> unless otherwise noted.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="/index.php/ArchWiki:Privacy_policy" class="mw-redirect" title="ArchWiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="/index.php/ArchWiki:About" title="ArchWiki:About">About ArchWiki</a></li>
+								<li id="footer-places-disclaimer"><a href="/index.php/ArchWiki:General_disclaimer" title="ArchWiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+											</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.080","walltime":"0.083","ppvisitednodes":{"value":1212,"limit":1000000},"ppgeneratednodes":{"value":3317,"limit":1000000},"postexpandincludesize":{"value":11217,"limit":2097152},"templateargumentsize":{"value":5518,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   27.421      1 -total"," 25.46%    6.981     98 Template:Ic"," 10.95%    3.004      5 Template:App","  8.49%    2.329      1 Template:Merge","  8.05%    2.207     18 Template:Pkg","  6.07%    1.665      1 Template:Related_articles_start","  4.94%    1.355      8 Template:AUR","  4.45%    1.219      3 Template:Note","  4.15%    1.138      1 Template:META_Message","  3.60%    0.987      1 Template:Hc"]},"cachereport":{"timestamp":"20181223192035","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":67});});</script>
+	</body>
+<!-- Cached/compressed 20181224041250 -->
+</html>

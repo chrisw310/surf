@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="no-js hasSidebar hasPageActions hasBreadcrumb conceptual" lang="en-us" dir="ltr" data-authenticated="false" data-target="docs" x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Fork your repository - Azure Repos" />
+	<meta property="og:image" content="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/microsoft-header.png" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@docsmsft" />
+	<meta name="twitter:title" content="Fork your repository - Azure Repos" />
+	<meta name="twitter:description" content="Learn to isolate code using forks in Azure DevOps Services & TFS" />
+	<meta name="twitter:image" content="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/microsoft-header.png" />
+	<meta name="twitter:image:alt" content="Microsoft Logo" />
+
+		<meta name="MSHAttr.msprod" content="ms.prod:ALM">
+<meta name="ms.prodfamily" content="ALM">
+<meta name="author" content="steved0x">
+<meta name="ms.author" content="sdanie">
+<meta name="breadcrumb_path" content="../../breadcrumb/toc.json?view=vsts">
+<meta name="ms.version" content="ALM">
+<meta name="ms.topic" content="conceptual">
+<meta name="ms.date" content="09/10/2018">
+<meta name="ms.prod" content="devops">
+<meta name="uhfHeaderId" content="MSDocsHeader-AzureDevOps">
+<meta name="ms.assetid" content="d212c1ec-19b9-4d5a-bb7f-2a909f151180">
+<meta name="description" content="Learn to isolate code using forks in Azure DevOps Services &amp; TFS">
+<meta name="ms.manager" content="douge">
+<meta name="ms.technology" content="devops-code-git">
+<meta name="search.ms_sitename" content="Docs">
+<meta name="search.ms_docsetname" content="team-services">
+<meta name="locale" content="en-us">
+<meta name="site_name" content="Docs">
+<meta name="search.ms_product" content="MSDN">
+<meta name="depot_name" content="MSDN.team-services">
+<meta name="updated_at" content="2018-09-10 02:33 PM">
+<meta name="gitcommit" content="https://mseng.visualstudio.com/DefaultCollection/TechnicalContent/_git/vsts-docs-pr/commit/cd6f00635ed5a0794d1b4196cfdb16319dcb4f3a?path=%2fdocs%2frepos%2fgit%2fforks.md&amp;_a=contents">
+<meta name="original_content_git_url" content="https://mseng.visualstudio.com/DefaultCollection/TechnicalContent/_git/vsts-docs-pr?path=%2fdocs%2frepos%2fgit%2fforks.md&amp;version=GBlive&amp;_a=contents">
+<meta name="document_id" content="240f15e3-daf9-78f8-7423-cc17490ee401">
+<meta name="document_version_independent_id" content="3f1934d0-75c4-56b3-32d5-676b7fbe70b7">
+<meta name="monikers" content="tfs-2018">
+<meta name="monikers" content="azdevserver-2019">
+<meta name="monikers" content="vsts">
+<meta name="page_type" content="conceptual">
+<meta name="toc_rel" content="toc.json?view=vsts">
+<meta name="pdf_url_template" content="https://docs.microsoft.com/pdfstore/en-us/MSDN.team-services/{branchName}{pdfName}">
+<meta name="word_count" content="881">
+
+	<meta name="scope" content="Azure DevOps Services, Azure DevOps, VSTS, Visual Studio Team Services, TFS, Team Foundation Server" />
+<link href="https://docs.microsoft.com/en-us/azure/devops/repos/git/forks" rel="canonical">
+	<title>Fork your repository - Azure Repos | Microsoft Docs</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/css/2f45b070.site-ltr.css ">
+
+	<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/css/fbd113ac.conceptual.css ">
+
+
+	<script>
+	var msDocs = {
+		data:{
+			azureHeaderLocale: 'en-us',
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+
+			},
+			hasComments: true,
+			feedbackSystem: 'GitHub',
+			feedbackGitHubRepo: 'MicrosoftDocs/vsts-docs',
+			feedbackProductUrl: 'https://developercommunity.visualstudio.com/spaces/21/index.html',
+			contentGitUrl: 'https://github.com/MicrosoftDocs/vsts-docs/blob/master/docs/repos/git/forks.md'
+		},
+		functions:{},
+		settings:{
+			extendBreadcrumb: true,
+			enableUHFPPE: false
+		}
+	};
+	if (!('Promise' in window && 'resolve' in window.Promise && 'reject' in window.Promise && 'all' in window.Promise && 'race' in window.Promise)) {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/6ee34c01.bluebird.min.js"><\/script>');
+	}
+	if (typeof fetch !== 'function') {
+		document.write('<script src="/_themes/docs.theme/master/en-us/_themes/global/js/d9fc435c.fetch.min.js"><\/script>');
+	}
+	</script>
+
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+	<script src="/_themes/docs.theme/master/en-us/_themes/global/js/bcc7abe7.global.min.js"></script>
+
+<script>bazadebezolkohpepadr="386055707"</script><script type="text/javascript" src="https://docs.microsoft.com/akam/10/1702befb" defer></script></head>
+
+<body lang="en-us" dir="ltr">
+<div class="header-holder">
+		<div id="headerAreaHolder" data-bi-name="header">
+			<div id="uhf-placeholder"></div>
+		</div>
+	<div class="content-header uhf-container has-padding has-default-focus" data-bi-name="content-header">
+		<nav class="has-padding-none-mobile" data-bi-name="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList" role="navigation" aria-label="Breadcrumb">
+		<ul class="breadcrumbs">
+		</ul>
+		</nav>
+		<div class="content-header-controls exit-focus">
+			<button type="button" class="ap-collapse-behavior ap-expanded button" data-bi-name="ap-collapse">
+				<span class="icon"><span class="docon docon-exit-mode"></span></span>
+				<span>Exit focus mode</span>
+			</button>
+			
+		</div>
+		<div class="content-header-controls">
+			<button type="button" class="contents-button button" data-bi-name="contents-expand">
+				<span class="icon"><span class="docon docon-menu"></span></span>
+				<span>Contents</span>
+			</button>
+		</div>
+		<div class="action-bar">
+			<ul class="action-list">
+						<li>
+							<a href="#feedback" class="button is-text is-size-7 is-icon-only-touch" data-bi-name="comments">
+								<span class="icon">
+									<span class="docon docon-comment-lines" aria-hidden="true"></span>
+								</span>
+								<span class="action-item-text">Feedback</span>
+							</a>
+						</li>
+							<li id="contenteditbtn">
+									<a href="https://github.com/MicrosoftDocs/vsts-docs/blob/master/docs/repos/git/forks.md" class="button is-text is-icon-only-touch is-size-7" title="Edit This Document" data-bi-name="edit" data-original_content_git_url="https://mseng.visualstudio.com/DefaultCollection/TechnicalContent/_git/vsts-docs-pr?path=%2fdocs%2frepos%2fgit%2fforks.md&version=GBlive&_a=contents">
+									<span class="icon"> 
+										<span class="docon docon-edit-outline" aria-hidden="true"></span>
+									</span>
+									<span class="action-item-text">Edit</span>
+								</a>
+							</li>
+				<li>
+					<div class="sharing dropdown has-caret" auto-align>
+						<a href="#" class="dropdown-trigger button is-text is-size-7 is-icon-only-touch" aria-haspopup="true" aria-controls="sharing-menu" aria-expanded="false" title="Share This Document" data-bi-name="share">
+							<span class="icon">
+								<span class="docon docon-sharing" aria-hidden="true"></span>
+							</span>
+							<span class="action-item-text">Share</span>
+						</a>
+						<div class="dropdown-menu" id="sharing-menu" role="menu">
+							<ul data-bi-name="share-links">
+								<li><a class="share-twitter" data-bi-name="twitter">
+									<span class="icon">
+										<span class="docon docon-brand-twitter" aria-hidden="true"></span>
+									</span>
+									<span>Twitter</span></a></li>
+								<li><a class="share-linkedin" data-bi-name="linkedin">
+									<span class="icon">
+										<span class="docon docon-brand-linkedin" aria-hidden="true"></span>
+									</span>
+									<span>LinkedIn</span></a></li>
+								<li><a class="share-facebook" data-bi-name="facebook">
+									<span class="icon">
+										<span class="docon docon-brand-facebook" aria-hidden="true"></span>
+									</span>
+									<span>Facebook</span></a></li>
+								<li><a class="share-email" data-bi-name="email">
+									<span class="icon">
+										<span class="docon docon-mail-message-fill" aria-hidden="true"></span>
+									</span>
+									<span>Email</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<button class="toggle-theme button is-text is-size-7 is-icon-only-touch" aria-label="toggle-theme" data-bi-name="select-theme">
+						<span class="icon">
+							<span class="docon docon-sun"></span>
+						</span>
+						<span class="action-item-text">Theme</span>
+					</button>
+				</li>
+				<li class="is-unstyled-action-list-item">
+					<a class="docs-sign-in not-authenticated button is-text has-text-primary is-size-7" href="#">Sign in</a>
+					<div class="dropdown has-caret authenticated" auto-align>
+						<button class="dropdown-trigger button is-text is-size-7 is-icon-only-touch has-inner-focus" aria-label="Your Account" aria-haspopup="true" aria-controls="user-menu" aria-expanded="false">
+							<span class="image icon" aria-hidden="true">
+								<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+							</span>
+							<span class="is-truncated" data-profile-property="userName"></span>
+						</button>
+						<div class="dropdown-menu box" id="user-menu" role="menu">
+							<div class="media is-user-dir">
+								<div class="media-left">
+									<span class="image is-64x64" aria-hidden="true">
+										<img class="has-body-background-medium is-rounded" data-profile-property="avatarUrl">
+									</span>
+								</div>
+								<div class="media-content">
+									<p class="title has-margin-top-small">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="userName"></span>
+									</p>
+									<p class="subtitle">
+										<span class="is-truncated" style="max-width: 200px" data-profile-property="upn"></span>
+									</p>
+								</div>
+							</div>
+							<ul class="is-unstyled has-margin-none">
+								<li><a href="/profile" data-profile-property="profileUrl">Profile</a></li>
+								<li><a class="docs-sign-out" href="#">Sign out</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="contents-button" aria-label="Contents" data-bi-name="contents-expand-">
+				<span class="docon docon-editor-list-bullet"></span><span>Contents</span>
+			</button>
+		</div>
+	</div>
+	<div id="disclaimer-holder" class="disclaimer-holder"></div>
+	</div>
+
+	<div class="mainContainer uhf-container  has-top-padding  has-default-focus" data-bi-name="body">
+		
+		<div class="columns ">
+
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<div class="columns ">
+
+					<div id="page-actions" class="right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+							<nav id="side-doc-outline" class="doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="On page navigation">
+								<h3>In this article</h3>
+							</nav>
+					</div>
+
+
+				<div id="main-column" class="column  is-full is-four-fifths-desktop ">
+					
+					<main id="main" role="main" class="content" data-bi-name="content" lang="en-us" dir="ltr">
+
+
+
+						<h1 id="forks" sourcefile="repos/git/forks.md" sourcestartlinenumber="17" sourceendlinenumber="17">Forks</h1>
+
+						<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+							<li class="displayDate loading">
+								<time role="presentation" datetime="2018-09-10T00:00:00.000Z" data-article-date-source="ms.date">09/10/2018</time>
+							</li>
+								<li class="readingTime">
+									4 minutes to read
+								</li>
+							<li class="contributors-holder">
+								<span class="contributors-text">Contributors</span>
+								<ul class="contributors" data-bi-name="contributors">
+											<li><a href="https://github.com/steved0x" title="Steve Danielson" data-bi-name="contributorprofile"><img src="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/contributor.svg" data-src="https://github.com/steved0x.png?size=32" alt="Steve Danielson"></a></li>
+											<li><a href="https://github.com/DavidStaheli" title="David Staheli" data-bi-name="contributorprofile"><img src="https://docs.microsoft.com/_themes/docs.theme/master/en-us/_themes/images/contributor.svg" data-src="https://github.com/DavidStaheli.png?size=32" alt="David Staheli"></a></li>
+								</ul>
+							</li>
+
+						</ul>
+
+						<nav id="center-doc-outline" class="doc-outline is-hidden-desktop" data-bi-name="intopic toc" role="navigation" aria-label="On page navigation">
+							<h3>In this article</h3>
+						</nav>
+
+
+
+						<!-- <content> -->
+							
+<h4 id="azure-repos--tfs-2018">Azure Repos | TFS 2018</h4>
+<p>A fork is a complete copy of a repository, including all files, commits, and (optionally) branches.
+Forks are a great way to support an Inner Source workflow: you can create a
+fork to suggest changes to a project when you don&#39;t have permissions to 
+write to the original project directly.
+Once you&#39;re ready to share those changes, it&#39;s easy to contribute them back using <a href="pull-requests-overview?view=vsts" data-linktype="relative-path">pull requests</a>.</p>
+<h2 id="whats-in-a-fork">What&#39;s in a fork</h2>
+<p>A fork starts with all the contents of its upstream (original) repository.
+When you create a fork, you can choose whether to include all branches or limit to only the default branch.
+None of the permissions, policies, or build pipelines are applied.
+The new fork acts as if someone cloned the original repository, then pushed to a new, empty repository.
+After a fork has been created, new files, folders, and branches are not shared between the repositories unless a PR carries them along.</p>
+<h3 id="sharing-code-between-forks">Sharing code between forks</h3>
+<p>You can create PRs in either direction: from fork to upstream, or upstream to fork.
+The most common direction will be from fork to upstream.
+The destination repository&#39;s permissions, policies, builds, and work items will apply to the PR.</p>
+<h2 id="choosing-between-branches-and-forks">Choosing between branches and forks</h2>
+<p>For a very small team (2-5 developers), we recommend working in a single repo.
+Everyone should work in topic branches, and master should be protected with <a href="branch-policies-overview?view=vsts" data-linktype="relative-path">branch policies</a>.
+As your team grows larger, you may find yourself outgrowing this arrangement and prefer to switch to a forking workflow.</p>
+<p>If your repository has a large number of casual or infrequent committers (similar to an open source project), we recommend the forking workflow.
+Typically only core contributors to your project have direct commit rights into your repository.
+You should ask collaborators from outside this core set of people to work from a fork of the repository. 
+This will isolate their changes from yours until you&#39;ve had a chance to vet the work.</p>
+<h2 id="the-forking-workflow">The forking workflow</h2>
+<ol>
+<li><a href="#create-fork" data-linktype="self-bookmark">Create a fork</a></li>
+<li><a href="#clone-locally" data-linktype="self-bookmark">Clone it locally</a></li>
+<li><a href="#push-changes" data-linktype="self-bookmark">Make your changes locally and push them to a branch</a></li>
+<li><a href="#create-pr" data-linktype="self-bookmark">Create and complete a PR to upstream</a></li>
+<li><a href="#sync-fork" data-linktype="self-bookmark">Sync your fork to the latest from upstream</a></li>
+</ol>
+<p><a name="create-fork"></a></p>
+<h3 id="create-the-fork">Create the fork</h3>
+<ol>
+<li><p>Navigate to the repository to fork, and choose <strong>Fork</strong>.</p>
+</li>
+<li><p>Specify a name, and choose the project where you want the fork to be created. If the repository contains a lot of topic branches, we recommend you fork only the default branch.</p>
+</li>
+<li><p>Choose <strong>Fork</strong> to create the fork.</p>
+</li>
+</ol>
+<p><img src="_img/forks/create-new-fork.png?view=vsts" alt="Create new fork" data-linktype="relative-path"></p>
+<div class="NOTE"><p>Note</p><p>You must have the <a href="../../organizations/security/permissions?view=vsts#git-repository-object-level" data-linktype="relative-path">Create Repository</a> permission in your chosen project to create a fork.
+We recommend you create a dedicated project for forks where all contributors have the Create Repository permission. For an example of granting this permission, see <a href="../../organizations/security/set-git-tfvc-repository-permissions?view=vsts#set-git-repository-permissions" data-linktype="relative-path">Set Git repository permissions</a>.</p>
+</div>
+<p><a name="clone-locally"></a></p>
+<h3 id="clone-your-fork-locally">Clone your fork locally</h3>
+<p>Once your fork is ready, clone it using the <a href="clone?tabs=command-line&view=vsts" data-linktype="relative-path">command line</a> or an IDE like <a href="clone?view=vsts" data-linktype="relative-path">Visual Studio</a>.
+The fork will be your <code>origin</code> remote.</p>
+<p>For convenience, after cloning you&#39;ll want to add the upstream repository (where you forked from) as a remote named <code>upstream</code>.</p>
+<div class="tabGroup" id="tabgroup_cEIlZE705t">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_cEIlZE705t_visual-studio" role="tab" aria-controls="tabpanel_cEIlZE705t_visual-studio" data-tab="visual-studio" tabindex="0" aria-selected="true" data-linktype="self-bookmark">Visual Studio</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_cEIlZE705t_command-line" role="tab" aria-controls="tabpanel_cEIlZE705t_command-line" data-tab="command-line" tabindex="-1" data-linktype="self-bookmark">Command Line</a>
+</li>
+</ul>
+<section id="tabpanel_cEIlZE705t_visual-studio" role="tabpanel" data-tab="visual-studio">
+<p>To add your upstream repository in Visual Studio, follow these steps:</p>
+<ol>
+<li><p>Open the <strong>Settings</strong> page.</p>
+<p><img src="_img/forks/vs-te-home-settings.png?view=vsts" alt="Team Explorer home" data-linktype="relative-path"></p>
+</li>
+<li><p>Choose <strong>Repository Settings</strong>.</p>
+<p> <img src="_img/forks/vs-te-settings.png?view=vsts" alt="Team Explorer settings" data-linktype="relative-path"></p>
+</li>
+<li><p>Under <strong>Remotes</strong>, choose <strong>Add</strong>.</p>
+<p> <img src="_img/forks/vs-te-reposettings.png?view=vsts" alt="Repository settings" data-linktype="relative-path"></p>
+</li>
+<li><p>Add a new remote called <code>upstream</code>, using the Git clone URL of the repo you forked.</p>
+<p> <img src="_img/forks/vs-te-new-remote.png?view=vsts" alt="Dialog: add new remote" data-linktype="relative-path"></p>
+</li>
+<li><p>Select <strong>Save</strong> and the new remote is added and displayed in the repository settings.</p>
+<p> <img src="_img/forks/vs-te-upstream-added.png?view=vsts" alt="New remote added" data-linktype="relative-path"></p>
+</li>
+</ol>
+</section>
+<section id="tabpanel_cEIlZE705t_command-line" role="tabpanel" data-tab="command-line" aria-hidden="true" hidden="hidden">
+<p>On the command line, navigate to your repository, and type:</p>
+<p><code>git remote add upstream {upstream_url}</code></p>
+</section>
+</div>
+<p><a name="push-changes"></a></p>
+<h3 id="make-and-push-changes">Make and push changes</h3>
+<p>It&#39;s possible to work directly in <code>master</code> - after all, this fork is your personal copy of the repo.
+We recommend you still work in a topic branch, though.
+This allows you to maintain multiple, independent workstreams simultaneously.
+Also, it reduces confusion later when you want to sync changes into your fork.</p>
+<p>Make and commit your changes as you normally would.
+When you&#39;re done with the changes, push them to <code>origin</code> (your fork).</p>
+<p><a name="create-pr"></a></p>
+<h3 id="create-and-complete-a-pr">Create and complete a PR</h3>
+<p>Open a pull request from your fork to the upstream.
+All the policies, required reviewers, and builds will be applied in the upstream repo.
+Once all policies are satisfied, the PR can be completed and the changes become a permanent part of the upstream repo.</p>
+<p><img src="_img/forks/cross-repo-pr.png?view=vsts" alt="Pull request" data-linktype="relative-path"></p>
+<div class="IMPORTANT"><p>Important</p><p>Anyone with the <a href="../../organizations/security/permissions?view=vsts#git-repository-object-level" data-linktype="relative-path">Read</a> permission can open a PR to upstream.
+If a PR build pipeline is configured, the build will run against the code introduced in the fork.</p>
+</div>
+<p><a name="sync-fork"></a></p>
+<h3 id="sync-your-fork-to-latest">Sync your fork to latest</h3>
+<p>When you&#39;ve gotten your PR accepted into upstream, you&#39;ll want to make sure your fork reflects the latest state of the repo.
+We recommend rebasing on <code>upstream</code>&#39;s <code>master</code> branch (assuming <code>master</code> is the main development branch).</p>
+<div class="tabGroup" id="tabgroup_cEIlZE705t-1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_cEIlZE705t-1_visual-studio" role="tab" aria-controls="tabpanel_cEIlZE705t-1_visual-studio" data-tab="visual-studio" tabindex="0" aria-selected="true" data-linktype="self-bookmark">Visual Studio</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_cEIlZE705t-1_command-line" role="tab" aria-controls="tabpanel_cEIlZE705t-1_command-line" data-tab="command-line" tabindex="-1" data-linktype="self-bookmark">Command Line</a>
+</li>
+</ul>
+<section id="tabpanel_cEIlZE705t-1_visual-studio" role="tabpanel" data-tab="visual-studio">
+<p>In Visual Studio, you can use the <strong>Synchronization</strong> page to fetch and rebase.</p>
+<ol>
+<li><p>Open the <strong>Synchronization</strong> page in Team Explorer.</p>
+</li>
+<li><p>Fetch from <code>upstream</code>.</p>
+<p> <img src="_img/forks/vs-te-sync.png?view=vsts" alt="Team Explorer sync" data-linktype="relative-path"></p>
+</li>
+<li><p>Open the <strong>Branches</strong> page in Team Explorer. Make sure <code>master</code> is checked out.</p>
+<p> <img src="_img/forks/vs-te-master-checked-out.png?view=vsts" alt="Check out master branch" data-linktype="relative-path"></p>
+</li>
+<li><p>Rebase <code>master</code> onto <code>upstream/master</code>.</p>
+<p> <img src="_img/forks/vs-te-rebase.png?view=vsts" alt="Rebase" data-linktype="relative-path"></p>
+</li>
+</ol>
+<p>Now you&#39;re all set to start your next feature on a new topic branch.</p>
+</section>
+<section id="tabpanel_cEIlZE705t-1_command-line" role="tabpanel" data-tab="command-line" aria-hidden="true" hidden="hidden">
+<p>On the command line, navigate to your repository and run:</p>
+<pre><code>git fetch upstream master
+git rebase upstream/master
+git push origin
+</code></pre></section>
+</div>
+<p>The forking workflow lets you isolate changes from the main repository until you&#39;re ready to integrate them.
+When you&#39;re ready, integrating code is as easy as completing a pull request.</p>
+
+						<!-- </content> -->
+							
+						</main>
+
+						<!-- feedback section -->
+
+
+				
+<section class="feedback-section" data-bi-name="feedback-section">
+	<h2 id="feedback">Feedback</h2>
+
+	<div class="alert choose-feedback-type">
+		<p>
+We'd love to hear your thoughts. Choose the type you'd like to provide:		</p>
+
+		<div class="choose-feedback-buttons">
+			<a class="button feedback-type-product has-margin-bottom-small" href="https://developercommunity.visualstudio.com/spaces/21/index.html" data-bi-name="product-feedback">
+				<span>Product feedback</span>
+				<span class="icon docon docon-navigate-external" aria-hidden="true"></span>
+			</a>
+
+			<div class="field has-addons is-inline-flex has-margin-bottom-small">
+				<div class="control has-margin-top-none has-margin-bottom-none">
+					<button class="button feedback-sign-in-button has-text-wrap" data-bi-name="feedback-sign-in">
+						<span class="icon docon docon-brand-github" aria-hidden="true"></span>
+						<span>
+							Sign in to give documentation feedback						</span>
+					</button>
+				</div>
+				<div class="control dropdown has-caret has-margin-top-none has-margin-bottom-none" auto-align>
+					<button class="button dropdown-trigger has-text-wrap" aria-haspopup="true" aria-expanded="false" aria-controls="fbm0"
+						aria-label="Expand documentation feedback menu" data-bi-name="documentation-feedback-menu">
+						<span class="icon docon docon-chevron-down-light" aria-hidden="true"></span>
+					</button>
+					<div class="dropdown-menu documentation-feedback-menu" id="fbm0" role="menu">
+						You may also leave feedback <a data-bi-name="create-issue-on-github" href="{0}">directly on GitHub <span class="docon docon-navigate-external" aria-hidden="true"></span></a>.					</div>
+				</div>
+			</div>
+
+			<div class="field has-addons is-inline-flex has-margin-bottom-small" hidden>
+				<div class="control has-margin-top-none has-margin-bottom-none">
+					<button class="button feedback-form-toggle" aria-expanded="false" aria-controls="feedback-form"
+						data-bi-name="documentation-feedback">
+Content feedback					</button>
+				</div>
+				<div class="control dropdown has-caret has-margin-top-none has-margin-bottom-none" auto-align>
+					<button class="button dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="fbm1"
+						aria-label="Expand documentation feedback menu" data-bi-name="documentation-feedback-menu">
+						<span class="icon docon docon-chevron-down-light" aria-hidden="true"></span>
+					</button>
+					<div class="dropdown-menu documentation-feedback-menu" id="fbm1" role="menu">
+						You may also leave feedback <a data-bi-name="create-issue-on-github" href="{0}">directly on GitHub <span class="docon docon-navigate-external" aria-hidden="true"></span></a>.					</div>
+				</div>
+			</div>
+		</div>
+		<p class="has-margin-top-none"><small>Our new feedback system is built on GitHub Issues. Read about this change in <a href="https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs">our blog post</a>.</small></p>
+	</div>
+
+	<form class="feedback-form" id="feedback-form" accept-charset="UTF-8" autocomplete="off" action="javascript:" hidden>
+		<h3 class="feedback-form-heading current-user">
+			<img class="avatar" alt="Avatar" width="36" height="36" aria-hidden="true">
+			<span class="username" aria-hidden="true"></span>
+			<span class="visually-hidden">Liquid error: Can't find the localized string giveDocumentationFeedback for template Conceptual.</span>
+		</h3>
+
+		<label>
+			<span class="visually-hidden">Issue Title</span>
+			<input class="input is-radiusless has-margin-bottom-small" name="title" type="text" placeholder="Issue Title" required pattern=".*\w.*">
+		</label>
+		<label>
+			<span class="visually-hidden">Leave a comment</span>
+			<textarea name="body" placeholder="Leave a comment" class="textarea is-radiusless" required></textarea>
+		</label>
+
+		<div class="action-container">
+			<button class="button is-primary" type="submit" name="submit">Submit feedback</button>
+		</div>
+	</form>
+
+	<div class="feedback-status alert is-loading" role="alert">
+		<p>Loading feedback...</p>
+	</div>
+
+	<div class="feedback-tab-group tabGroup" data-tab-group-independent hidden>
+		<ul role="tablist">
+			<li role="presentation">
+				<a href="#tabpanel-issues-open" role="tab" aria-controls="tabpanel-issues-open" data-tab="issues-open" aria-label="Open Issues"></a>
+			</li>
+			<li role="presentation">
+				<a href="#tabpanel-issues-closed" role="tab" aria-controls="tabpanel-issues-closed" data-tab="issues-closed"
+				 aria-label="Closed Issues"></a>
+			</li>
+		</ul>
+		<section id="tabpanel-issues-open" role="tabpanel" data-tab="issues-open">
+			<div class="no-issues-placeholder">There are no open issues</div>
+			<ul class="github-issues-list" aria-label="Open Issues"></ul>
+		</section>
+		<section id="tabpanel-issues-closed" role="tabpanel" data-tab="issues-closed">
+			<div class="no-issues-placeholder">There are no closed issues</div>
+			<ul class="github-issues-list" aria-label="Closed Issues"></ul>
+		</section>
+	</div>
+	<div class="action-container">
+		<a class="view-on-github" href="https://github.com/MicrosoftDocs/vsts-docs/issues" data-bi-name="view-on-github"
+		 hidden>
+			<span class="docon docon-brand-github" aria-hidden="true"></span>
+			<span>View on GitHub</span>
+			<span class="docon docon-navigate-external" aria-hidden="true"></span>
+		</a>
+	</div>
+</section>						<!-- end feedback section -->
+
+						<div class="footerContainer is-visible-interactive has-default-focus ">
+<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text"></span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>						</div>
+					</div>
+
+					<!--end of div.columns -->
+
+				</div>
+			
+			<!--end of .primary-holder -->
+			</section>
+
+				<div id="left-container" class="left-container column is-one-third-tablet is-one-quarter-desktop">
+					<nav class="sidebar" id="sidebar" data-bi-name="left toc" role="navigation" aria-label="Main Navigation">
+						<button class="sidebar-header" type="button" aria-label="Close" data-bi-name="contents-collapse">
+							<span>Contents</span>
+							<span class="docon docon-navigate-close" aria-hidden="true"></span>
+						</button>
+						<div id="sidebarContent">
+							<div class="filterHolder">
+							</div>
+							<nav class="toc"></nav>
+							<div class="pdf-download-holder"></div>
+						</div>
+					</nav>
+				</div>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small"></span><span class="local-selector-link-text"></span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>	</div>
+
+	<div class="action-panel has-default-focus"></div>
+<noscript><img src="https://docs.microsoft.com/akam/10/pixel_1702befb?a=dD01ZDZlZWE5ZmQ5OGY4N2IwZDA4M2VhMmU2YWFlOTE2YTQ5YWY5Yzk4JmpzPW9mZg==" style="visibility: hidden; position: absolute; left: -999px; top: -999px;" /></noscript></body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Intel graphics - ArchWiki</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Intel_graphics","wgTitle":"Intel graphics","wgCurRevisionId":559449,"wgRevisionId":559449,"wgArticleId":4788,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Sections flagged with Template:Remove","Graphics","X server"],"wgBreakFrames":false,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Intel_graphics","wgRelevantArticleId":4788,"wgRequestId":"d5f5806b1674f63bb30d7d75","wgIsProbablyEditable":false,"wgRelevantPageIsProbablyEditable":false,"wgRestrictionEdit":[],"wgRestrictionMove":[]});mw.loader.state({"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","site":"ready","user.options":"ready","user.tokens":"loading","zzz.ext.archLinux.styles":"ready","skins.vector.styles.responsive":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.sectionAnchor":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.tokens@1pa52qv",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["mediawiki.page.startup","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.sectionAnchor%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cskins.vector.styles.responsive%7Czzz.ext.archLinux.styles&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/load.php?debug=false&amp;lang=en&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/load.php?debug=false&amp;lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.31.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="ArchWiki (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.archlinux.org/api.php?action=rsd"/>
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html"/>
+<link rel="alternate" type="application/atom+xml" title="ArchWiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom"/>
+<!--[if lt IE 9]><script src="/load.php?debug=false&amp;lang=en&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Intel_graphics rootpage-Intel_graphics skin-vector action-view"><div id="archnavbar" class="noprint">
+    <div id="archnavbarlogo">
+        <p><a id="logo" href="https://www.archlinux.org/"></a></p>
+    </div>
+    <div id="archnavbarmenu">
+        <ul id="archnavbarlist">
+                        <li id="anb-home"><a href="https://www.archlinux.org/">Home</a></li>            <li id="anb-packages"><a href="https://www.archlinux.org/packages/">Packages</a></li>            <li id="anb-forums"><a href="https://bbs.archlinux.org/">Forums</a></li>            <li id="anb-wiki" class="anb-selected"><a href="https://wiki.archlinux.org/">Wiki</a></li>            <li id="anb-bugs"><a href="https://bugs.archlinux.org/">Bugs</a></li>            <li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li>            <li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li>            <li id="anb-download"><a href="https://www.archlinux.org/download/">Download</a></li>        </ul>
+    </div>
+</div>
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="en">Intel graphics</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">From ArchWiki</div>				<div id="contentSub"></div>
+								<div id="jump-to-nav" class="mw-jump">
+					Jump to:					<a href="#mw-head">navigation</a>, 					<a href="#p-search">search</a>
+				</div>
+				<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><div class="archwiki-template-meta-related-articles-start"><p>Related articles</p><ul>
+<li><a href="/index.php/Intel_GMA_3600" title="Intel GMA 3600">Intel GMA 3600</a></li>
+<li><a href="/index.php/Xorg" title="Xorg">Xorg</a></li>
+<li><a href="/index.php/Kernel_mode_setting" title="Kernel mode setting">Kernel mode setting</a></li>
+<li><a href="/index.php/Xrandr" title="Xrandr">Xrandr</a></li>
+<li><a href="/index.php/Hybrid_graphics" title="Hybrid graphics">Hybrid graphics</a></li>
+<li><a href="/index.php/Vulkan" title="Vulkan">Vulkan</a></li>
+</ul></div>
+<p>Since Intel provides and supports open source drivers, Intel graphics are essentially plug-and-play.
+</p><p>For a comprehensive list of Intel GPU models and corresponding chipsets and CPUs, see <a href="https://en.wikipedia.org/wiki/List_of_Intel_graphics_processing_units" class="extiw" title="wikipedia:List of Intel graphics processing units">Wikipedia:List of Intel graphics processing units</a>.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> PowerVR-based graphics (<a href="/index.php/Intel_GMA_3600" title="Intel GMA 3600">GMA 3600</a> series) are not supported by open source drivers.</div>
+<div id="toc" class="toc"><div class="toctitle" lang="en" dir="ltr"><h2>Contents</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Installation"><span class="tocnumber">1</span> <span class="toctext">Installation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Loading"><span class="tocnumber">2</span> <span class="toctext">Loading</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="#Enable_early_KMS"><span class="tocnumber">2.1</span> <span class="toctext">Enable early KMS</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Enable_GuC_/_HuC_firmware_loading"><span class="tocnumber">2.2</span> <span class="toctext">Enable GuC / HuC firmware loading</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-5"><a href="#Xorg_configuration"><span class="tocnumber">3</span> <span class="toctext">Xorg configuration</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Module-based_options"><span class="tocnumber">4</span> <span class="toctext">Module-based options</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="#Framebuffer_compression_(enable_fbc)"><span class="tocnumber">4.1</span> <span class="toctext">Framebuffer compression (enable_fbc)</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Fastboot"><span class="tocnumber">4.2</span> <span class="toctext">Fastboot</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Intel_GVT-g_Graphics_Virtualization_Support"><span class="tocnumber">4.3</span> <span class="toctext">Intel GVT-g Graphics Virtualization Support</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-10"><a href="#Tips_and_tricks"><span class="tocnumber">5</span> <span class="toctext">Tips and tricks</span></a>
+<ul>
+<li class="toclevel-2 tocsection-11"><a href="#Setting_scaling_mode"><span class="tocnumber">5.1</span> <span class="toctext">Setting scaling mode</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="#Hardware_accelerated_H.264_decoding_on_GMA_4500"><span class="tocnumber">5.2</span> <span class="toctext">Hardware accelerated H.264 decoding on GMA 4500</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="#Setting_brightness_and_gamma"><span class="tocnumber">5.3</span> <span class="toctext">Setting brightness and gamma</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="#Troubleshooting"><span class="tocnumber">6</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class="toclevel-2 tocsection-15"><a href="#Tearing"><span class="tocnumber">6.1</span> <span class="toctext">Tearing</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#Disable_Vertical_Synchronization_(VSYNC)"><span class="tocnumber">6.2</span> <span class="toctext">Disable Vertical Synchronization (VSYNC)</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#SNA_issues"><span class="tocnumber">6.3</span> <span class="toctext">SNA issues</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#DRI3_issues"><span class="tocnumber">6.4</span> <span class="toctext">DRI3 issues</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Font_and_screen_corruption_in_GTK+_applications_(missing_glyphs_after_suspend/resume)"><span class="tocnumber">6.5</span> <span class="toctext">Font and screen corruption in GTK+ applications (missing glyphs after suspend/resume)</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Blank_screen_during_boot,_when_&quot;Loading_modules&quot;"><span class="tocnumber">6.6</span> <span class="toctext">Blank screen during boot, when "Loading modules"</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#X_freeze/crash_with_intel_driver"><span class="tocnumber">6.7</span> <span class="toctext">X freeze/crash with intel driver</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Baytrail_complete_freeze"><span class="tocnumber">6.8</span> <span class="toctext">Baytrail complete freeze</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Adding_undetected_resolutions"><span class="tocnumber">6.9</span> <span class="toctext">Adding undetected resolutions</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="#Weathered_colors_(color_range_problem)"><span class="tocnumber">6.10</span> <span class="toctext">Weathered colors (color range problem)</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="#Backlight_is_not_adjustable"><span class="tocnumber">6.11</span> <span class="toctext">Backlight is not adjustable</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="#Corruption/Unresponsiveness_in_Chromium_and_Firefox"><span class="tocnumber">6.12</span> <span class="toctext">Corruption/Unresponsiveness in Chromium and Firefox</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="#Kernel_crashing_w/kernels_4.0+_on_Broadwell/Core-M_chips"><span class="tocnumber">6.13</span> <span class="toctext">Kernel crashing w/kernels 4.0+ on Broadwell/Core-M chips</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="#Lag_in_Windows_guests"><span class="tocnumber">6.14</span> <span class="toctext">Lag in Windows guests</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="#Screen_flickering"><span class="tocnumber">6.15</span> <span class="toctext">Screen flickering</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="#OpenGL_2.1_with_i915_driver"><span class="tocnumber">6.16</span> <span class="toctext">OpenGL 2.1 with i915 driver</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="#KMS_Issue:_console_is_limited_to_small_area"><span class="tocnumber">6.17</span> <span class="toctext">KMS Issue: console is limited to small area</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-32"><a href="#See_also"><span class="tocnumber">7</span> <span class="toctext">See also</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Installation">Installation</span></h2>
+<p><a href="/index.php/Install" class="mw-redirect" title="Install">Install</a> the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=mesa">mesa</a></span> package, which provides the DRI driver for 3D acceleration.
+</p>
+<ul><li>For 32-bit application support, also install the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=lib32-mesa">lib32-mesa</a></span> package from the <a href="/index.php/Multilib" class="mw-redirect" title="Multilib">multilib</a> repository.</li>
+<li>For the DDX driver (which provides 2D acceleration in <a href="/index.php/Xorg" title="Xorg">Xorg</a>), <a href="/index.php/Install" class="mw-redirect" title="Install">install</a> the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=xf86-video-intel">xf86-video-intel</a></span> package. (Often not recommended, see note below.)</li>
+<li>For <a href="/index.php/Vulkan" title="Vulkan">Vulkan</a> support (<i>Ivy Bridge</i> and newer), install the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=vulkan-intel">vulkan-intel</a></span> package.</li></ul>
+<p>Also see <a href="/index.php/Hardware_video_acceleration" title="Hardware video acceleration">Hardware video acceleration</a>.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Some (<a rel="nofollow" class="external text" href="http://www.phoronix.com/scan.php?page=news_item&amp;px=Ubuntu-Debian-Abandon-Intel-DDX">Debian &amp; Ubuntu</a>, <a rel="nofollow" class="external text" href="http://www.phoronix.com/scan.php?page=news_item&amp;px=Fedora-Xorg-Intel-DDX-Switch">Fedora</a>, <a rel="nofollow" class="external text" href="https://community.kde.org/Plasma/5.9_Errata#Intel_GPUs">KDE</a>) recommend not installing the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=xf86-video-intel">xf86-video-intel</a></span> driver, and instead falling back on the modesetting driver for fourth generation and newer GPUs. See <a rel="nofollow" class="external autonumber" href="https://www.reddit.com/r/archlinux/comments/4cojj9/it_is_probably_time_to_ditch_xf86videointel/">[1]</a>, <a rel="nofollow" class="external autonumber" href="http://www.phoronix.com/scan.php?page=article&amp;item=intel-modesetting-2017&amp;num=1">[2]</a>, <a href="/index.php/Xorg#Installation" title="Xorg">Xorg#Installation</a>, and <span class="plainlinks archwiki-template-man" title="$ man 4 modesetting"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/modesetting.4">modesetting(4)</a></span>. However, the modesetting driver can cause problems such as <a rel="nofollow" class="external text" href="https://bugs.chromium.org/p/chromium/issues/detail?id=370022">Chromium Issue 370022</a>. Also, the modesetting driver will not be benefited by Intel GuC/HuC/DMC firmware.</div>
+<h2><span class="mw-headline" id="Loading">Loading</span></h2>
+<p>The Intel kernel module should load fine automatically on system boot.
+</p><p>If it does not happen, then:
+</p>
+<ul><li>Make sure you do <b>not</b> have <code>nomodeset</code> or <code>vga=</code> as a <a href="/index.php/Kernel_parameter" class="mw-redirect" title="Kernel parameter">kernel parameter</a>, since Intel requires kernel mode-setting.</li>
+<li>Also, check that you have not disabled Intel by using any modprobe blacklisting within <code>/etc/modprobe.d/</code> or <code>/usr/lib/modprobe.d/</code>.</li></ul>
+<h3><span class="mw-headline" id="Enable_early_KMS">Enable early KMS</span></h3>
+<p><a href="/index.php/Kernel_mode_setting" title="Kernel mode setting">Kernel mode setting</a> (KMS) is supported by Intel chipsets that use the i915 DRM driver and is mandatory and enabled by default.
+</p><p>Refer to <a href="/index.php/Kernel_mode_setting#Early_KMS_start" title="Kernel mode setting">Kernel mode setting#Early KMS start</a> for instructions on how to enable KMS as soon as possible at the boot process.
+</p>
+<h3><span id="Enable_GuC_.2F_HuC_firmware_loading"></span><span class="mw-headline" id="Enable_GuC_/_HuC_firmware_loading">Enable GuC / HuC firmware loading</span></h3>
+<div class="archwiki-template-box archwiki-template-box-warning"><strong>Warning:</strong> Setting <code>enable_gvt=1</code> when GuC/HuC is enabled is not supported as of linux 4.18.8. The i915 module would fail to initialize as shown in system journal.
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">$ journalctl</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">... kernel: [drm:intel_gvt_init [i915]] *ERROR* i915 GVT-g loading failed due to Graphics virtualization is not yet supported with GuC submission
+... kernel: i915 0000:00:02.0: [drm:i915_driver_load [i915]] Device initialization failed (-5)
+... kernel: i915: probe of 0000:00:02.0 failed with error -5
+... kernel: snd_hda_intel 0000:00:1f.3: failed to add i915 component master (-19)
+</pre></div>
+<p>For Skylake and newer processors, some video features (e.g. CBR rate control on SKL low-power encoding mode) may require the use of an updated GPU firmware, which is currently (as of 4.16) not enabled by default. Enabling GuC/HuC firmware loading can cause issues on some systems; disable it if you experience freezing (for example, after resuming from hibernation).
+</p><p>It is necessary to add <code>i915.enable_guc=3</code> to the <a href="/index.php/Kernel_parameters" title="Kernel parameters">kernel parameters</a> to enable both GuG and HuC firmware loading. Alternatively, if the <a href="/index.php/Initramfs" class="mw-redirect" title="Initramfs">initramfs</a> already includes the <code>i915</code> module (see <a href="/index.php/Kernel_mode_setting#Early_KMS_start" title="Kernel mode setting">Kernel mode setting#Early KMS start</a>), you can set these options through a file in <code>/etc/modprobe.d/</code>, e.g.:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/modprobe.d/i915.conf</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">options i915 enable_guc=3</pre>
+<p>You can verify both are enabled by using <i>dmesg</i>:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">$ dmesg</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">[drm] HuC: Loaded firmware i915/kbl_huc_ver02_00_1810.bin (version 2.0)
+[drm] GuC: Loaded firmware i915/kbl_guc_ver9_39.bin (version 9.39)
+i915 0000:00:02.0: GuC firmware version 9.39
+i915 0000:00:02.0: GuC submission enabled
+i915 0000:00:02.0: HuC enabled</pre>
+<p>Alternatively, check using:
+</p>
+<pre># cat /sys/kernel/debug/dri/0/i915_huc_load_status
+# cat /sys/kernel/debug/dri/0/i915_guc_load_status
+</pre>
+<h2><span class="mw-headline" id="Xorg_configuration">Xorg configuration</span></h2>
+<p>There may be no need for any configuration to run <a href="/index.php/Xorg" title="Xorg">Xorg</a>.
+</p><p>However, if <a href="/index.php/Xorg" title="Xorg">Xorg</a> does not start, and to take advantage of some driver options, you can create an Xorg configuration file similar to the one below:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/X11/xorg.conf.d/20-intel.conf</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">Section "Device"
+  Identifier  "Intel Graphics"
+  Driver      "intel"
+EndSection</pre>
+<p>Additional options are added by the user on new lines below <code>Driver</code>.
+For the full list of options, see the <span class="plainlinks archwiki-template-man" title="$ man 4 intel"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/intel.4">intel(4)</a></span> man page.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> 
+<ul><li>You may need to indicate <code>Option "AccelMethod"</code> when creating a configuration file, even just to set it to the default method (currently <code>"sna"</code>); otherwise, X may crash.</li>
+<li>You might need to add more device sections than the one listed above. This will be indicated where necessary.</li></ul></div>
+<h2><span class="mw-headline" id="Module-based_options">Module-based options</span></h2>
+<p>The <code>i915</code> kernel module allows for configuration via <a href="/index.php/Kernel_modules#Setting_module_options" class="mw-redirect" title="Kernel modules">module options</a>. Some of the module options impact power saving.
+</p><p>A list of all options along with short descriptions and default values can be generated with the following command:
+</p>
+<pre>$ modinfo -p i915
+</pre>
+<p>To check which options are currently enabled, run
+</p>
+<pre># systool -m i915 -av
+</pre>
+<p>You will note that many options default to -1, resulting in per-chip powersaving defaults. It is however possible to configure more aggressive powersaving by using <a href="/index.php/Kernel_modules#Setting_module_options" class="mw-redirect" title="Kernel modules">module options</a>.
+</p>
+<div class="archwiki-template-box archwiki-template-box-warning"><strong>Warning:</strong> Diverting from the defaults will mark the kernel as <a rel="nofollow" class="external text" href="https://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=fc9740cebc3ab7c65f3c5f6ce0caf3e4969013ca">tainted</a> from Linux 3.18 onwards. This basically implies using other options than the per-chip defaults is considered experimental and not supported by the developers.</div>
+<h3><span id="Framebuffer_compression_.28enable_fbc.29"></span><span class="mw-headline" id="Framebuffer_compression_(enable_fbc)">Framebuffer compression (enable_fbc)</span></h3>
+<p>Making use of Framebuffer compression (FBC) can reduce power consumption while reducing memory bandwidth needed for screen refreshes.
+</p><p>To enable FBC, use <code>i915.enable_fbc=1</code> as <a href="/index.php/Kernel_parameter" class="mw-redirect" title="Kernel parameter">kernel parameter</a> or set in <code>/etc/modprobe.d/i915.conf</code>:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/modprobe.d/i915.conf</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">options i915 enable_fbc=1
+</pre>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Framebuffer compression may be unreliable or unavailable on Intel GPU generations before Sandy Bridge (generation 6). This results in messages logged to the system journal similar to this one:
+<pre>kernel: drm: not enough stolen space for compressed buffer, disabling.
+</pre>
+<p>Enabling frame buffer compression on pre-Sandy Bridge CPUs results in endless error messages:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">$ dmesg</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">[ 2360.475430] [drm] not enough stolen space for compressed buffer (need 4325376 bytes), disabling
+[ 2360.475437] [drm] hint: you may be able to increase stolen memory size in the BIOS to avoid this
+</pre>
+The solution is to disable frame buffer compression which will imperceptibly increase power consumption (around 0.06 W). In order to disable it add <code>i915.enable_fbc=0</code> to the kernel line parameters. More information on the results of disabled compression can be found <a rel="nofollow" class="external text" href="http://kernel.ubuntu.com/~cking/power-benchmarking/background-colour-and-framebuffer-compression/">here</a>.</div>
+<h3><span class="mw-headline" id="Fastboot">Fastboot</span></h3>
+<p>The goal of Intel Fastboot is to preserve the frame-buffer as setup by the BIOS or <a href="/index.php/Bootloader" class="mw-redirect" title="Bootloader">bootloader</a> to avoid any flickering until <a href="/index.php/Xorg" title="Xorg">Xorg</a> has started <a rel="nofollow" class="external autonumber" href="https://www.phoronix.com/scan.php?page=news_item&amp;px=MTEwNzc">[3]</a>.
+</p><p>To enable fastboot, set <code>i915.fastboot=1</code> as <a href="/index.php/Kernel_parameter" class="mw-redirect" title="Kernel parameter">kernel parameter</a> or set in <code>/etc/modprobe.d/i915.conf</code>:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/modprobe.d/i915.conf</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">options i915 fastboot=1
+</pre>
+<div class="archwiki-template-box archwiki-template-box-warning"><strong>Warning:</strong> This parameter is not enabled by default and may cause issues on some systems <a rel="nofollow" class="external autonumber" href="https://www.phoronix.com/scan.php?page=news_item&amp;px=i915-Fastboot-Default-2017">[4]</a>.</div>
+<h3><span class="mw-headline" id="Intel_GVT-g_Graphics_Virtualization_Support">Intel GVT-g Graphics Virtualization Support</span></h3>
+<p>To enable GVT support, mainly used for allowing <a href="/index.php/Xen" title="Xen">Xen</a>/<a href="/index.php/KVM" title="KVM">KVM</a> guests to access the Intel GPU of the host, the <code>enable_gvt=1</code> has to be set:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/modprobe.d/i915.conf</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">options i915 enable_gvt=1
+</pre>
+<h2><span class="mw-headline" id="Tips_and_tricks">Tips and tricks</span></h2>
+<h3><span class="mw-headline" id="Setting_scaling_mode">Setting scaling mode</span></h3>
+<p>This can be useful for some full screen applications:
+</p>
+<pre>$ xrandr --output LVDS1 --set PANEL_FITTING <i>param</i>
+</pre>
+<p>where <code><i>param</i></code> can be:
+</p>
+<ul><li><code>center</code>: resolution will be kept exactly as defined, no scaling will be made,</li>
+<li><code>full</code>: scale the resolution so it uses the entire screen or</li>
+<li><code>full_aspect</code>: scale the resolution to the maximum possible but keep the aspect ratio.</li></ul>
+<p>If it does not work, try:
+</p>
+<pre>$ xrandr --output LVDS1 --set "scaling mode" <i>param</i>
+</pre>
+<p>where <code><i>param</i></code> is one of <code>"Full"</code>, <code>"Center"</code> or <code>"Full aspect"</code>.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> This option currently does not work for external displays (e.g. VGA, DVI, HDMI, DP). <a rel="nofollow" class="external autonumber" href="https://bugs.freedesktop.org/show_bug.cgi?id=90989">[5]</a></div>
+<h3><span class="mw-headline" id="Hardware_accelerated_H.264_decoding_on_GMA_4500">Hardware accelerated H.264 decoding on GMA 4500</span></h3>
+<p>The <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=libva-intel-driver">libva-intel-driver</a></span> package only provides hardware accelerated MPEG-2 decoding for GMA 4500 series GPUs. The H.264 decoding support is maintained in a separated g45-h264 branch, which can be used by installing <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/libva-intel-driver-g45-h264/">libva-intel-driver-g45-h264</a></span><sup><small>AUR</small></sup> package. Note however that this support is experimental and its development has been abandoned. Using the VA-API with this driver on a GMA 4500 series GPU will offload the CPU but may not result in as smooth a playback as non-accelerated playback. Tests using mplayer showed that using vaapi to play back an H.264 encoded 1080p video halved the CPU load (compared to the XV overlay) but resulted in very choppy playback, while 720p worked reasonably well <a rel="nofollow" class="external autonumber" href="https://bbs.archlinux.org/viewtopic.php?id=150550">[6]</a>. This is echoed by other experiences <a rel="nofollow" class="external autonumber" href="http://www.emmolution.org/?p=192&amp;cpage=1#comment-12292">[7]</a>.
+Setting the preallocated video ram size higher in bios results in much better hardware decoded playback. Even 1080p h264 works well if this is done.
+Smooth playback (1080p/720p) works also with <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/mpv-git/">mpv-git</a></span><sup><small>AUR</small></sup> in combination with <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/ffmpeg-git/">ffmpeg-git</a></span><sup><small>AUR</small></sup> and <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://aur.archlinux.org/packages/libva-intel-driver-g45-h264/">libva-intel-driver-g45-h264</a></span><sup><small>AUR</small></sup>. With MPV and the Firefox plugin "Watch with MPV"<a rel="nofollow" class="external autonumber" href="https://addons.mozilla.org/de/firefox/addon/watch-with-mpv/">[8]</a> it is possible to watch hardware accelerated YouTube videos.
+</p>
+<h3><span class="mw-headline" id="Setting_brightness_and_gamma">Setting brightness and gamma</span></h3>
+<p>See <a href="/index.php/Backlight" title="Backlight">Backlight</a>.
+</p>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<h3><span class="mw-headline" id="Tearing">Tearing</span></h3>
+<p>The SNA acceleration method causes tearing on some machines. To fix this, enable the <code>"TearFree"</code> option in the driver by adding the following line to your <a href="#Xorg_configuration">configuration file</a>:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/X11/xorg.conf.d/20-intel.conf</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">Section "Device"
+  Identifier  "Intel Graphics"
+  Driver      "intel"
+  Option      "TearFree" "true"
+EndSection</pre>
+<p>See the <a rel="nofollow" class="external text" href="https://bugs.freedesktop.org/show_bug.cgi?id=37686">original bug report</a> for more info.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> 
+<ul><li>This option may not work when <code>SwapbuffersWait</code> is <code>false</code>.</li>
+<li>This option may increases memory allocation considerably and reduce performance. <a rel="nofollow" class="external autonumber" href="https://bugs.freedesktop.org/show_bug.cgi?id=37686#c123">[9]</a></li>
+<li>This option is problematic for applications that are very picky about vsync timing, like <a href="https://en.wikipedia.org/wiki/Super_Meat_Boy" class="extiw" title="wikipedia:Super Meat Boy">Super Meat Boy</a>.</li>
+<li>This option does not work with UXA acceleration method, only with SNA.</li></ul></div>
+<h3><span id="Disable_Vertical_Synchronization_.28VSYNC.29"></span><span class="mw-headline" id="Disable_Vertical_Synchronization_(VSYNC)">Disable Vertical Synchronization (VSYNC)</span></h3>
+<p>Useful when:
+</p>
+<ul><li>Chomium/Chrome has lags and slow performance due to GPU and runs smoothly with --disable-gpu switch</li>
+<li>glxgears test does not show desired performance</li></ul>
+<p>The intel-driver uses <a rel="nofollow" class="external text" href="http://www.intel.com/support/graphics/sb/CS-004527.htm">Triple Buffering</a> for vertical synchronization, this allows for full performance and avoids tearing. To turn vertical synchronization off (e.g. for benchmarking) use this <code>.drirc</code> in your home directory:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">~/.drirc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">&lt;device screen&#61;"0" driver&#61;"dri2"&gt;
+	&lt;application name&#61;"Default"&gt;
+		&lt;option name&#61;"vblank_mode" value&#61;"0"/&gt;
+	&lt;/application&gt;
+&lt;/device&gt;</pre>
+<div class="archwiki-template-box archwiki-template-box-warning"><strong>Warning:</strong> Do not use <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=driconf">driconf</a></span> to create this file. It is buggy and will set the wrong driver.</div>
+<h3><span class="mw-headline" id="SNA_issues">SNA issues</span></h3>
+<p><i>SNA</i> is the default acceleration method in <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=xf86-video-intel">xf86-video-intel</a></span>. If you experience issues with <i>SNA</i> (e.g. pixelated graphics, corrupt text, etc.), try using <i>UXA</i> instead, which can be done by adding the following line to your <a href="#Xorg_configuration">configuration file</a>:
+</p>
+<pre>Option      "AccelMethod"  "uxa"
+</pre>
+<p>See <span class="plainlinks archwiki-template-man" title="$ man 4 intel"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/intel.4">intel(4)</a></span> under <code>Option "AccelMethod"</code>.
+</p>
+<h3><span class="mw-headline" id="DRI3_issues">DRI3 issues</span></h3>
+<p><i>DRI3</i> is the default DRI version in <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=xf86-video-intel">xf86-video-intel</a></span>. On some systems this can cause issues such as <a rel="nofollow" class="external text" href="https://bugs.chromium.org/p/chromium/issues/detail?id=370022">this</a>. To switch back to <i>DRI2</i> add the following line to your <a href="#Xorg_configuration">configuration file</a>:
+</p>
+<pre>Option "DRI" "2"
+</pre>
+<p>For the <code>modesetting</code> driver, this method of disabling DRI3 does not work.  Instead, one can set the environment variable <code>LIBGL_DRI3_DISABLE=1</code>.
+</p>
+<h3><span id="Font_and_screen_corruption_in_GTK.2B_applications_.28missing_glyphs_after_suspend.2Fresume.29"></span><span class="mw-headline" id="Font_and_screen_corruption_in_GTK+_applications_(missing_glyphs_after_suspend/resume)">Font and screen corruption in GTK+ applications (missing glyphs after suspend/resume)</span></h3>
+<p>Should you experience missing font glyphs in GTK+ applications, the following workaround might help. <a href="/index.php/Textedit" class="mw-redirect" title="Textedit">Edit</a> <code>/etc/environment</code> to add the following line:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/environment</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">COGL_ATLAS_DEFAULT_BLIT_MODE=framebuffer</pre>
+<p>See also <a rel="nofollow" class="external text" href="https://bugs.freedesktop.org/show_bug.cgi?id=88584">FreeDesktop bug 88584</a>.
+</p>
+<h3><span id="Blank_screen_during_boot.2C_when_.22Loading_modules.22"></span><span class="mw-headline" id="Blank_screen_during_boot,_when_&quot;Loading_modules&quot;">Blank screen during boot, when "Loading modules"</span></h3>
+<p>If using "late start" KMS and the screen goes blank when "Loading modules", it may help to add <code>i915</code> and <code>intel_agp</code> to the initramfs. See <a href="/index.php/Kernel_mode_setting#Early_KMS_start" title="Kernel mode setting">Kernel mode setting#Early KMS start</a> section.
+</p><p>Alternatively, appending the following <a href="/index.php/Kernel_parameter" class="mw-redirect" title="Kernel parameter">kernel parameter</a> seems to work as well:
+</p>
+<pre>video=SVIDEO-1:d
+</pre>
+<p>If you need to output to VGA then try this:
+</p>
+<pre>video=VGA-1:1280x800
+</pre>
+<h3><span id="X_freeze.2Fcrash_with_intel_driver"></span><span class="mw-headline" id="X_freeze/crash_with_intel_driver">X freeze/crash with intel driver</span></h3>
+<p>Some issues with X crashing, GPU hanging, or problems with X freezing, can be fixed by disabling the GPU usage with the <code>NoAccel</code> option - add the following lines to your <a href="#Xorg_configuration">configuration file</a>:
+</p>
+<pre>  Option "NoAccel" "True"
+</pre>
+<p>Alternatively, try to disable the 3D acceleration only with the <code>DRI</code> option:
+</p>
+<pre>  Option "DRI" "False"
+</pre>
+<h3><span class="mw-headline" id="Baytrail_complete_freeze">Baytrail complete freeze</span></h3>
+<p>If you are using kernel &gt; 3.16 on Baytrail architecture and randomly encounter total system freezes, the following kernel option is a workaround until <a rel="nofollow" class="external text" href="https://bugzilla.kernel.org/show_bug.cgi?id=109051">this bug</a> is fixed in the linux kernel.
+</p>
+<pre>intel_idle.max_cstate=1
+</pre>
+<p>This is originally an Intel CPU bug that can be triggered by certain c-state transitions. It can also happen with Linux kernel 3.16 or Windows, though apparently much more rarely.
+The kernel option will prevent the freeze by avoiding c-state transitions but will also increase power consumption.
+</p>
+<h3><span class="mw-headline" id="Adding_undetected_resolutions">Adding undetected resolutions</span></h3>
+<p>This issue is covered on the <a href="/index.php/Xrandr#Adding_undetected_resolutions" title="Xrandr">Xrandr page</a>.
+</p>
+<h3><span id="Weathered_colors_.28color_range_problem.29"></span><span class="mw-headline" id="Weathered_colors_(color_range_problem)">Weathered colors (color range problem)</span></h3>
+<div class="noprint archwiki-template-message">
+<p><a href="/index.php/File:Tango-edit-cut.png" class="image"><img alt="Tango-edit-cut.png" src="/images/6/62/Tango-edit-cut.png" width="48" height="48" /></a><b>This section is being considered for removal.</b><a href="/index.php/File:Tango-edit-cut.png" class="image"><img alt="Tango-edit-cut.png" src="/images/6/62/Tango-edit-cut.png" width="48" height="48" /></a></p>
+<div><b>Reason:</b> This bug has been resolved, closed and is patched in Kernel 4.18.8. (Discuss in <a rel="nofollow" class="external text" href="https://wiki.archlinux.org/index.php/Talk:Intel_graphics">Talk:Intel graphics#</a>)</div>
+</div>
+<p>Kernel 3.9 <a rel="nofollow" class="external text" href="http://lists.freedesktop.org/archives/dri-devel/2013-January/033576.html">contains</a> a new default "Automatic" mode for the "Broadcast RGB" property in the Intel driver. It is almost equivalent to "Limited 16:235" (instead of the old default "Full") whenever an HDMI/DP output is in a <a rel="nofollow" class="external text" href="http://raspberrypi.stackexchange.com/questions/7332/what-is-the-difference-between-cea-and-dmt">CEA mode</a>. If a monitor does not support signal in limited color range, it will cause weathered colors.
+</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> Some monitors/TVs support both color range. In that case an option often known as <i>Black Level</i> may need to be adjusted to make them handle the signal correctly. Some TVs can handle signal in limited range only. Setting Broadcast RGB to "Full" will cause color clipping. You may need to set it to "Limited 16:235" manually to avoid the clipping.</div>
+<p>One can force mode e.g. <code>xrandr --output &lt;HDMI&gt; --set "Broadcast RGB" "Full"</code> (replace <code>&lt;HDMI&gt;</code> with the appropriate output device, verify by running <code>xrandr</code>).
+</p><p>Unfortunately, the Intel driver does not support setting the color range through an <code>xorg.conf.d</code> configuration file.
+</p><p>A <a rel="nofollow" class="external text" href="https://bugzilla.kernel.org/show_bug.cgi?id=94921">bug report</a> is filed and a patch can be found in the attachment.
+</p><p>Also there are other related problems which can be fixed editing GPU registers. More information can be found <a rel="nofollow" class="external autonumber" href="http://lists.freedesktop.org/archives/intel-gfx/2012-April/016217.html">[10]</a> and <a rel="nofollow" class="external autonumber" href="http://github.com/OpenELEC/OpenELEC.tv/commit/09109e9259eb051f34f771929b6a02635806404c">[11]</a>.
+</p>
+<h3><span class="mw-headline" id="Backlight_is_not_adjustable">Backlight is not adjustable</span></h3>
+<p>If after resuming from suspend, the hotkeys for changing the screen brightness do not take effect, check your configuration against the <a href="/index.php/Backlight" title="Backlight">Backlight</a> article.
+</p><p>If the problem persists, try one of the following <a href="/index.php/Kernel_parameters" title="Kernel parameters">kernel parameters</a>:
+</p>
+<pre>acpi_osi=Linux
+acpi_osi="!Windows 2012"
+acpi_osi=
+</pre>
+<h3><span id="Corruption.2FUnresponsiveness_in_Chromium_and_Firefox"></span><span class="mw-headline" id="Corruption/Unresponsiveness_in_Chromium_and_Firefox">Corruption/Unresponsiveness in Chromium and Firefox</span></h3>
+<p>If you experience corruption, unresponsiveness, lags or slow performance in Chromium and/or Firefox: 
+</p>
+<ul><li><a href="#SNA_issues">Set the AccelMethod to "uxa"</a></li>
+<li><a href="#Disable_Vertical_Synchronization_(VSYNC)">Disable VSYNC</a></li></ul>
+<h3><span id="Kernel_crashing_w.2Fkernels_4.0.2B_on_Broadwell.2FCore-M_chips"></span><span class="mw-headline" id="Kernel_crashing_w/kernels_4.0+_on_Broadwell/Core-M_chips">Kernel crashing w/kernels 4.0+ on Broadwell/Core-M chips</span></h3>
+<p>A few seconds after X/Wayland loads the machine will freeze and journalctl will log a kernel crash referencing the Intel graphics as below:
+</p>
+<pre>Jun 16 17:54:03 hostname kernel: BUG: unable to handle kernel NULL pointer dereference at           (null)
+Jun 16 17:54:03 hostname kernel: IP: [&lt;          (null)&gt;]           (null)
+...
+Jun 16 17:54:03 hostname kernel: CPU: 0 PID: 733 Comm: gnome-shell Tainted: G     U     O    4.0.5-1-ARCH #1
+...
+Jun 16 17:54:03 hostname kernel: Call Trace:
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffffa055cc27&gt;]&#160;? i915_gem_object_sync+0xe7/0x190 [i915]
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffffa0579634&gt;] intel_execlists_submission+0x294/0x4c0 [i915]
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffffa05539fc&gt;] i915_gem_do_execbuffer.isra.12+0xabc/0x1230 [i915]
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffffa055d349&gt;]&#160;? i915_gem_object_set_to_cpu_domain+0xa9/0x1f0 [i915]
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffff811ba2ae&gt;]&#160;? __kmalloc+0x2e/0x2a0
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffffa0555471&gt;] i915_gem_execbuffer2+0x141/0x2b0 [i915]
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffffa042fcab&gt;] drm_ioctl+0x1db/0x640 [drm]
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffffa0555330&gt;]&#160;? i915_gem_execbuffer+0x450/0x450 [i915]
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffff8122339b&gt;]&#160;? eventfd_ctx_read+0x16b/0x200
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffff811ebc36&gt;] do_vfs_ioctl+0x2c6/0x4d0
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffff811f6452&gt;]&#160;? __fget+0x72/0xb0
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffff811ebec1&gt;] SyS_ioctl+0x81/0xa0
+Jun 16 17:54:03 hostname kernel:  [&lt;ffffffff8157a589&gt;] system_call_fastpath+0x12/0x17
+Jun 16 17:54:03 hostname kernel: Code:  Bad RIP value.
+Jun 16 17:54:03 hostname kernel: RIP  [&lt;          (null)&gt;]           (null)
+</pre>
+<p>This can be fixed by disabling execlist support which was changed to default on with kernel 4.0. Add the following <a href="/index.php/Kernel_parameter" class="mw-redirect" title="Kernel parameter">kernel parameter</a>:
+</p>
+<pre>i915.enable_execlists=0
+</pre>
+<p>This is known to be broken to at least kernel 4.0.5.
+</p>
+<h3><span class="mw-headline" id="Lag_in_Windows_guests">Lag in Windows guests</span></h3>
+<p>The video output of a Windows guest in VirtualBox sometimes hangs until the host forces a screen update (e.g. by moving the mouse cursor). Removing the <code>enable_fbc=1</code> option fixes this issue.
+</p>
+<h3><span class="mw-headline" id="Screen_flickering">Screen flickering</span></h3>
+<p>Panel Self Refresh (PSR), a power saving feature used by Intel iGPUs is known to cause flickering in some instances <a rel="nofollow" class="external text" href="https://bugs.archlinux.org/task/49628">FS#49628</a> <a rel="nofollow" class="external text" href="https://bugs.archlinux.org/task/49371">FS#49371</a> <a rel="nofollow" class="external text" href="https://bugs.archlinux.org/task/50605">FS#50605</a>. A temporary solution is to disable this feature using the <a href="/index.php/Kernel_parameter" class="mw-redirect" title="Kernel parameter">kernel parameter</a> <code>i915.enable_psr=0</code>.
+</p>
+<h3><span class="mw-headline" id="OpenGL_2.1_with_i915_driver">OpenGL 2.1 with i915 driver</span></h3>
+<p>The update of <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=mesa">mesa</a></span> from version 13.x to 17 may break support for OpenGL 2.1 on third gen Intel GPUs (GMA3100, see <a href="https://en.wikipedia.org/wiki/List_of_Intel_graphics_processing_units#Third_generation" class="extiw" title="wikipedia:List of Intel graphics processing units">here</a>), as described in this <a rel="nofollow" class="external text" href="http://www.phoronix.com/scan.php?page=news_item&amp;px=Mesa-i915-OpenGL-2-Drop">article</a>, reverting it back to OpenGL 1.4. However this could be restored manually by setting <code>/etc/drirc</code> or <code>~/.drirc</code> options like:
+</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/drirc</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">&lt;driconf&gt;
+...
+    &lt;device driver="i915"&gt;
+        &lt;application name="Default"&gt;
+            &lt;option name="<b>stub_occlusion_query</b>" value="<b>true</b>" /&gt;
+            &lt;option name="<b>fragment_shader</b>" value="<b>true</b>" /&gt;
+        &lt;/application&gt;
+    &lt;/device&gt;
+...
+&lt;/driconf&gt;</pre>
+<div class="archwiki-template-box archwiki-template-box-note"><strong>Note:</strong> the reason of this step back was Chromium and other apps bad experience. If needed, you might edit the drirc file in a "app-specific" style, see <a rel="nofollow" class="external text" href="https://dri.freedesktop.org/wiki/ConfigurationInfrastructure/">here</a>, to disable gl2.1 on executable chromium for instance.</div>
+<h3><span class="mw-headline" id="KMS_Issue:_console_is_limited_to_small_area">KMS Issue: console is limited to small area</span></h3>
+<p>One of the low-resolution video ports may be enabled on boot which is causing the terminal to utilize a small area of the screen. To fix, explicitly disable the port with an i915 module setting with <code>video=SVIDEO-1:d</code> in the kernel command line parameter in the bootloader. See <a href="/index.php/Kernel_parameters" title="Kernel parameters">Kernel parameters</a> for more info.
+</p><p>If that does not work, try disabling TV1 or VGA1 instead of SVIDEO-1. Video port names can be listed with <a href="/index.php/Xrandr" title="Xrandr">xrandr</a>.
+</p>
+<h2><span class="mw-headline" id="See_also">See also</span></h2>
+<ul><li><a rel="nofollow" class="external free" href="https://01.org/linuxgraphics/documentation">https://01.org/linuxgraphics/documentation</a> (includes a list of supported hardware)</li></ul>
+
+<!-- 
+NewPP limit report
+Cached time: 20181223210938
+Cache expiry: 86400
+Dynamic content: false
+CPU time usage: 0.071 seconds
+Real time usage: 0.075 seconds
+Preprocessor visited node count: 997/1000000
+Preprocessor generated node count: 2789/1000000
+Post‐expand include size: 15394/2097152 bytes
+Template argument size: 8606/2097152 bytes
+Highest expansion depth: 5/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 79/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   24.362      1 -total
+ 15.47%    3.768     47 Template:Ic
+ 13.36%    3.255      8 Template:Note
+  9.72%    2.369      1 Template:Remove
+  9.33%    2.274     12 Template:Hc
+  8.07%    1.965      4 Template:Warning
+  7.81%    1.902      3 Template:Man
+  7.01%    1.707      1 Template:Related_articles_start
+  5.87%    1.431     10 Template:Pkg
+  5.10%    1.242      4 Template:AUR
+-->
+</div>
+<!-- Saved in parser cache with key archwiki:pcache:idhash:4788-0!canonical and timestamp 20181223210938 and revision id 559449
+ -->
+</div>					<div class="printfooter">
+						Retrieved from "<a dir="ltr" href="https://wiki.archlinux.org/index.php?title=Intel_graphics&amp;oldid=559449">https://wiki.archlinux.org/index.php?title=Intel_graphics&amp;oldid=559449</a>"					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/index.php/Special:Categories" title="Special:Categories">Categories</a>: <ul><li><a href="/index.php/Category:Graphics" title="Category:Graphics">Graphics</a></li><li><a href="/index.php/Category:X_server" title="Category:X server">X server</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden category: <ul><li><a href="/index.php/Category:Sections_flagged_with_Template:Remove" title="Category:Sections flagged with Template:Remove">Sections flagged with Template:Remove</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Navigation menu</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Personal tools</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="/index.php?title=Special:CreateAccount&amp;returnto=Intel+graphics" title="You are encouraged to create an account and log in; however, it is not mandatory">Create account</a></li><li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=Intel+graphics" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o">Log in</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Namespaces</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/index.php/Intel_graphics" title="View the content page [c]" accesskey="c">Page</a></span></li><li id="ca-talk"><span><a href="/index.php/Talk:Intel_graphics" rel="discussion" title="Discussion about the content page [t]" accesskey="t">Discussion</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Views</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/index.php/Intel_graphics">Read</a></span></li><li id="ca-viewsource" class="collapsible"><span><a href="/index.php?title=Intel_graphics&amp;action=edit" title="This page is protected.&#10;You can view its source [e]" accesskey="e">View source</a></span></li><li id="ca-history" class="collapsible"><span><a href="/index.php?title=Intel_graphics&amp;action=history" title="Past revisions of this page [h]" accesskey="h">View history</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Search</label>
+						</h3>
+						<form action="/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search ArchWiki" title="Search ArchWiki [f]" accesskey="f" id="searchInput"/><input type="hidden" value="Special:Search" name="title"/><input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/index.php/Main_page"  title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navigation</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/index.php/Main_page" title="Visit the main page [z]" accesskey="z">Main page</a></li><li id="n-Table-of-contents"><a href="/index.php/Table_of_contents">Table of contents</a></li><li id="n-portal"><a href="/index.php/Getting_involved" title="Various ways Archers can contribute to the community">Getting involved</a></li><li id="n-currentevents"><a href="/index.php/ArchWiki:News" title="The latest lowdown on the wiki">Wiki news</a></li><li id="n-randompage"><a href="/index.php/Special:Random" title="Load a random page [x]" accesskey="x">Random page</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Interaction" aria-labelledby="p-Interaction-label">
+			<h3 id="p-Interaction-label">Interaction</h3>
+			<div class="body">
+								<ul>
+					<li id="n-help"><a href="/index.php/Category:Help" title="Wiki navigation, reading, and editing help">Help</a></li><li id="n-Contributing"><a href="/index.php/ArchWiki:Contributing">Contributing</a></li><li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [r]" accesskey="r">Recent changes</a></li><li id="n-Recent-talks"><a href="https://wiki.archlinux.org/index.php/Special:RecentChanges?namespace=0&amp;invert=1" rel="nofollow">Recent talks</a></li><li id="n-newpages"><a href="/index.php/Special:NewPages">New pages</a></li><li id="n-Statistics"><a href="/index.php/ArchWiki:Statistics">Statistics</a></li><li id="n-Requests"><a href="/index.php/ArchWiki:Requests">Requests</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Tools</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/Intel_graphics" title="A list of all wiki pages that link here [j]" accesskey="j">What links here</a></li><li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/Intel_graphics" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k">Related changes</a></li><li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q">Special pages</a></li><li id="t-print"><a href="/index.php?title=Intel_graphics&amp;printable=yes" rel="alternate" title="Printable version of this page [p]" accesskey="p">Printable version</a></li><li id="t-permalink"><a href="/index.php?title=Intel_graphics&amp;oldid=559449" title="Permanent link to this revision of the page">Permanent link</a></li><li id="t-info"><a href="/index.php?title=Intel_graphics&amp;action=info" title="More information about this page">Page information</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">In other languages</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-cs"><a href="https://wiki.archlinux.org/index.php/Intel_graphics_(%C4%8Cesky)" title="Intel graphics – čeština" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-de"><a href="https://wiki.archlinux.de/title/Intel" title="Intel – Deutsch" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-es"><a href="https://wiki.archlinux.org/index.php/Intel_graphics_(Espa%C3%B1ol)" title="Intel graphics – español" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-fr"><a href="https://wiki.archlinux.fr/Intel" title="Intel – français" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-hu"><a href="https://wiki.archlinux.org/index.php/Intel_graphics_(Magyar)" title="Intel graphics – magyar" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-it"><a href="https://wiki.archlinux.org/index.php/Intel_graphics_(Italiano)" title="Intel graphics – italiano" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ja"><a href="https://wiki.archlinux.jp/index.php/Intel_Graphics" title="Intel Graphics – 日本語" lang="ja" hreflang="ja" class="interlanguage-link-target">日本語</a></li><li class="interlanguage-link interwiki-pl"><a href="https://wiki.archlinux.org/index.php/Intel_graphics_(Polski)" title="Intel graphics – polski" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://wiki.archlinux.org/index.php/Intel_graphics_(Portugu%C3%AAs)" title="Intel graphics – português" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://wiki.archlinux.org/index.php/Intel_graphics_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)" title="Intel graphics – русский" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-zh-hans"><a href="https://wiki.archlinux.org/index.php/Intel_graphics_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" title="Intel graphics – 中文（简体）‎" lang="zh-Hans" hreflang="zh-Hans" class="interlanguage-link-target">中文（简体）‎</a></li><li class="interlanguage-link interwiki-zh-hant"><a href="https://wiki.archlinux.org/index.php/Intel_graphics_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)" title="Intel graphics – 中文（繁體）‎" lang="zh-Hant" hreflang="zh-Hant" class="interlanguage-link-target">中文（繁體）‎</a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> This page was last edited on 18 December 2018, at 18:36.</li>
+								<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3 or later</a> unless otherwise noted.</li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="/index.php/ArchWiki:Privacy_policy" class="mw-redirect" title="ArchWiki:Privacy policy">Privacy policy</a></li>
+								<li id="footer-places-about"><a href="/index.php/ArchWiki:About" title="ArchWiki:About">About ArchWiki</a></li>
+								<li id="footer-places-disclaimer"><a href="/index.php/ArchWiki:General_disclaimer" title="ArchWiki:General disclaimer">Disclaimers</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+											</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.071","walltime":"0.075","ppvisitednodes":{"value":997,"limit":1000000},"ppgeneratednodes":{"value":2789,"limit":1000000},"postexpandincludesize":{"value":15394,"limit":2097152},"templateargumentsize":{"value":8606,"limit":2097152},"expansiondepth":{"value":5,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":79,"limit":5000000},"timingprofile":["100.00%   24.362      1 -total"," 15.47%    3.768     47 Template:Ic"," 13.36%    3.255      8 Template:Note","  9.72%    2.369      1 Template:Remove","  9.33%    2.274     12 Template:Hc","  8.07%    1.965      4 Template:Warning","  7.81%    1.902      3 Template:Man","  7.01%    1.707      1 Template:Related_articles_start","  5.87%    1.431     10 Template:Pkg","  5.10%    1.242      4 Template:AUR"]},"cachereport":{"timestamp":"20181223210938","ttl":86400,"transientcontent":false}}});});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":65});});</script>
+	</body>
+<!-- Cached/compressed 20181224041605 -->
+</html>

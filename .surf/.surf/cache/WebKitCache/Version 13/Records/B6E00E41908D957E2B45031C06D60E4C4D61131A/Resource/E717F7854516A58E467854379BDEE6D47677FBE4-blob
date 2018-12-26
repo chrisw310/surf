@@ -1,0 +1,2729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>82889 &ndash; [GTK] Honor GTK+ font settings</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="data/assets/52436921e68ed468d372628fc792a752.css?1529619270" rel="stylesheet" type="text/css">
+
+<link href="data/assets/3173de5410adb6e3827752fbd2bfd7b4.css?1529619260" rel="stylesheet" type="text/css">
+
+    
+<script type="text/javascript" src="data/assets/a7c2f3a028f17a9aa60f56dc9d6e732d.js?1529619270"></script>
+
+    <script type="text/javascript">
+    <!--
+        YAHOO.namespace('bugzilla');
+        YAHOO.util.Event.addListener = function (el, sType, fn, obj, overrideContext) {
+               if ( ("onpagehide" in window || YAHOO.env.ua.gecko) && sType === "unload") { sType = "pagehide"; };
+               var capture = ((sType == "focusin" || sType == "focusout") && !YAHOO.env.ua.ie) ? true : false;
+               return this._addListener(el, this._getType(sType), fn, obj, overrideContext, capture);
+         };
+        if ( "onpagehide" in window || YAHOO.env.ua.gecko) {
+            YAHOO.util.Event._simpleRemove(window, "unload", 
+                                           YAHOO.util.Event._unload);
+        }
+        
+        function unhide_language_selector() { 
+            YAHOO.util.Dom.removeClass(
+                'lang_links_container', 'bz_default_hidden'
+            ); 
+        } 
+        YAHOO.util.Event.onDOMReady(unhide_language_selector);
+
+        
+        var BUGZILLA = {
+            param: {
+                cookiepath: '\/',
+                maxusermatches: 1000
+            },
+            constant: {
+                COMMENT_COLS: 80
+            },
+            string: {
+                
+
+                attach_desc_required:
+                    "You must enter a Description for this attachment.",
+                component_required:
+                    "You must select a Component for this bug.",
+                description_required:
+                    "You must enter a Description for this bug.",
+                short_desc_required:
+                    "You must enter a Summary for this bug.",
+                version_required:
+                    "You must select a Version for this bug."
+            }
+              , api_token: ''
+        };
+
+    if (history && history.replaceState) {
+      if(!document.location.href.match(/show_bug\.cgi/)) {
+        history.replaceState( null,
+                             "82889 – [GTK] Honor GTK+ font settings",
+                             "show_bug.cgi?id=82889" );
+        document.title = "82889 – [GTK] Honor GTK+ font settings";
+      }
+      if (document.location.href.match(/show_bug\.cgi\?.*list_id=/)) {
+        var href = document.location.href;
+        href = href.replace(/[\?&]+list_id=(\d+|cookie)/, '');
+        history.replaceState(null, "82889 – [GTK] Honor GTK+ font settings", href);
+      }
+    }
+    YAHOO.util.Event.onDOMReady(function() {
+      initDirtyFieldTracking();
+
+    });
+    // -->
+    </script>
+<script type="text/javascript" src="data/assets/daf5e0fb6826e6a35280e622913f0c4a.js?1529619270"></script>
+
+
+    
+
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="Bugzilla" href="./search_plugin.cgi">
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+  <body 
+        class="bugs-webkit-org
+                 bz_bug
+                 bz_status_RESOLVED
+                 bz_product_WebKit
+                 bz_component_WebKit_Gtk
+                 bz_bug_82889 yui-skin-sam">
+
+
+  <div id="header">
+
+    
+
+
+    <div id="titles">
+
+      <span id="title"> WebKit Bugzilla</span>
+
+
+
+    </div>
+
+
+
+        <div id="bug_title">Bug&nbsp;82889: [GTK] Honor GTK+ font settings</div>
+
+
+    <div id="common_links"><ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input type="hidden" id="no_redirect_top" name="no_redirect" value="0">
+    <script type="text/javascript">
+      if (history && history.replaceState) {
+        var no_redirect = document.getElementById("no_redirect_top");
+        no_redirect.value = 1;
+      }
+    </script>
+    <input class="txt" type="text" id="quicksearch_top" name="quicksearch" 
+           title="Quick Search" value="">
+    <input class="btn" type="submit" value="Search" 
+           id="find_top"></form>
+  <a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li>
+      <span class="separator">| </span>
+        <a href="request.cgi">Requests</a></li>
+
+
+  <li>
+        <span class="separator">| </span>
+        <a href="https://bugzilla.readthedocs.org/en/5.0/using/understanding.html" target="_blank">Help</a>
+      </li>
+    
+      <li id="new_account_container_top">
+        <span class="separator">| </span>
+        <a href="createaccount.cgi">New&nbsp;Account</a>
+      </li>
+
+    <li id="mini_login_container_top">
+  <span class="separator">| </span>
+  <a id="login_link_top" href="show_bug.cgi?id=82889&amp;GoAheadAndLogIn=1"
+     onclick="return show_mini_login_form('_top')">Log In</a>
+
+  <form action="show_bug.cgi?id=82889" method="POST"
+        class="mini_login bz_default_hidden"
+        id="mini_login_top">
+    <input id="Bugzilla_login_top" required
+           name="Bugzilla_login" class="bz_login"
+        type="email" placeholder="Email Address">
+    <input class="bz_password" name="Bugzilla_password" type="password"
+           id="Bugzilla_password_top" required
+           placeholder="Password">
+    <input type="hidden" name="Bugzilla_login_token"
+           value="">
+    <input type="submit" name="GoAheadAndLogIn" value="Log in"
+            id="log_in_top">
+    <a href="#" onclick="return hide_mini_login_form('_top')">[x]</a>
+  </form>
+</li>
+
+
+  <li id="forgot_container_top">
+    <span class="separator">| </span>
+    <a id="forgot_link_top" href="show_bug.cgi?id=82889&amp;GoAheadAndLogIn=1#forgot"
+       onclick="return show_forgot_form('_top')">Forgot Password</a>
+    <form action="token.cgi" method="post" id="forgot_form_top"
+          class="mini_forgot bz_default_hidden">
+      <label for="login_top">Login:</label>
+      <input name="loginname" size="20" id="login_top" required
+          type="email" placeholder="Your Email Address">
+      <input id="forgot_button_top" value="Reset Password" type="submit">
+      <input type="hidden" name="a" value="reqpw">
+      <input type="hidden" id="token_top" name="token"
+             value="1545656889-9sly-oi4RZmiLpYXG0NcGZpJK-JCbLy-aWjSUTbCcWo">
+      <a href="#" onclick="return hide_forgot_form('_top')">[x]</a>
+    </form>
+  </li>
+</ul>
+    </div>
+  </div>
+
+
+  <div id="bugzilla-body">
+
+
+<script type="text/javascript">
+<!--
+
+//-->
+</script>
+
+<form name="changeform" id="changeform" method="post" action="process_bug.cgi">
+
+  <input type="hidden" name="delta_ts" value="2017-03-23 05:10:50">
+  <input type="hidden" name="id" value="82889">
+  <input type="hidden" name="token" value="1545656889-9yNtO8qQyLykFA_oWP15SUE4h4hGi6WXrT4P9SHI8O0">
+<div class="bz_short_desc_container edit_form">
+     <a href="show_bug.cgi?id=82889"><b>Bug&nbsp;82889</b></a> <span id="summary_container" class="bz_default_hidden">
+      - <span id="short_desc_nonedit_display">[GTK] Honor GTK+ font settings</span>
+     </span>
+
+    <div id="summary_input"><span class="field_label "
+    id="field_label_short_desc">
+
+
+  <a 
+      title="The bug summary is a short sentence which succinctly describes what the bug is about."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#short_desc"
+  >Summary:</a>
+
+</span>[GTK] Honor GTK+ font settings
+    </div>
+  </div>
+  <script type="text/javascript">
+    hideEditableField('summary_container',
+                      'summary_input',
+                      'summary_edit_action',
+                      'short_desc',
+                      '[GTK] Honor GTK+ font settings' );
+  </script>
+
+  <table id="bug_details" class="edit_form">
+
+    <tr>
+      
+      <td id="bz_show_bug_column_1" class="bz_show_bug_column">     
+        <table>
+          <tr>
+    <th class="field_label">
+      <a href="page.cgi?id=fields.html#bug_status">Status</a>:
+    </th>
+    <td id="bz_field_status">
+      <span id="static_bug_status">RESOLVED
+          FIXED
+      </span>
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_alias">
+
+
+  <a 
+      title="A short, unique name assigned to a bug in order to assist with looking it up and referring to it in other places in Bugzilla."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#alias"
+  >Alias:</a>
+
+</th>
+    <td>
+        None
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_product">
+
+
+  <a 
+      title="Bugs are categorised into Products and Components."
+      class="field_help_link"
+      href="describecomponents.cgi"
+  >Product:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_product" >WebKit
+
+</td>
+    </tr>
+
+    
+    <tr class="bz_default_hidden"><th class="field_label "
+    id="field_label_classification">
+
+
+  <a 
+      title="Bugs are categorised into Classifications, Products and Components. classifications is the top-level categorisation."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#classification"
+  >Classification:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_classification" >Unclassified
+
+</td>
+    </tr>
+        
+    
+    
+    <tr><th class="field_label "
+    id="field_label_component">
+
+
+  <a 
+      title="Components are second-level categories; each belongs to a particular Product. Select a Product to narrow down this list."
+      class="field_help_link"
+      href="describecomponents.cgi?product=WebKit"
+  >Component:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_component" >WebKit Gtk
+
+  (<a href="buglist.cgi?component=WebKit%20Gtk&amp;product=WebKit&amp;bug_status=__open__"
+      target="_blank">show other bugs</a>)
+</td>
+    </tr>
+    <tr>
+<th class="field_label "
+    id="field_label_version">
+
+
+  <a 
+      title="The version field defines the version of the software the bug was found in."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#version"
+  >Version:</a>
+
+</th>
+<td>528+ (Nightly build)
+  </td>
+
+    </tr>
+        
+    
+        
+    <tr><th class="field_label "
+    id="field_label_rep_platform">
+
+
+  <a 
+      title="The hardware platform the bug was observed on. Note: When searching, selecting the option &quot;All&quot; only finds bugs whose value for this field is literally the word &quot;All&quot;."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#rep_platform"
+  >Hardware:</a>
+
+</th>
+      <td class="field_value">Unspecified
+        Unspecified
+      </td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          
+          <tr>
+      <th class="field_label">
+        <label  accesskey="i">
+          <a href="page.cgi?id=fields.html#importance"><u>I</u>mportance</a></label>:
+      </th>
+      <td>P2
+
+       Normal
+
+      </td>
+    </tr>
+          
+          <tr><th class="field_label "
+    id="field_label_assigned_to">
+
+
+  <a 
+      title="The person in charge of resolving the bug."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#assigned_to"
+  >Assignee:</a>
+
+</th>
+      <td><span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+      </td>
+    </tr>
+
+
+    <script type="text/javascript">
+      assignToDefaultOnChange(['product'],
+        'webkit-unassigned\x40lists.webkit.org',
+        '');
+    </script>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          <tr><th class="field_label "
+    id="field_label_bug_file_loc">
+
+
+  <a 
+      title="Bugs can have a URL associated with them - for example, a pointer to a web site where the problem is seen."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#bug_file_loc"
+  >URL:</a>
+
+</th>
+    <td>
+      <span id="bz_url_input_area">
+      </span>
+    </td>
+  </tr>
+
+
+    <tr><th class="field_label "
+    id="field_label_keywords">
+
+
+  <a 
+      title="You can add keywords from a defined list to bugs, in order to easily identify and group them."
+      class="field_help_link"
+      href="describekeywords.cgi"
+  >Keywords:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_keywords" >
+
+</td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+          
+<tr><th class="field_label "
+    id="field_label_dependson">
+
+
+  <a 
+      title="The bugs listed here must be resolved before this bug can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#dependson"
+  >Depends on:</a>
+
+</th>
+
+  <td>
+    <span id="dependson_input_area">
+    </span>
+
+  </td>
+  </tr>
+  
+  <tr><th class="field_label "
+    id="field_label_blocked">
+
+
+  <a 
+      title="This bug must be resolved before the bugs listed in this field can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#blocked"
+  >Blocks:</a>
+
+</th>
+
+  <td>
+    <span id="blocked_input_area">
+    </span>
+
+  </td>
+  </tr>
+          
+        </table>
+      </td>
+      <td>
+        <div class="bz_column_spacer">&nbsp;</div>
+      </td>
+      
+      <td id="bz_show_bug_column_2" class="bz_show_bug_column">
+        <table>
+        <tr>
+    <th class="field_label">
+      Reported:
+    </th>
+    <td>2012-04-02 05:14 PDT by <span class="vcard"><span class="fn">Milan Crha</span>
+</span>
+    </td>
+  </tr>
+  
+  <tr>
+    <th class="field_label">
+      Modified:
+    </th>
+    <td>2017-03-23 05:10 PDT
+      (<a href="show_activity.cgi?id=82889">History</a>)
+    </td>
+  
+  </tr>
+<tr>
+      <th class="field_label">
+        <label  accesskey="a">
+          CC List:
+        </label>
+      </th>
+      <td>7 
+          users
+          <span id="cc_edit_area_showhide_container" class="bz_default_hidden">
+            (<a href="#" id="cc_edit_area_showhide">show</a>)
+          </span>
+        <div id="cc_edit_area">
+          <br>
+            <select id="cc" multiple="multiple" size="5" >
+                <option value="aperez">aperez</option>
+                <option value="bugs-noreply">bugs-noreply</option>
+                <option value="cgarcia">cgarcia</option>
+                <option value="mcatanzaro">mcatanzaro</option>
+                <option value="mmaxfield">mmaxfield</option>
+                <option value="mrobinson">mrobinson</option>
+                <option value="tpopela">tpopela</option>
+            </select>
+        </div>
+          <script type="text/javascript">
+            hideEditableField( 'cc_edit_area_showhide_container', 
+                               'cc_edit_area', 
+                               'cc_edit_area_showhide', 
+                               '', 
+                               '');  
+          </script>
+      </td>
+    </tr>
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_see_also">
+
+
+  <a 
+      title="This allows you to refer to bugs in other installations. You can enter a URL to a bug in the 'Add Bug URLs' field to note that that bug is related to this one. You can enter multiple URLs at once by separating them with whitespace. You should normally use this field to refer to bugs in other installations. For bugs in this installation, it is better to use the Depends on and Blocks fields."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#see_also"
+  >See Also:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_see_also" >
+
+</td>
+    </tr> 
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+
+
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+          <hr id="bz_top_half_spacer">
+      </td>
+    </tr>
+  </table>
+
+  <table id="bz_big_form_parts">
+  <tr>
+  <td>
+
+    
+<script src="js/status-bubble.js?1535068681"></script>
+<script type="text/javascript">
+<!--
+window.addEventListener('message', handleStatusBubbleMessage, false);
+
+function toggle_display(link) {
+    var table = document.getElementById("attachment_table");
+    var view_all = document.getElementById("view_all");
+    var hide_obsolete_url_parameter = "&hide_obsolete=1";
+    // Store current height for scrolling later
+    var originalHeight = table.offsetHeight;
+    var rows = YAHOO.util.Dom.getElementsByClassName(
+        'bz_tr_obsolete', 'tr', table);
+
+    for (var i = 0; i < rows.length; i++) {
+        bz_toggleClass(rows[i], 'bz_default_hidden');
+    }
+
+    if (YAHOO.util.Dom.hasClass(rows[0], 'bz_default_hidden')) {
+        link.innerHTML = "Show Obsolete";
+        view_all.href = view_all.href + hide_obsolete_url_parameter 
+    }
+    else {
+        link.innerHTML = "Hide Obsolete";
+        view_all.href = view_all.href.replace(hide_obsolete_url_parameter,"");
+    }
+
+    var newHeight = table.offsetHeight;
+    // This scrolling makes the window appear to not move at all.
+    window.scrollBy(0, newHeight - originalHeight);
+
+    return false;
+}
+//-->
+</script>
+
+<br>
+<table id="attachment_table">
+  <tr id="a0">
+    <th colspan="3" class="left">
+      Attachments
+    </th>
+  </tr>
+
+
+      <tr id="a1" class="bz_contenttype_text_plain bz_patch bz_tr_obsolete bz_default_hidden"
+
+
+      >
+        <td>
+            <a href="attachment.cgi?id=294635"
+               title="View the content of the attachment">
+          <b><span class="bz_obsolete">Patch</span></b></a>
+
+          <span class="bz_attach_extra_info">
+              (11.28 KB,
+                patch)
+
+            <br>
+            <a href="#attach_294635"
+               title="Go to the comment associated with the attachment">2016-11-12 15:13 PST</a>,
+
+            <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+          </span>
+        </td>
+
+          <td class="bz_attach_flags">
+              <i>no flags</i>
+          </td>
+
+        <td>
+
+
+          <a href="attachment.cgi?id=294635&amp;action=edit">Details</a>
+
+            | <a href="attachment.cgi?id=294635&amp;action=prettypatch">Formatted Diff</a>
+
+            | <a href="attachment.cgi?id=294635&amp;action=diff">Diff</a>
+
+          <div class="statusBubble">
+            <iframe src="https://webkit-queues.webkit.org/status-bubble/294635"
+                    style="width: 600px; height: 20px; border: none;" scrolling="no" onload="handleStatusBubbleLoad(this)">
+            </iframe>
+          </div>
+
+        </td>
+      </tr>
+      <tr id="a2" class="bz_contenttype_text_plain bz_patch bz_tr_obsolete bz_default_hidden"
+
+
+      >
+        <td>
+            <a href="attachment.cgi?id=294636"
+               title="View the content of the attachment">
+          <b><span class="bz_obsolete">Patch</span></b></a>
+
+          <span class="bz_attach_extra_info">
+              (11.26 KB,
+                patch)
+
+            <br>
+            <a href="#attach_294636"
+               title="Go to the comment associated with the attachment">2016-11-12 15:15 PST</a>,
+
+            <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+          </span>
+        </td>
+
+          <td class="bz_attach_flags">
+              <i>no flags</i>
+          </td>
+
+        <td>
+
+
+          <a href="attachment.cgi?id=294636&amp;action=edit">Details</a>
+
+            | <a href="attachment.cgi?id=294636&amp;action=prettypatch">Formatted Diff</a>
+
+            | <a href="attachment.cgi?id=294636&amp;action=diff">Diff</a>
+
+          <div class="statusBubble">
+            <iframe src="https://webkit-queues.webkit.org/status-bubble/294636"
+                    style="width: 600px; height: 20px; border: none;" scrolling="no" onload="handleStatusBubbleLoad(this)">
+            </iframe>
+          </div>
+
+        </td>
+      </tr>
+      <tr id="a3" class="bz_contenttype_text_plain bz_patch bz_tr_obsolete bz_default_hidden"
+
+
+      >
+        <td>
+            <a href="attachment.cgi?id=303711"
+               title="View the content of the attachment">
+          <b><span class="bz_obsolete">Patch</span></b></a>
+
+          <span class="bz_attach_extra_info">
+              (9.59 KB,
+                patch)
+
+            <br>
+            <a href="#attach_303711"
+               title="Go to the comment associated with the attachment">2017-03-07 13:18 PST</a>,
+
+            <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+          </span>
+        </td>
+
+          <td class="bz_attach_flags">
+              <i>no flags</i>
+          </td>
+
+        <td>
+
+
+          <a href="attachment.cgi?id=303711&amp;action=edit">Details</a>
+
+            | <a href="attachment.cgi?id=303711&amp;action=prettypatch">Formatted Diff</a>
+
+            | <a href="attachment.cgi?id=303711&amp;action=diff">Diff</a>
+
+          <div class="statusBubble">
+            <iframe src="https://webkit-queues.webkit.org/status-bubble/303711"
+                    style="width: 600px; height: 20px; border: none;" scrolling="no" onload="handleStatusBubbleLoad(this)">
+            </iframe>
+          </div>
+
+        </td>
+      </tr>
+      <tr id="a4" class="bz_contenttype_text_plain bz_patch bz_tr_obsolete bz_default_hidden"
+
+
+      >
+        <td>
+            <a href="attachment.cgi?id=303719"
+               title="View the content of the attachment">
+          <b><span class="bz_obsolete">Patch</span></b></a>
+
+          <span class="bz_attach_extra_info">
+              (9.35 KB,
+                patch)
+
+            <br>
+            <a href="#attach_303719"
+               title="Go to the comment associated with the attachment">2017-03-07 13:45 PST</a>,
+
+            <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+          </span>
+        </td>
+
+          <td class="bz_attach_flags">
+              <i>no flags</i>
+          </td>
+
+        <td>
+
+
+          <a href="attachment.cgi?id=303719&amp;action=edit">Details</a>
+
+            | <a href="attachment.cgi?id=303719&amp;action=prettypatch">Formatted Diff</a>
+
+            | <a href="attachment.cgi?id=303719&amp;action=diff">Diff</a>
+
+          <div class="statusBubble">
+            <iframe src="https://webkit-queues.webkit.org/status-bubble/303719"
+                    style="width: 600px; height: 20px; border: none;" scrolling="no" onload="handleStatusBubbleLoad(this)">
+            </iframe>
+          </div>
+
+        </td>
+      </tr>
+      <tr id="a5" class="bz_contenttype_text_plain bz_patch bz_tr_obsolete bz_default_hidden"
+
+
+      >
+        <td>
+            <a href="attachment.cgi?id=303730"
+               title="View the content of the attachment">
+          <b><span class="bz_obsolete">Patch</span></b></a>
+
+          <span class="bz_attach_extra_info">
+              (9.43 KB,
+                patch)
+
+            <br>
+            <a href="#attach_303730"
+               title="Go to the comment associated with the attachment">2017-03-07 15:01 PST</a>,
+
+            <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+          </span>
+        </td>
+
+          <td class="bz_attach_flags">
+              <i>no flags</i>
+          </td>
+
+        <td>
+
+
+          <a href="attachment.cgi?id=303730&amp;action=edit">Details</a>
+
+            | <a href="attachment.cgi?id=303730&amp;action=prettypatch">Formatted Diff</a>
+
+            | <a href="attachment.cgi?id=303730&amp;action=diff">Diff</a>
+
+          <div class="statusBubble">
+            <iframe src="https://webkit-queues.webkit.org/status-bubble/303730"
+                    style="width: 600px; height: 20px; border: none;" scrolling="no" onload="handleStatusBubbleLoad(this)">
+            </iframe>
+          </div>
+
+        </td>
+      </tr>
+      <tr id="a6" class="bz_contenttype_text_plain bz_patch bz_tr_obsolete bz_default_hidden"
+
+
+      >
+        <td>
+            <a href="attachment.cgi?id=303733"
+               title="View the content of the attachment">
+          <b><span class="bz_obsolete">Patch</span></b></a>
+
+          <span class="bz_attach_extra_info">
+              (10.24 KB,
+                patch)
+
+            <br>
+            <a href="#attach_303733"
+               title="Go to the comment associated with the attachment">2017-03-07 15:11 PST</a>,
+
+            <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+          </span>
+        </td>
+
+          <td class="bz_attach_flags">
+              <i>no flags</i>
+          </td>
+
+        <td>
+
+
+          <a href="attachment.cgi?id=303733&amp;action=edit">Details</a>
+
+            | <a href="attachment.cgi?id=303733&amp;action=prettypatch">Formatted Diff</a>
+
+            | <a href="attachment.cgi?id=303733&amp;action=diff">Diff</a>
+
+          <div class="statusBubble">
+            <iframe src="https://webkit-queues.webkit.org/status-bubble/303733"
+                    style="width: 600px; height: 20px; border: none;" scrolling="no" onload="handleStatusBubbleLoad(this)">
+            </iframe>
+          </div>
+
+        </td>
+      </tr>
+      <tr id="a7" class="bz_contenttype_text_plain bz_patch bz_tr_obsolete bz_default_hidden"
+
+
+      >
+        <td>
+            <a href="attachment.cgi?id=304781"
+               title="View the content of the attachment">
+          <b><span class="bz_obsolete">Patch</span></b></a>
+
+          <span class="bz_attach_extra_info">
+              (11.22 KB,
+                patch)
+
+            <br>
+            <a href="#attach_304781"
+               title="Go to the comment associated with the attachment">2017-03-17 08:38 PDT</a>,
+
+            <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+          </span>
+        </td>
+
+          <td class="bz_attach_flags">
+              <i>no flags</i>
+          </td>
+
+        <td>
+
+
+          <a href="attachment.cgi?id=304781&amp;action=edit">Details</a>
+
+            | <a href="attachment.cgi?id=304781&amp;action=prettypatch">Formatted Diff</a>
+
+            | <a href="attachment.cgi?id=304781&amp;action=diff">Diff</a>
+
+          <div class="statusBubble">
+            <iframe src="https://webkit-queues.webkit.org/status-bubble/304781"
+                    style="width: 600px; height: 20px; border: none;" scrolling="no" onload="handleStatusBubbleLoad(this)">
+            </iframe>
+          </div>
+
+        </td>
+      </tr>
+      <tr id="a8" class="bz_contenttype_text_plain bz_patch"
+ style="background-color: rgb(255,255,200);" 
+
+      >
+        <td>
+            <a href="attachment.cgi?id=304889"
+               title="View the content of the attachment">
+          <b>Patch</b></a>
+
+          <span class="bz_attach_extra_info">
+              (10.64 KB,
+                patch)
+
+            <br>
+            <a href="#attach_304889"
+               title="Go to the comment associated with the attachment">2017-03-18 17:55 PDT</a>,
+
+            <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+          </span>
+        </td>
+
+          <td class="bz_attach_flags">
+                  <span title="Carlos Garcia Campos">cgarcia</span>:
+                review+
+                <br>
+          </td>
+
+        <td>
+
+
+          <a href="attachment.cgi?id=304889&amp;action=edit">Details</a>
+
+            | <a href="attachment.cgi?id=304889&amp;action=prettypatch">Formatted Diff</a>
+
+            | <a href="attachment.cgi?id=304889&amp;action=diff">Diff</a>
+
+          <div class="statusBubble">
+            <iframe src="https://webkit-queues.webkit.org/status-bubble/304889"
+                    style="width: 600px; height: 20px; border: none;" scrolling="no" onload="handleStatusBubbleLoad(this)">
+            </iframe>
+          </div>
+
+        </td>
+      </tr>
+
+  <tr class="bz_attach_footer">
+    <td colspan="3">
+        <span class="bz_attach_view_hide">
+            <a href="#a0" onclick="return toggle_display(this);">Show
+              Obsolete</a> (7)
+            <a id="view_all" href="attachment.cgi?bugid=82889&amp;action=viewall&amp;hide_obsolete=1">View All</a>
+        </span>
+        <a href="attachment.cgi?bugid=82889&amp;action=enter">Add an attachment</a>
+        (proposed patch, testcase, etc.)
+    </td>
+  </tr>
+</table>
+<br>
+<div id="add_comment" class="bz_section_additional_comments">
+      <table>
+        <tr>
+          <td>
+            <fieldset>
+              <legend>Note</legend>
+              You need to
+              <a href="show_bug.cgi?id=82889&amp;GoAheadAndLogIn=1">log in</a>
+              before you can comment on or make changes to this bug.
+            </fieldset>
+          </td>
+        </tr> 
+      </table>
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr></table>
+
+  
+  <div id="comments"><script src="js/comments.js?1490751600" type="text/javascript">
+</script>
+
+<script type="text/javascript">
+<!--
+  /* Adds the reply text to the 'comment' textarea */
+  function replyToComment(id, real_id, name) {
+      var prefix = "(In reply to " + name + " from comment #" + id + ")\n";
+      var replytext = "";
+        /* pre id="comment_name_N" */
+        var text_elem = document.getElementById('comment_text_'+id);
+        var text = getText(text_elem);
+        replytext = prefix + wrapReplyText(text);
+
+
+      /* <textarea id="comment"> */
+      var textarea = document.getElementById('comment');
+      if (textarea.value != replytext) {
+          textarea.value += replytext;
+      }
+
+      textarea.focus();
+  } 
+//-->
+</script>
+
+
+<!-- This auto-sizes the comments and positions the collapse/expand links 
+     to the right. -->
+<table class="bz_comment_table">
+<tr>
+<td>
+<div id="c0" class="bz_comment bz_first_comment">
+
+      <div class="bz_first_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c0">Description</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Milan Crha</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-04-02 05:14:09 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">GTK follows system font settings on its cairo contexts, but WebKitGtk doesn't follow this settings, which makes pages rendered in Gtk look ugly and inconsistent with the rest of application. If I apply the below change, then I get consistent behaviour, with one exception, if I change font setting while webkitview is already created, then the font change is not noticed in it. Note the system settings has both font Hinting and font Antialiasing, and I use Hinting: Slight, Antialiasing: Rgba. You can see a sample screen shot here [1], where the first part from GtkHTML uses system font setting (on a monospaced font), while the webkit does not. The difference is noticeable.
+
+[1] <a href="https://bugzilla.gnome.org/show_bug.cgi?id=673108#c1">https://bugzilla.gnome.org/show_bug.cgi?id=673108#c1</a>
+
+diff -up webkit-1.8.0/Source/WebCore/platform/graphics/freetype/FontPlatformDataFreeType.cpp.fonts webkit-1.8.0/Source/WebCore/platform/graphics/freetype/FontPlatformDataFreeType.cpp
+--- webkit-1.8.0/Source/WebCore/platform/graphics/freetype/FontPlatformDataFreeType.cpp.fonts	2012-04-02 13:58:12.393501948 +0200
++++ webkit-1.8.0/Source/WebCore/platform/graphics/freetype/FontPlatformDataFreeType.cpp	2012-04-02 13:58:15.363537998 +0200
+&#64;&#64; -94,10 +94,10 &#64;&#64; void setCairoFontOptionsFromFontConfigPa
+             cairo_font_options_set_antialias(options, CAIRO_ANTIALIAS_GRAY);
+     }
+ 
+-    if (FcPatternGetInteger(pattern, FC_HINT_STYLE, 0, &amp;integerResult) == FcResultMatch)
++    /*if (FcPatternGetInteger(pattern, FC_HINT_STYLE, 0, &amp;integerResult) == FcResultMatch)
+         cairo_font_options_set_hint_style(options, convertFontConfigHintStyle(integerResult));
+     if (FcPatternGetBool(pattern, FC_HINTING, 0, &amp;booleanResult) == FcResultMatch &amp;&amp; !booleanResult)
+-        cairo_font_options_set_hint_style(options, CAIRO_HINT_STYLE_NONE);
++        cairo_font_options_set_hint_style(options, CAIRO_HINT_STYLE_NONE);*/
+ }
+ 
+ static cairo_font_options_t* getDefaultFontOptions()
+diff -up webkit-1.8.0/Source/WebCore/platform/graphics/pango/FontPlatformDataPango.cpp.fonts webkit-1.8.0/Source/WebCore/platform/graphics/pango/FontPlatformDataPango.cpp
+--- webkit-1.8.0/Source/WebCore/platform/graphics/pango/FontPlatformDataPango.cpp.fonts	2012-04-02 13:59:00.823090496 +0200
++++ webkit-1.8.0/Source/WebCore/platform/graphics/pango/FontPlatformDataPango.cpp	2012-04-02 13:59:38.091543457 +0200
+&#64;&#64; -152,8 +152,8 &#64;&#64; FontPlatformData::FontPlatformData(cairo
+ 
+     // We force antialiasing and disable hinting to provide consistent
+     // typographic qualities for custom fonts on all platforms.
+-    cairo_font_options_set_hint_style(options, CAIRO_HINT_STYLE_NONE);
+-    cairo_font_options_set_antialias(options, CAIRO_ANTIALIAS_GRAY);
++    /*cairo_font_options_set_hint_style(options, CAIRO_HINT_STYLE_NONE);
++    cairo_font_options_set_antialias(options, CAIRO_ANTIALIAS_GRAY);*/
+ 
+     m_scaledFont = cairo_scaled_font_create(fontFace, &amp;fontMatrix, &amp;ctm, options);
+     cairo_font_options_destroy(options);</pre>
+    </div>
+
+    <div id="c1" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c1">Comment 1</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Martin Robinson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-04-10 08:37:19 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">WebKitGTK+ should follow your Fontconfig settings over the Xsettings ones. The reason is that XSettings switches are not per-font, while Fontconfig settings are. You simply need to modify your Fontconfig setup to disable hinting. For all of the gory details take a look here: <a href="http://neugierig.org/software/chromium/fonts/">http://neugierig.org/software/chromium/fonts/</a>
+
+Now, if for some reason WebKitGTK+ isn't reading your Fontconfig settings properly and you don't see this issue in Chromium, this is a valid bug.</pre>
+    </div>
+
+    <div id="c2" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c2">Comment 2</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Milan Crha</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-04-11 02:26:35 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">My idea was that if this is WebKitGTK, then it should follow gtk's font settings, thus also WebKitGTK will follow look &amp; feel of other gtk+ applications. Hinting makes a large difference, noticeable on the first look.</pre>
+    </div>
+
+    <div id="c3" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c3">Comment 3</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Martin Robinson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-04-11 07:52:57 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=82889#c2">comment #2</a>)
+<span class="quote">&gt; My idea was that if this is WebKitGTK, then it should follow gtk's font settings, thus also WebKitGTK will follow look &amp; feel of other gtk+ applications. Hinting makes a large difference, noticeable on the first look.</span >
+
+In the end, the choice to follow the Fontconfig settings or the XSettings settings is somewhat arbitrary. In this case, we've chosen to take the route that gives the user more control. XSettings does not allow you to hint some fonts and not others. Not only that, we try to do the same thing as Chromium here.
+
+If you simply update your Fontconfig settings to disable hinting everywhere, I think you'll find fonts are to your liking. You'll also fix all applications that obey Fontconfig over XSettings.</pre>
+    </div>
+
+    <div id="c4" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c4">Comment 4</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Milan Crha</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-07-25 02:19:57 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">I still believe that in webkitgtk you should follow gtk settings, it's WebKit *GTK*, after all. Nonetheless, I'm not going to fight here.
+
+I would like to ask you for one thing, though. Could you tell me where and how I can change font settings in fontconfig, please? The best some kind of UI tool, like the gtk has. I know about gtk, but not about fontconfig, and I expect users will ask for it, as they might not like tiny fonts, which are hard to read, same as I do not like them for monospace fonts.</pre>
+    </div>
+
+    <div id="c5" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c5">Comment 5</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Martin Robinson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-07-25 23:25:25 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=82889#c4">comment #4</a>)
+<span class="quote">&gt; I still believe that in webkitgtk you should follow gtk settings, it's WebKit *GTK*, after all. Nonetheless, I'm not going to fight here.
+&gt; 
+&gt; I would like to ask you for one thing, though. Could you tell me where and how I can change font settings in fontconfig, please? The best some kind of UI tool, like the gtk has. I know about gtk, but not about fontconfig, and I expect users will ask for it, as they might not like tiny fonts, which are hard to read, same as I do not like them for monospace fonts.</span >
+
+I don't know of a tool to modify fontconfig font settings, but if you look around you should be able to find some examples of how to modify the configuration of all fonts.
+
+The size of the font isn't determined by the fontconfig or XSettings configuration. It's up to the client (Epiphany, for instance) to determine the the default font size. One thing to ensure is that, if you are using Epiphany, you should uncheck &quot;Use system font settings&quot; and choose a more appropriate default size.</pre>
+    </div>
+
+    <div id="c6" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c6">Comment 6</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Milan Crha</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-07-26 01:08:28 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">It's not about font size, like how tall it's supposed to be, it's about hinting and antialiasing. If I turn than on, then the font is weighter, easier to read for me. If you open font settings for gtk/gnome, then you can tweak these options there and see what I mean. Different settings fit for different monitors (CRT/LCD/Laptop/...).
+
+I looked around, I only found /etc/fonts/..., but that is quite user unfriendly. My intention for the setting is also to verify that your advice actually works.</pre>
+    </div>
+
+    <div id="c7" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c7">Comment 7</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Martin Robinson</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-07-26 01:11:26 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=82889#c6">comment #6</a>)
+<span class="quote">&gt; It's not about font size, like how tall it's supposed to be, it's about hinting and antialiasing. If I turn than on, then the font is weighter, easier to read for me. If you open font settings for gtk/gnome, then you can tweak these options there and see what I mean. Different settings fit for different monitors (CRT/LCD/Laptop/...).</span >
+
+So the font.conf settings are specifying that the fonts are not hinted nor anti-aliased? Typically those are on by default, unless fontconfig disables them for a particular font.
+
+Here's a guide to configuring fontconfig via the ~/fonts.conf file: <a href="https://wiki.archlinux.org/index.php/Font_Configuration#Fontconfig_configuration">https://wiki.archlinux.org/index.php/Font_Configuration#Fontconfig_configuration</a></pre>
+    </div>
+
+    <div id="c8" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c8">Comment 8</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Milan Crha</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-07-26 01:56:34 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Nice, thanks. I also made this system-wide, when I copied 10-sub-pixel-rgb.conf and 10-autohint.conf from /etc/fonts/conf.avail/ to /etc/fonts/conf.d/ and after I restart Evolution (the application using webkitgtk now), the fonts look readable again.</pre>
+    </div>
+
+    <div id="c9" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c9">Comment 9</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2016-10-31 18:56:16 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">After much discussion with Behdad and Martin (who is still not completely convinced I think :) I want to merge cairo font options into the Fontconfig pattern used for rendering using cairo_ft_font_options_substitute(). This is how the API was designed to be used anyway. Fontconfig will still have final say over whether to actually respect the desktop settings or not, so it can still choose to ignore the desktop's settings, but I don't think it makes sense to have desktop-wide font settings and not tell Fontconfig about them, especially when the whole point of WebKitGTK+ is desktop integration. This should also reduce complaints that we're not following desktop settings and that we're drawing fonts differently than Firefox.</pre>
+    </div>
+
+    <div id="c10" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c10">Comment 10</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2016-11-12 15:09:49 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Here's an initial patch. The code changes should all be fine, but it will probably break a huge amount of layout tests. To be able to easily rebase the layout tests, we need accurate test expectations for all currently-failing tests, so it's probably a bad idea to commit this patch in the meantime.</pre>
+    </div>
+
+    <div id="c11" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c11">Comment 11</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2016-11-12 15:11:17 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Note that our font rendering still looks completely different from Firefox, but I am hoping that is <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - [FreeType] FontPlatformData::fallbacks() returns unprepared FcPatterns"
+   href="show_bug.cgi?id=164689">bug #164689</a>, knock on wood.</pre>
+    </div>
+
+    <div id="c12" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c12">Comment 12</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2016-11-12 15:13:49 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class="bz_obsolete"><a href="attachment.cgi?id=294635&amp;action=diff" name="attach_294635" title="Patch">attachment 294635</a> <a href="attachment.cgi?id=294635&amp;action=edit" title="Patch">[details]</a></span>
+Patch</pre>
+    </div>
+
+    <div id="c13" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c13">Comment 13</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2016-11-12 15:15:07 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class="bz_obsolete"><a href="attachment.cgi?id=294636&amp;action=diff" name="attach_294636" title="Patch">attachment 294636</a> <a href="attachment.cgi?id=294636&amp;action=edit" title="Patch">[details]</a></span>
+Patch</pre>
+    </div>
+
+    <div id="c14" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c14">Comment 14</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2016-11-12 16:59:34 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=82889#c11">comment #11</a>)
+<span class="quote">&gt; Note that our font rendering still looks completely different from Firefox,
+&gt; but I am hoping that is <a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - [FreeType] FontPlatformData::fallbacks() returns unprepared FcPatterns"
+   href="show_bug.cgi?id=164689">bug #164689</a>, knock on wood.</span >
+
+Nope, even with both of these patches, our font rendering looks nothing at all like Firefox. Alas.</pre>
+    </div>
+
+    <div id="c15" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c15">Comment 15</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Carlos Garcia Campos</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2016-11-13 23:32:02 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Comment on <span class="bz_obsolete"><a href="attachment.cgi?id=294636&amp;action=diff" name="attach_294636" title="Patch">attachment 294636</a> <a href="attachment.cgi?id=294636&amp;action=edit" title="Patch">[details]</a></span>
+Patch
+
+View in context: <a href="https://bugs.webkit.org/attachment.cgi?id=294636&amp;action=review">https://bugs.webkit.org/attachment.cgi?id=294636&amp;action=review</a>
+
+<span class="quote">&gt; Source/WebCore/PlatformEfl.cmake:160
+&gt; +    platform/graphics/freetype/FreeTypeFontUtilities.cpp</span >
+
+This files uses GTK+, it should be added to WebCorePlatformGTK_SOURCES
+
+<span class="quote">&gt; Source/WebCore/PlatformGTK.cmake:212
+&gt; +    platform/graphics/freetype/FontCacheFreeType.cpp
+&gt;      platform/graphics/freetype/FontPlatformDataFreeType.cpp
+&gt; +    platform/graphics/freetype/FreeTypeFontUtilities.cpp</span >
+
+It's the other way around, FontPlatformDataFreeType.cpp no longer uses GTK+, so all theses should be moved to WebCore_SOURCES, and FreeTypeFontUtilities.cpp should be moved to WebCorePlatformGTK_SOURCES, but you are adding it to both.
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/freetype/FontPlatformDataFreeType.cpp:-119
+&gt; -static CairoUniquePtr&lt;cairo_font_options_t&gt; getDefaultCairoFontOptions()
+&gt; -{
+&gt; -#if PLATFORM(GTK)
+&gt; -    if (GdkScreen* screen = gdk_screen_get_default()) {
+&gt; -        const cairo_font_options_t* screenOptions = gdk_screen_get_font_options(screen);
+&gt; -        if (screenOptions)
+&gt; -            return CairoUniquePtr&lt;cairo_font_options_t&gt;(cairo_font_options_copy(screenOptions));
+&gt; -    }
+&gt; -#endif
+&gt; -    return CairoUniquePtr&lt;cairo_font_options_t&gt;(cairo_font_options_create());
+&gt; -}</span >
+
+Can we also remove the #include &lt;gdk/gdk.h&gt; now?
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/freetype/FreeTypeFontUtilities.cpp:27
+&gt; +#include &quot;FreeTypeFontUtilities.h&quot;</span >
+
+I'm not sure FreeTypeFontUtilities is the best name for this, nor Source/WebCore/platform/graphics/freetype/ the best place. This has nothing to do with freetype actually, it's more a cairo implementation. I would add it to Source/WebCore/platform/graphics/cairo instead, named as CairoFontUtilities or CairoDefaultFontOptions. Or you could add it to CairoUtilities that already has some FreeType stuff (although that would make CairoUtilities a GTK+ file).
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/freetype/FreeTypeFontUtilities.cpp:29
+&gt; +#include &lt;wtf/Platform.h&gt;</span >
+
+I'm pretty sure you don't need this, I think all config.h files already include Platform.h
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/freetype/FreeTypeFontUtilities.cpp:37
+&gt; +CairoUniquePtr&lt;cairo_font_options_t&gt; getDefaultCairoFontOptions()</span >
+
+We should take advantage of this patch to properly name this, it should be defaultCairoFonrOptions()
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/freetype/FreeTypeFontUtilities.cpp:43
+&gt; +            return CairoUniquePtr&lt;cairo_font_options_t&gt;(cairo_font_options_copy(screenOptions));</span >
+
+So, in all the new places where you are now using this, the font options are not modified, they are used to set up a FcPattern. I wonder if we could return the options without copying them, and let the caller decide whether to copy them or not. For the fallback case we could use a static cairo_font_options_t
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/freetype/FreeTypeFontUtilities.h:29
+&gt; +#include &quot;CairoUniquePtr.h&quot;
+&gt; +#include &lt;cairo.h&gt;</span >
+
+CairoUniquePtr.h already includes cairo.h</pre>
+    </div>
+
+    <div id="c16" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c16">Comment 16</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2016-11-19 19:01:27 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=82889#c14">comment #14</a>)
+<span class="quote">&gt; Nope, even with both of these patches, our font rendering looks nothing at
+&gt; all like Firefox. Alas.</span >
+
+Actually this seems to get us about halfway there. Our character positioning is completely different (arguably worse) but it makes the hinting match. That's good.
+
+Will update this patch when I have sufficient time to attend to the layout tests.</pre>
+    </div>
+
+    <div id="c17" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c17">Comment 17</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2016-11-19 19:04:29 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=82889#c3">comment #3</a>)
+<span class="quote">&gt; In the end, the choice to follow the Fontconfig settings or the XSettings
+&gt; settings is somewhat arbitrary. In this case, we've chosen to take the route
+&gt; that gives the user more control. XSettings does not allow you to hint some
+&gt; fonts and not others. Not only that, we try to do the same thing as Chromium
+&gt; here.</span >
+
+By the way, I am only merging *defaults* from GTK+ settings. Users still have full control of the final hinting on a per-font basis with fontconfig, just the default will be GTK+'s default and not fontconfig's default (which is currently only used by WebKitGTK+ and not anything else).</pre>
+    </div>
+
+    <div id="c18" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c18">Comment 18</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-07 13:01:22 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">So the big change since I originally wrote this patch is that Fontconfig switched from medium to light hinting by default, which now matches GTK+'s default. So this should make no difference to users who have not touched those hidden font settings. But if you have tweaked your settings, you probably want them to work properly... hence we still need this.</pre>
+    </div>
+
+    <div id="c19" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c19">Comment 19</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-07 13:16:45 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Next patch attempt is mainly for EWS; I'm still building it locally. Big thanks to Carlos Garcia, Carlos Lopez, and Javi Fernandez for doing the hard part to make this possible, which was cleaning up our test expectations. This has to land when the bot is green or almost green, as otherwise it's way too hard to assess impact on layout tests.
+
+I tried running tests locally and am at something like 200 failures and 400 timeouts, so it's just not practical now. I'll watch the bots after this lands to see what the impact is. In theory, any breakage should be fixable without altering test expectations by just modifying our test Fontconfig configuration, but I want to assess the impact before making any changes there.</pre>
+    </div>
+
+    <div id="c20" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c20">Comment 20</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-07 13:18:15 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class="bz_obsolete"><a href="attachment.cgi?id=303711&amp;action=diff" name="attach_303711" title="Patch">attachment 303711</a> <a href="attachment.cgi?id=303711&amp;action=edit" title="Patch">[details]</a></span>
+Patch</pre>
+    </div>
+
+    <div id="c21" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c21">Comment 21</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-07 13:45:13 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class="bz_obsolete"><a href="attachment.cgi?id=303719&amp;action=diff" name="attach_303719" title="Patch">attachment 303719</a> <a href="attachment.cgi?id=303719&amp;action=edit" title="Patch">[details]</a></span>
+Patch</pre>
+    </div>
+
+    <div id="c22" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c22">Comment 22</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-07 15:01:59 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class="bz_obsolete"><a href="attachment.cgi?id=303730&amp;action=diff" name="attach_303730" title="Patch">attachment 303730</a> <a href="attachment.cgi?id=303730&amp;action=edit" title="Patch">[details]</a></span>
+Patch</pre>
+    </div>
+
+    <div id="c23" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c23">Comment 23</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-07 15:05:32 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=82889#c15">comment #15</a>)
+<span class="quote">&gt; It's the other way around, FontPlatformDataFreeType.cpp no longer uses GTK+,
+&gt; so all theses should be moved to WebCore_SOURCES, and
+&gt; FreeTypeFontUtilities.cpp should be moved to WebCorePlatformGTK_SOURCES, but
+&gt; you are adding it to both.</span >
+
+I'm sure I did it because I couldn't get it to link otherwise.
+
+This time around, it doesn't seem to work no matter what I try:
+
+FAILED: lib/libwebkit2gtk-4.0.so.37.20.0 
+: &amp;&amp; /usr/lib64/ccache/c++  -fPIC -fno-exceptions -fno-strict-aliasing -fno-rtti -std=c++1y -O2 -DNDEBUG  -Wl,--no-undefined  -L/home/mcatanzaro/Projects/GNOME/install/lib  -fuse-ld=gold -Wl,--disable-new-dtags -fuse-ld=gold -Wl,--disable-new-dtags -shared -Wl,-soname,libwebkit2gtk-4.0.so.37 -o lib/libwebkit2gtk-4.0.so.37.20.0 &#64;CMakeFiles/WebKit2.rsp  &amp;&amp; :
+lib/libWebCoreGTK.a(lib/../Source/WebCore/CMakeFiles/WebCore.dir/platform/graphics/freetype/FontCacheFreeType.cpp.o):FontCacheFreeType.cpp:function WebCore::FontCache::systemFallbackForCharacters(WebCore::FontDescription const&amp;, WebCore::Font const*, bool, unsigned short const*, unsigned int): error: undefined reference to 'WebCore::getDefaultCairoFontOptions()'
+lib/libWebCoreGTK.a(lib/../Source/WebCore/CMakeFiles/WebCore.dir/platform/graphics/freetype/FontCacheFreeType.cpp.o):FontCacheFreeType.cpp:function WebCore::FontCache::createFontPlatformData(WebCore::FontDescription const&amp;, WTF::AtomicString const&amp;, WebCore::FontTaggedSettings&lt;int&gt; const*, WebCore::FontVariantSettings const*): error: undefined reference to 'WebCore::getDefaultCairoFontOptions()'
+lib/libWebCoreGTK.a(lib/../Source/WebCore/CMakeFiles/WebCore.dir/platform/graphics/freetype/FontCacheFreeType.cpp.o):FontCacheFreeType.cpp:function WebCore::FontCache::createFontPlatformData(WebCore::FontDescription const&amp;, WTF::AtomicString const&amp;, WebCore::FontTaggedSettings&lt;int&gt; const*, WebCore::FontVariantSettings const*): error: undefined reference to 'WebCore::getDefaultCairoFontOptions()'
+lib/libWebCoreGTK.a(lib/../Source/WebCore/CMakeFiles/WebCore.dir/platform/graphics/freetype/FontPlatformDataFreeType.cpp.o):FontPlatformDataFreeType.cpp:function void std::call_once&lt;WebCore::getDefaultFontconfigOptions()::{lambda(_FcPattern*)#1}, _FcPattern*&amp;&gt;(std::once_flag&amp;, WebCore::getDefaultFontconfigOptions()::{lambda(_FcPattern*)#1}&amp;&amp;, _FcPattern*&amp;)::{lambda()#2}::_FUN(): error: undefined reference to 'WebCore::getDefaultCairoFontOptions()'
+collect2: error: ld returned 1 exit status
+
+Linkers!</pre>
+    </div>
+
+    <div id="c24" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c24">Comment 24</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-07 15:09:31 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=82889#c23">comment #23</a>)
+<span class="quote">&gt; I'm sure I did it because I couldn't get it to link otherwise.
+&gt; 
+&gt; This time around, it doesn't seem to work no matter what I try:</span >
+
+Ah, it was just a missing namespace</pre>
+    </div>
+
+    <div id="c25" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c25">Comment 25</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-07 15:11:43 PST
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class="bz_obsolete"><a href="attachment.cgi?id=303733&amp;action=diff" name="attach_303733" title="Patch">attachment 303733</a> <a href="attachment.cgi?id=303733&amp;action=edit" title="Patch">[details]</a></span>
+Patch</pre>
+    </div>
+
+    <div id="c26" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c26">Comment 26</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Myles C. Maxfield</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-15 15:34:13 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Comment on <span class="bz_obsolete"><a href="attachment.cgi?id=303733&amp;action=diff" name="attach_303733" title="Patch">attachment 303733</a> <a href="attachment.cgi?id=303733&amp;action=edit" title="Patch">[details]</a></span>
+Patch
+
+View in context: <a href="https://bugs.webkit.org/attachment.cgi?id=303733&amp;action=review">https://bugs.webkit.org/attachment.cgi?id=303733&amp;action=review</a>
+
+I don't think I can review this.
+
+<span class="quote">&gt; Source/WebCore/PlatformGTK.cmake:-190
+&gt; -    platform/graphics/freetype/FontPlatformDataFreeType.cpp</span >
+
+Why move it?
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/cairo/CairoUtilities.h:31
+&gt; +#include &quot;CairoUniquePtr.h&quot;</span >
+
+Can't you forward-declare the type instead of including it in the header? Header includes make our builds slower.</pre>
+    </div>
+
+    <div id="c27" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c27">Comment 27</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-15 18:12:43 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=82889#c26">comment #26</a>)
+<span class="quote">&gt; Comment on <span class="bz_obsolete"><a href="attachment.cgi?id=303733&amp;action=diff" name="attach_303733" title="Patch">attachment 303733</a> <a href="attachment.cgi?id=303733&amp;action=edit" title="Patch">[details]</a></span>
+&gt; Patch
+&gt; 
+&gt; View in context:
+&gt; <a href="https://bugs.webkit.org/attachment.cgi?id=303733&amp;action=review">https://bugs.webkit.org/attachment.cgi?id=303733&amp;action=review</a>
+&gt; 
+&gt; I don't think I can review this.</span >
+
+I wouldn't expect you to... I'll bug Carlos.
+
+<span class="quote">&gt; &gt; Source/WebCore/PlatformGTK.cmake:-190
+&gt; &gt; -    platform/graphics/freetype/FontPlatformDataFreeType.cpp
+&gt; 
+&gt; Why move it?</span >
+
+I can't get it to link otherwise.
+
+<span class="quote">&gt; &gt; Source/WebCore/platform/graphics/cairo/CairoUtilities.h:31
+&gt; &gt; +#include &quot;CairoUniquePtr.h&quot;
+&gt; 
+&gt; Can't you forward-declare the type instead of including it in the header?
+&gt; Header includes make our builds slower.</span >
+
+I doubt it, since it's needed for template expansion? Anyway, if we remove it we have to include cairo.h directly instead, which is way bigger.</pre>
+    </div>
+
+    <div id="c28" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c28">Comment 28</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Carlos Garcia Campos</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-16 00:21:12 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Comment on <span class="bz_obsolete"><a href="attachment.cgi?id=303733&amp;action=diff" name="attach_303733" title="Patch">attachment 303733</a> <a href="attachment.cgi?id=303733&amp;action=edit" title="Patch">[details]</a></span>
+Patch
+
+View in context: <a href="https://bugs.webkit.org/attachment.cgi?id=303733&amp;action=review">https://bugs.webkit.org/attachment.cgi?id=303733&amp;action=review</a>
+
+<span class="quote">&gt;&gt;&gt; Source/WebCore/PlatformGTK.cmake:-190
+&gt;&gt;&gt; -    platform/graphics/freetype/FontPlatformDataFreeType.cpp
+&gt;&gt; 
+&gt;&gt; Why move it?
+&gt; 
+&gt; I can't get it to link otherwise.</span >
+
+Before this patch FontPlatformDataFreeType used GTK+ so we had to add it to WebCorePlatformGTK_SOURCES. Norw that it doesn't it should be moved to WebCore_SOURCES that doesn't depend on GTK+.
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/cairo/CairoUtilities.cpp:54
+&gt; +CairoUniquePtr&lt;cairo_font_options_t&gt; getDefaultCairoFontOptions()
+&gt; +{
+&gt; +    return CairoUniquePtr&lt;cairo_font_options_t&gt;(cairo_font_options_create());
+&gt; +}</span >
+
+I know this is the existing name, but this patch is a good moment to improve it. The get sounds like a global static object is returned, even when it returns a unique_ptr. So, maybe we can rename this to defaultCairoFontOptions(). Or wait, I think we can stop returning a copy. Before this patch, we always wanted a copy because FontPlatformData::buildScaledFont was the only user and it changes the options, but now we are using this only to pass it to cairo_ft_font_options_substitute that expects a const cairo_font_options_t*. So, I think this should use NeverDestroyed to create a global default font options, and let the user decide whether to copy it or not.
+
+<span class="quote">&gt;&gt;&gt; Source/WebCore/platform/graphics/cairo/CairoUtilities.h:31
+&gt;&gt;&gt; +#include &quot;CairoUniquePtr.h&quot;
+&gt;&gt; 
+&gt;&gt; Can't you forward-declare the type instead of including it in the header? Header includes make our builds slower.
+&gt; 
+&gt; I doubt it, since it's needed for template expansion? Anyway, if we remove it we have to include cairo.h directly instead, which is way bigger.</span >
+
+And then we don't need this here because we will return a pointer
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/gtk/GdkCairoUtilities.cpp:41
+&gt; +        const cairo_font_options_t* screenOptions = gdk_screen_get_font_options(screen);
+&gt; +        if (screenOptions)</span >
+
+if (const auto* options = gdk_screen_get_font_options(screen))
+    return options;
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/gtk/GdkCairoUtilities.cpp:44
+&gt; +    return CairoUniquePtr&lt;cairo_font_options_t&gt;(cairo_font_options_create());</span >
+
+And here we would use a lazy initialized never destroyed</pre>
+    </div>
+
+    <div id="c29" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c29">Comment 29</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-16 20:26:15 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=82889#c28">comment #28</a>)
+<span class="quote">&gt; Before this patch FontPlatformDataFreeType used GTK+ so we had to add it to
+&gt; WebCorePlatformGTK_SOURCES. Norw that it doesn't it should be moved to
+&gt; WebCore_SOURCES that doesn't depend on GTK+.</span >
+
+I know that's right, but I really don't know how to make that work. See <a href="show_bug.cgi?id=82889#c23">comment #23</a>. I know it's not cool to ask you to debug my problem, but I'm stumped.
+
+<span class="quote">&gt; &gt; Source/WebCore/platform/graphics/cairo/CairoUtilities.cpp:54
+&gt; &gt; +CairoUniquePtr&lt;cairo_font_options_t&gt; getDefaultCairoFontOptions()
+&gt; &gt; +{
+&gt; &gt; +    return CairoUniquePtr&lt;cairo_font_options_t&gt;(cairo_font_options_create());
+&gt; &gt; +}
+&gt; 
+&gt; I know this is the existing name, but this patch is a good moment to improve
+&gt; it. The get sounds like a global static object is returned, even when it
+&gt; returns a unique_ptr. So, maybe we can rename this to
+&gt; defaultCairoFontOptions(). Or wait, I think we can stop returning a copy.
+&gt; Before this patch, we always wanted a copy because
+&gt; FontPlatformData::buildScaledFont was the only user and it changes the
+&gt; options, but now we are using this only to pass it to
+&gt; cairo_ft_font_options_substitute that expects a const cairo_font_options_t*.
+&gt; So, I think this should use NeverDestroyed to create a global default font
+&gt; options, and let the user decide whether to copy it or not.</span >
+
+OK.
+
+<span class="quote">&gt; &gt;&gt;&gt; Source/WebCore/platform/graphics/cairo/CairoUtilities.h:31
+&gt; &gt;&gt;&gt; +#include &quot;CairoUniquePtr.h&quot;
+&gt; &gt;&gt; 
+&gt; &gt;&gt; Can't you forward-declare the type instead of including it in the header? Header includes make our builds slower.
+&gt; &gt; 
+&gt; &gt; I doubt it, since it's needed for template expansion? Anyway, if we remove it we have to include cairo.h directly instead, which is way bigger.
+&gt; 
+&gt; And then we don't need this here because we will return a pointer</span >
+
+OK.
+
+<span class="quote">&gt; &gt; Source/WebCore/platform/graphics/gtk/GdkCairoUtilities.cpp:41
+&gt; &gt; +        const cairo_font_options_t* screenOptions = gdk_screen_get_font_options(screen);
+&gt; &gt; +        if (screenOptions)
+&gt; 
+&gt; if (const auto* options = gdk_screen_get_font_options(screen))
+&gt;     return options;</span >
+
+Yes that's nicer, though I think I would omit the const there...? It's not useful.
+
+<span class="quote">&gt; &gt; Source/WebCore/platform/graphics/gtk/GdkCairoUtilities.cpp:44
+&gt; &gt; +    return CairoUniquePtr&lt;cairo_font_options_t&gt;(cairo_font_options_create());
+&gt; 
+&gt; And here we would use a lazy initialized never destroyed</span >
+
+OK.</pre>
+    </div>
+
+    <div id="c30" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c30">Comment 30</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Carlos Garcia Campos</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-17 00:41:53 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=82889#c29">comment #29</a>)
+<span class="quote">&gt; (In reply to <a href="show_bug.cgi?id=82889#c28">comment #28</a>)
+&gt; &gt; Before this patch FontPlatformDataFreeType used GTK+ so we had to add it to
+&gt; &gt; WebCorePlatformGTK_SOURCES. Norw that it doesn't it should be moved to
+&gt; &gt; WebCore_SOURCES that doesn't depend on GTK+.
+&gt; 
+&gt; I know that's right, but I really don't know how to make that work. See
+&gt; <a href="show_bug.cgi?id=82889#c23">comment #23</a>. I know it's not cool to ask you to debug my problem, but I'm
+&gt; stumped.</span >
+
+This patch is doing the right thing now, FontPlatformDataFreeType no longer uses GTK+ so it's moved to the common sources.</pre>
+    </div>
+
+    <div id="c31" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c31">Comment 31</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-17 05:48:29 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Ummm... OK great, I got it working and forgot! See <a href="show_bug.cgi?id=82889#c24">comment #24</a>, my linker error was due to a missing namespace. :)</pre>
+    </div>
+
+    <div id="c32" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c32">Comment 32</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-17 08:38:25 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class="bz_obsolete"><a href="attachment.cgi?id=304781&amp;action=diff" name="attach_304781" title="Patch">attachment 304781</a> <a href="attachment.cgi?id=304781&amp;action=edit" title="Patch">[details]</a></span>
+Patch</pre>
+    </div>
+
+    <div id="c33" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c33">Comment 33</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Carlos Garcia Campos</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-17 09:57:27 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Comment on <span class="bz_obsolete"><a href="attachment.cgi?id=304781&amp;action=diff" name="attach_304781" title="Patch">attachment 304781</a> <a href="attachment.cgi?id=304781&amp;action=edit" title="Patch">[details]</a></span>
+Patch
+
+View in context: <a href="https://bugs.webkit.org/attachment.cgi?id=304781&amp;action=review">https://bugs.webkit.org/attachment.cgi?id=304781&amp;action=review</a>
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/freetype/FontPlatformDataFreeType.cpp:296
+&gt; -    CairoUniquePtr&lt;cairo_font_options_t&gt; options = getDefaultCairoFontOptions();
+&gt; +    cairo_font_options_t* options = getDefaultCairoFontOptions();</span >
+
+Default options should never be modified, because then they are no the default ones anymore. Here you have to explicitly copy them.
+
+CairoUniquePtr&lt;cairo_font_options_t&gt; options(cairo_font_options_copy(getDefaultCairoFontOptions()));
+
+<span class="quote">&gt; Source/WebCore/platform/graphics/gtk/GdkCairoUtilities.cpp:52
+&gt; +    static LazyNeverDestroyed&lt;cairo_font_options_t*&gt; options;
+&gt; +    static std::once_flag flag;
+&gt; +    std::call_once(flag, [] {
+&gt; +        if (auto* screen = gdk_screen_get_default()) {
+&gt; +            if (auto* screenOptions = gdk_screen_get_font_options(screen)) {
+&gt; +                options.construct(cairo_font_options_copy(screenOptions));
+&gt; +                return;
+&gt; +            }
+&gt; +        }
+&gt; +        options.construct(cairo_font_options_create());
+&gt; +    });
+&gt; +    return options;</span >
+
+This is not what I meant. In the case of the GTK+ default options can change at any time, so we don't want to init once, we can simply return always the result of gdk_screen_get_font_options(screen). Only in case that's nullptr, we want to use our global options like in the non gtk case, but in this case we want to lazy initialize because in most of the cases it won't be used.</pre>
+    </div>
+
+    <div id="c34" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c34">Comment 34</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-18 16:57:42 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Comment on <span class="bz_obsolete"><a href="attachment.cgi?id=304781&amp;action=diff" name="attach_304781" title="Patch">attachment 304781</a> <a href="attachment.cgi?id=304781&amp;action=edit" title="Patch">[details]</a></span>
+Patch
+
+View in context: <a href="https://bugs.webkit.org/attachment.cgi?id=304781&amp;action=review">https://bugs.webkit.org/attachment.cgi?id=304781&amp;action=review</a>
+
+<span class="quote">&gt;&gt; Source/WebCore/platform/graphics/freetype/FontPlatformDataFreeType.cpp:296
+&gt;&gt; +    cairo_font_options_t* options = getDefaultCairoFontOptions();
+&gt; 
+&gt; Default options should never be modified, because then they are no the default ones anymore. Here you have to explicitly copy them.
+&gt; 
+&gt; CairoUniquePtr&lt;cairo_font_options_t&gt; options(cairo_font_options_copy(getDefaultCairoFontOptions()));</span >
+
+Oh no! Good catch....
+
+<span class="quote">&gt;&gt; Source/WebCore/platform/graphics/gtk/GdkCairoUtilities.cpp:52
+&gt;&gt; +    return options;
+&gt; 
+&gt; This is not what I meant. In the case of the GTK+ default options can change at any time, so we don't want to init once, we can simply return always the result of gdk_screen_get_font_options(screen). Only in case that's nullptr, we want to use our global options like in the non gtk case, but in this case we want to lazy initialize because in most of the cases it won't be used.</span >
+
+Ah, right.</pre>
+    </div>
+
+    <div id="c35" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c35">Comment 35</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-18 17:55:14 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class=""><a href="attachment.cgi?id=304889&amp;action=diff" name="attach_304889" title="Patch">attachment 304889</a> <a href="attachment.cgi?id=304889&amp;action=edit" title="Patch">[details]</a></span>
+Patch</pre>
+    </div>
+
+    <div id="c36" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c36">Comment 36</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-22 16:17:56 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">OK, let's do a test commit to see how layout tests react. I'm expecting to need to roll this out.</pre>
+    </div>
+
+    <div id="c37" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c37">Comment 37</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-22 16:19:01 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Committed r214283: &lt;<a href="http://trac.webkit.org/changeset/214283">http://trac.webkit.org/changeset/214283</a>&gt;</pre>
+    </div>
+
+    <div id="c38" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c38">Comment 38</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Michael Catanzaro</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-22 17:15:32 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Bots are happy.</pre>
+    </div>
+
+    <div id="c39" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=82889#c39">Comment 39</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Adrian Perez</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2017-03-23 05:10:50 PDT
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to Michael Catanzaro from <a href="show_bug.cgi?id=82889#c38">comment #38</a>)
+<span class="quote">&gt; Bots are happy.</span >
+
+/me is happy, too! :-)</pre>
+    </div>
+
+
+  
+
+</td>
+<td>
+</td>
+</tr></table>
+  </div>
+        
+
+</form>
+
+<hr>
+<ul class="related_actions">
+    <li><a href="show_bug.cgi?format=multiple&amp;id=82889">Format For Printing</a></li>
+    <li>&nbsp;-&nbsp;<a href="show_bug.cgi?ctype=xml&amp;id=82889">XML</a></li>
+    <li>&nbsp;-&nbsp;<a href="enter_bug.cgi?cloned_bug_id=82889">Clone This Bug</a></li>
+    
+    <li>&nbsp;-&nbsp;<a href="#">Top of page </a></li>
+    </ul>
+
+<br>
+</div>
+
+    <div id="footer">
+      <div class="intro"></div>
+<ul id="useful-links">
+  <li id="links-actions"><ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input type="hidden" id="no_redirect_bottom" name="no_redirect" value="0">
+    <script type="text/javascript">
+      if (history && history.replaceState) {
+        var no_redirect = document.getElementById("no_redirect_bottom");
+        no_redirect.value = 1;
+      }
+    </script>
+    <input class="txt" type="text" id="quicksearch_bottom" name="quicksearch" 
+           title="Quick Search" value="">
+    <input class="btn" type="submit" value="Search" 
+           id="find_bottom"></form>
+  <a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li>
+      <span class="separator">| </span>
+        <a href="request.cgi">Requests</a></li>
+
+
+  <li>
+        <span class="separator">| </span>
+        <a href="https://bugzilla.readthedocs.org/en/5.0/using/understanding.html" target="_blank">Help</a>
+      </li>
+    
+      <li id="new_account_container_bottom">
+        <span class="separator">| </span>
+        <a href="createaccount.cgi">New&nbsp;Account</a>
+      </li>
+
+    <li id="mini_login_container_bottom">
+  <span class="separator">| </span>
+  <a id="login_link_bottom" href="show_bug.cgi?id=82889&amp;GoAheadAndLogIn=1"
+     onclick="return show_mini_login_form('_bottom')">Log In</a>
+
+  <form action="show_bug.cgi?id=82889" method="POST"
+        class="mini_login bz_default_hidden"
+        id="mini_login_bottom">
+    <input id="Bugzilla_login_bottom" required
+           name="Bugzilla_login" class="bz_login"
+        type="email" placeholder="Email Address">
+    <input class="bz_password" name="Bugzilla_password" type="password"
+           id="Bugzilla_password_bottom" required
+           placeholder="Password">
+    <input type="hidden" name="Bugzilla_login_token"
+           value="">
+    <input type="submit" name="GoAheadAndLogIn" value="Log in"
+            id="log_in_bottom">
+    <a href="#" onclick="return hide_mini_login_form('_bottom')">[x]</a>
+  </form>
+</li>
+
+
+  <li id="forgot_container_bottom">
+    <span class="separator">| </span>
+    <a id="forgot_link_bottom" href="show_bug.cgi?id=82889&amp;GoAheadAndLogIn=1#forgot"
+       onclick="return show_forgot_form('_bottom')">Forgot Password</a>
+    <form action="token.cgi" method="post" id="forgot_form_bottom"
+          class="mini_forgot bz_default_hidden">
+      <label for="login_bottom">Login:</label>
+      <input name="loginname" size="20" id="login_bottom" required
+          type="email" placeholder="Your Email Address">
+      <input id="forgot_button_bottom" value="Reset Password" type="submit">
+      <input type="hidden" name="a" value="reqpw">
+      <input type="hidden" id="token_bottom" name="token"
+             value="1545656889-9sly-oi4RZmiLpYXG0NcGZpJK-JCbLy-aWjSUTbCcWo">
+      <a href="#" onclick="return hide_forgot_form('_bottom')">[x]</a>
+    </form>
+  </li>
+</ul>
+  </li>
+
+  
+
+
+
+
+  
+</ul>
+
+      <div class="outro"></div>
+    </div>
+
+    <!-- WEBKIT_CHANGES -->
+    <script defer src="/committers-autocomplete.js"></script>
+  </body>
+</html>

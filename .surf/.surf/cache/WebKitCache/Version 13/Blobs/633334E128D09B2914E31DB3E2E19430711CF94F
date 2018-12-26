@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]><html lang="en" dir="ltr" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" dir="ltr" class="ie9"><![endif]-->
+<!--[if gt IE 9]><!--><html lang="en" dir="ltr"><!--<![endif]-->
+
+<head>
+    <title>Disqus Comments</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <style>
+        .alert--warning {
+            border-radius: 3px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #FFE070;
+            color: #A47703;
+        }
+
+        .alert--warning a,
+        .alert--warning a:hover,
+        .alert--warning strong {
+            color: #A47703;
+            font-weight: bold;
+        }
+
+        .alert--error p,
+        .alert--warning p {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        </style>
+    
+    <style>
+        
+        html {
+            overflow: hidden;
+        }
+        
+
+        #error {
+            display: none;
+        }
+
+        .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    
+
+    
+    <div id="error" class="alert--error">
+        <p>We were unable to load Disqus. If you are a moderator please see our <a href="https://docs.disqus.com/help/83/"> troubleshooting guide</a>. </p>
+    </div>
+
+    
+    <script type="text/json" id="disqus-forumData">{"session":{"canModerate":false,"audienceSyncVerified":false,"mustVerify":false,"canReply":true,"mustVerifyEmail":false},"forum":{"aetBannerConfirmation":null,"founder":"86250103","twitterName":"","commentsLinkOne":"1 Comment","guidelines":null,"favicon":{"permalink":"https://disqus.com/api/forums/favicons/thelinuxrain.jpg","cache":"https://c.disquscdn.com/uploads/forums/272/5276/favicon.png"},"commentsLinkZero":"0 Comments","disableDisqusBranding":false,"daysAlive":0,"createdAt":"2013-12-15T16:13:55.333729","category":"Tech","aetBannerEnabled":false,"aetBannerTitle":null,"raw_guidelines":null,"colorScheme":"auto","id":"thelinuxrain","installCompleted":true,"moderatorBadgeText":"","commentPolicyText":null,"aetEnabled":false,"channel":null,"sort":4,"description":"","newPolicy":true,"raw_description":"","language":"en","adsReviewStatus":1,"pk":"2725276","forumCategory":{"date_added":"2016-01-28T01:54:31","id":8,"name":"Tech"},"permissions":{},"commentPolicyLink":null,"aetBannerDescription":null,"name":"The Linux Rain","commentsLinkMultiple":"{num} Comments","settings":{"adsDRNativeEnabled":false,"disable3rdPartyTrackers":false,"adsVideoEnabled":false,"allowAnonPost":true,"audienceSyncEnabled":false,"unapproveLinks":false,"linkAffiliationEnabled":true,"adsProductLinksThumbnailsEnabled":false,"adsProductStoriesEnabled":false,"organicDiscoveryEnabled":true,"adsProductDisplayEnabled":false,"adsProductLinksEnabled":false,"hasCustomAvatar":false,"adsEnabled":false,"threadReactionsEnabled":false,"adsPositionTopEnabled":false,"allowMedia":true,"adultContent":false,"allowAnonVotes":false,"adsProductVideoEnabled":false,"mustVerify":true,"mustVerifyEmail":true,"ssoRequired":false,"mediaembedEnabled":true,"adsPositionBottomEnabled":false,"discoveryLocked":false,"validateAllPosts":false,"adsSettingsLocked":false,"isVIP":false,"adsPositionInthreadEnabled":false},"organizationId":2069547,"typeface":"auto","url":"http://www.thelinuxrain.com","daysThreadAlive":0,"avatar":{"small":{"permalink":"https://disqus.com/api/forums/avatars/thelinuxrain.jpg?size=32","cache":"//a.disquscdn.com/1541535443/images/noavatar32.png"},"large":{"permalink":"https://disqus.com/api/forums/avatars/thelinuxrain.jpg?size=92","cache":"//a.disquscdn.com/1541535443/images/noavatar92.png"}},"signedUrl":"http://disq.us/?url=http%3A%2F%2Fwww.thelinuxrain.com&key=LhTAeSj9uYhNqfeLrsqiNw"}}</script>
+
+    <script type="text/json" id="disqus-threadData">{"cursor":{"hasPrev":false,"prev":null,"total":7,"hasNext":false,"next":"1:0:0"},"code":0,"response":{"lastModified":1528479339,"posts":[{"editableUntil":"2017-06-04T23:49:28","dislikes":0,"numReports":0,"likes":4,"message":"\u003cp>As a long term arch user myself who isn't comfortable with the way things are going with systemd, this looks very interesting and I'm going to try it out.\u003cbr>Having a quick look at the documentation for runit, I find the way logging is handled quite elegant in that you only have to create a log directory alongside the service definition. Can an existing void user please comment on how practical this is in the real world?\u003cbr>Thanks for the articleq\u003c/p>","id":"3329365723","createdAt":"2017-05-28T23:49:28","author":{"username":"disqus_01wZNgLMvn","about":"","name":"Simon Ball","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2014-02-04T23:26:19","profileUrl":"https://disqus.com/by/disqus_01wZNgLMvn/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"93559852","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/disqus_01wZNgLMvn.jpg","cache":"https://c.disquscdn.com/uploads/users/9355/9852/avatar32.jpg?1496015369"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/disqus_01wZNgLMvn.jpg","cache":"https://c.disquscdn.com/uploads/users/9355/9852/avatar92.jpg?1496015369","large":{"permalink":"https://disqus.com/api/users/avatars/disqus_01wZNgLMvn.jpg","cache":"https://c.disquscdn.com/uploads/users/9355/9852/avatar92.jpg?1496015369"}}},"media":[],"isSpam":false,"hasMore":false,"isDeleted":false,"isDeletedByAuthor":false,"parent":null,"isApproved":true,"isFlagged":false,"raw_message":"As a long term arch user myself who isn't comfortable with the way things are going with systemd, this looks very interesting and I'm going to try it out.\nHaving a quick look at the documentation for runit, I find the way logging is handled quite elegant in that you only have to create a log directory alongside the service definition. Can an existing void user please comment on how practical this is in the real world?\nThanks for the articleq","isHighlighted":false,"canVote":false,"thread":"5856737480","forum":"thelinuxrain","depth":0,"points":4,"moderationLabels":[],"isEdited":false,"sb":false},{"editableUntil":"2017-10-08T00:14:53","dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>I have been running Void on my laptop for a year now, which I only use occasionally when I am on the run (my main computer runs Gentoo). \u003cbr>I don't use the socklog for more or less the same reason I didn't use journald when I was using Arch. When something goes wrong, I want to have access to my /var/log/messages file very quickly. So I run rsyslog, syslog or any other variants on all my computers.\u003cbr>Although, I didn't know that runit could be configured that way, so maybe I'll give socklog another try. Runit did provide some noticeable improvements over SysVinit after all, so maybe socklog can improve the way logs are handled in Unix. An because this is plain text logging, I can still create symlinks, something I couldn't do with journald.\u003c/p>","id":"3544470296","createdAt":"2017-10-01T00:14:53","author":{"username":"nicolasporcel","about":"","name":"Nicolas Porcel","disable3rdPartyTrackers":true,"isPowerContributor":false,"joinedAt":"2016-07-17T13:34:00","profileUrl":"https://disqus.com/by/nicolasporcel/","url":"http://nicolas.porcel.me","location":"Nice, France","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fnicolas.porcel.me&key=C4rwCaAqdpb9wiPozKJzdA","isPrimary":true,"isAnonymous":false,"id":"215384225","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/nicolasporcel.jpg","cache":"https://c.disquscdn.com/uploads/users/21538/4225/avatar32.jpg?1474158786"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/nicolasporcel.jpg","cache":"https://c.disquscdn.com/uploads/users/21538/4225/avatar92.jpg?1474158786","large":{"permalink":"https://disqus.com/api/users/avatars/nicolasporcel.jpg","cache":"https://c.disquscdn.com/uploads/users/21538/4225/avatar92.jpg?1474158786"}}},"media":[],"isSpam":false,"hasMore":false,"isDeleted":false,"isDeletedByAuthor":false,"parent":3329365723,"isApproved":true,"isFlagged":false,"raw_message":"I have been running Void on my laptop for a year now, which I only use occasionally when I am on the run (my main computer runs Gentoo). \nI don't use the socklog for more or less the same reason I didn't use journald when I was using Arch. When something goes wrong, I want to have access to my /var/log/messages file very quickly. So I run rsyslog, syslog or any other variants on all my computers.\nAlthough, I didn't know that runit could be configured that way, so maybe I'll give socklog another try. Runit did provide some noticeable improvements over SysVinit after all, so maybe socklog can improve the way logs are handled in Unix. An because this is plain text logging, I can still create symlinks, something I couldn't do with journald.","isHighlighted":false,"canVote":false,"thread":"5856737480","forum":"thelinuxrain","depth":1,"points":1,"moderationLabels":[],"isEdited":false,"sb":false},{"editableUntil":"2017-06-04T19:33:43","dislikes":0,"numReports":0,"likes":2,"message":"\u003cp>I've been using Void for almost a year and love it. Very stable. Systemd failed me on an update while I was using Arch which pushed me to find something systemd free. Runit is awesome! I had issue with the Nvidia drivers a couple of times on Void. Now I just run the beta drivers (currently 381.22) which I install from the Nvidia installer &amp; I'm totally comfortable with the setup.  As you state, Steam runs great. I've got Unreal Engine 4.16 compiled and it runs great. My only real complaint could be that there is no way to set the default Python to Python 3 (other than manually changing the /usr/bin/python symlink, which gets reset when Python 2.7 is updated).\u003c/p>\u003cp>As for wireless, I was using NetworkManager for a while until it was eating my RAM when I was hooked to ethernet with my adapter (Trendnet N-Speed) still plugged in. I tried econnman and it works great.\u003c/p>\u003cp>I use the XFCE4 desktop which has worked the best for my style of use. Currently switched to the 4.11 kernel.  Would like to see a more updated KDE.\u003c/p>\u003cp>I hope that more people could discover &amp; enjoy Void Linux.\u003c/p>\u003cp>System:\u003cbr>AMD 8750 8-core\u003cbr>16GB RAM\u003cbr>Nvidia GTX 660 Ti\u003c/p>","id":"3329091327","createdAt":"2017-05-28T19:33:43","author":{"username":"luisroldanjr","about":"","name":"Luis Roldan Jr","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2015-07-26T20:03:11","profileUrl":"https://disqus.com/by/luisroldanjr/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"166976285","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/luisroldanjr.jpg","cache":"//a.disquscdn.com/1541535443/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/luisroldanjr.jpg","cache":"//a.disquscdn.com/1541535443/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/luisroldanjr.jpg","cache":"//a.disquscdn.com/1541535443/images/noavatar92.png"}}},"media":[],"isSpam":false,"hasMore":false,"isDeleted":false,"isDeletedByAuthor":false,"parent":null,"isApproved":true,"isFlagged":false,"raw_message":"I've been using Void for almost a year and love it. Very stable. Systemd failed me on an update while I was using Arch which pushed me to find something systemd free. Runit is awesome! I had issue with the Nvidia drivers a couple of times on Void. Now I just run the beta drivers (currently 381.22) which I install from the Nvidia installer & I'm totally comfortable with the setup.  As you state, Steam runs great. I've got Unreal Engine 4.16 compiled and it runs great. My only real complaint could be that there is no way to set the default Python to Python 3 (other than manually changing the /usr/bin/python symlink, which gets reset when Python 2.7 is updated). \n\nAs for wireless, I was using NetworkManager for a while until it was eating my RAM when I was hooked to ethernet with my adapter (Trendnet N-Speed) still plugged in. I tried econnman and it works great. \n\nI use the XFCE4 desktop which has worked the best for my style of use. Currently switched to the 4.11 kernel.  Would like to see a more updated KDE.\n\nI hope that more people could discover & enjoy Void Linux.\n\nSystem:\nAMD 8750 8-core\n16GB RAM\nNvidia GTX 660 Ti","isHighlighted":false,"canVote":false,"thread":"5856737480","forum":"thelinuxrain","depth":0,"points":2,"moderationLabels":[],"isEdited":false,"sb":false},{"editableUntil":"2017-06-05T07:23:13","dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Thanks for your comment! Your experience with Void is pretty much what I keep seeing from Void users around the web - that it's a surprisingly stable, robust and well engineered operating system, despite the freshness of packages. I'm not sure how they even manage that, given how buggy a bleeding edge (Sid/Experimental) version of Debian can be.\u003c/p>\u003cp>On KDE, I think the actual KDE Plasma desktop isn't available in the repos? I only checked quickly, but as far as I could tell, only the necessary KDE5 libraries were there (for apps I guess), but not the Plasma desktop for some reason.\u003c/p>","id":"3329694765","createdAt":"2017-05-29T07:23:13","author":{"username":"RainNinja","about":"","name":"Andrew Powell","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2013-12-15T21:12:45","profileUrl":"https://disqus.com/by/RainNinja/","url":"http://thelinuxrain.com/","location":"Australia","isPrivate":false,"signedUrl":"http://disq.us/?url=http%3A%2F%2Fthelinuxrain.com%2F&key=A5RjNJb7ttCqntSCgy3XQg","isPrimary":true,"isAnonymous":false,"id":"86250103","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/RainNinja.jpg","cache":"https://c.disquscdn.com/uploads/users/8625/103/avatar32.jpg?1516529398"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/RainNinja.jpg","cache":"https://c.disquscdn.com/uploads/users/8625/103/avatar92.jpg?1516529398","large":{"permalink":"https://disqus.com/api/users/avatars/RainNinja.jpg","cache":"https://c.disquscdn.com/uploads/users/8625/103/avatar92.jpg?1516529398"}}},"media":[],"isSpam":false,"hasMore":false,"isDeleted":false,"isDeletedByAuthor":false,"parent":3329091327,"isApproved":true,"isFlagged":false,"raw_message":"Thanks for your comment! Your experience with Void is pretty much what I keep seeing from Void users around the web - that it's a surprisingly stable, robust and well engineered operating system, despite the freshness of packages. I'm not sure how they even manage that, given how buggy a bleeding edge (Sid/Experimental) version of Debian can be. \n\nOn KDE, I think the actual KDE Plasma desktop isn't available in the repos? I only checked quickly, but as far as I could tell, only the necessary KDE5 libraries were there (for apps I guess), but not the Plasma desktop for some reason.","isHighlighted":false,"canVote":false,"thread":"5856737480","forum":"thelinuxrain","depth":1,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"editableUntil":"2017-09-18T21:23:40","dislikes":0,"numReports":0,"likes":1,"message":"\u003cp>I've been using Void + GNOME on my netbook for 5 months and I'm quite satisfied. Occasionally something happens to break, either upstream or packagers errors, but it's a good experience overall.\u003c/p>","id":"3512847556","createdAt":"2017-09-11T21:23:40","author":{"username":"shibotto","about":"Mind your damn business","name":"Shiba","disable3rdPartyTrackers":true,"isPowerContributor":false,"joinedAt":"2012-09-11T13:56:11","profileUrl":"https://disqus.com/by/shibotto/","url":"","location":"","isPrivate":true,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"31970834","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/shibotto.jpg","cache":"https://c.disquscdn.com/uploads/users/3197/834/avatar32.jpg?1545678390"},"isCustom":true,"permalink":"https://disqus.com/api/users/avatars/shibotto.jpg","cache":"https://c.disquscdn.com/uploads/users/3197/834/avatar92.jpg?1545678390","large":{"permalink":"https://disqus.com/api/users/avatars/shibotto.jpg","cache":"https://c.disquscdn.com/uploads/users/3197/834/avatar92.jpg?1545678390"}}},"media":[],"isSpam":false,"hasMore":false,"isDeleted":false,"isDeletedByAuthor":false,"parent":null,"isApproved":true,"isFlagged":false,"raw_message":"I've been using Void + GNOME on my netbook for 5 months and I'm quite satisfied. Occasionally something happens to break, either upstream or packagers errors, but it's a good experience overall.","isHighlighted":false,"canVote":false,"thread":"5856737480","forum":"thelinuxrain","depth":0,"points":1,"moderationLabels":[],"isEdited":false,"sb":false},{"editableUntil":"2017-11-02T16:59:10","dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Void will eventually become the new Arch. It will take a while to polish it though.\u003c/p>","id":"3585949271","createdAt":"2017-10-26T16:59:10","author":{"username":"markusheiler","about":"","name":"Markus Heiler","disable3rdPartyTrackers":false,"isPowerContributor":false,"joinedAt":"2013-08-15T14:05:10","profileUrl":"https://disqus.com/by/markusheiler/","url":"","location":"","isPrivate":false,"signedUrl":"","isPrimary":true,"isAnonymous":false,"id":"67540462","avatar":{"small":{"permalink":"https://disqus.com/api/users/avatars/markusheiler.jpg","cache":"//a.disquscdn.com/1541535443/images/noavatar32.png"},"isCustom":false,"permalink":"https://disqus.com/api/users/avatars/markusheiler.jpg","cache":"//a.disquscdn.com/1541535443/images/noavatar92.png","large":{"permalink":"https://disqus.com/api/users/avatars/markusheiler.jpg","cache":"//a.disquscdn.com/1541535443/images/noavatar92.png"}}},"media":[],"isSpam":false,"hasMore":false,"isDeleted":false,"isDeletedByAuthor":false,"parent":null,"isApproved":true,"isFlagged":false,"raw_message":"Void will eventually become the new Arch. It will take a while to polish it though.","isHighlighted":false,"canVote":false,"thread":"5856737480","forum":"thelinuxrain","depth":0,"points":0,"moderationLabels":[],"isEdited":false,"sb":false},{"editableUntil":"2018-01-24T14:45:25","dislikes":0,"numReports":0,"likes":0,"message":"\u003cp>Agreed\u003c/p>","id":"3712378936","createdAt":"2018-01-17T14:45:25","author":{"name":"Void User","url":"","profileUrl":"","emailHash":"","avatar":{"small":{"permalink":"//a.disquscdn.com/1541535443/images/noavatar32.png","cache":"//a.disquscdn.com/1541535443/images/noavatar32.png"},"large":{"permalink":"//a.disquscdn.com/1541535443/images/noavatar92.png","cache":"//a.disquscdn.com/1541535443/images/noavatar92.png"},"permalink":"//a.disquscdn.com/1541535443/images/noavatar92.png","cache":"//a.disquscdn.com/1541535443/images/noavatar92.png"},"signedUrl":"","isAnonymous":true},"media":[],"isSpam":false,"hasMore":false,"isDeleted":false,"isDeletedByAuthor":false,"parent":3585949271,"isApproved":true,"isFlagged":false,"raw_message":"Agreed","isHighlighted":false,"canVote":false,"thread":"5856737480","forum":"thelinuxrain","depth":1,"points":0,"moderationLabels":["anonymous"],"isEdited":false,"sb":false}],"thread":{"feed":"https://thelinuxrain.disqus.com/void_linux_the_strangely_overlooked_distribution/latest.rss","author":"86250103","dislikes":0,"likes":4,"message":"","isSpam":false,"createdAt":"2017-05-28T02:13:57","category":"2766788","clean_title":"Void Linux - the Strangely Overlooked Distribution","id":"5856737480","signedLink":"http://disq.us/?url=http%3A%2F%2Fwww.thelinuxrain.com%2Farticles%2Fvoid-linux-the-strangely-overlooked-distribution&key=ymCilcQje1Hn46_GXfUCDQ","isDeleted":false,"hasStreaming":false,"raw_message":"","isClosed":false,"link":"http://www.thelinuxrain.com/articles/void-linux-the-strangely-overlooked-distribution","slug":"void_linux_the_strangely_overlooked_distribution","forum":"thelinuxrain","identifiers":["articles/void-linux-the-strangely-overlooked-distribution"],"posts":7,"moderators":[86250103],"validateAllPosts":false,"title":"Void Linux - the Strangely Overlooked Distribution","highlightedPost":null}},"order":"popular"}</script>
+
+
+    <div id="fixed-content"></div>
+
+
+    
+        
+<script type="text/json" id="disqus-urls">{
+    "root":"//disqus.com",
+    "next":"https://c.disquscdn.com/next/current/embed"
+}</script>
+
+        
+        <script>!function () {
+            var d = document;
+            var toH = d.head.appendChild.bind(d.head);
+
+            var v = window.location.href.match(/[#&?]version=([0-9a-f]{32})/);
+            var src = 'https://c.disquscdn.com/next/embed/lounge.load';
+            if (v)
+                src += '.' + v[1];
+            src += '.js';
+
+            var s = d.createElement('script');
+            s.crossOrigin = 'anonymous';
+            s.id = 'bootstrap-script';
+            s.setAttribute('data-app', 'lounge');
+            s.src = src;
+            toH(s);
+
+            var m = d.createElement('meta');
+            m.setAttribute('http-equiv', 'Content-Security-Policy');
+            m.setAttribute('content', "script-src https:;");
+            toH(m);
+        }();</script>
+    
+</body>
+</html>
