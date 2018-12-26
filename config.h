@@ -7,6 +7,11 @@ static char *certdir        = "~/.surf/certificates/";
 static char *cachedir       = "~/.surf/cache/";
 static char *cookiefile     = "~/.surf/cookies.txt";
 
+static SearchEngine searchengines[] = {
+	    { "g",   "http://www.google.de/search?q=%s"   },
+	        { "leo", "http://dict.leo.org/ende?search=%s" },
+};
+
 #define HOMEPAGE "https://duckduckgo.com/"
 
 static char *searchengine   = "https://duckduckgo.com/?q=";
