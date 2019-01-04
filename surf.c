@@ -564,8 +564,8 @@ loaduri(Client *c, const Arg *a)
 		if (!stat(apath, &st) && (path = realpath(apath, NULL))) {
 			url = g_strdup_printf("file://%s", path);
 			free(path);
-		} else if (*uri == ' ') {
-			url = g_strdup_printf("%s%s", searchengine, uri + 1);
+		} else if (*uri == '!') {
+			url = g_strdup_printf("%s%s", searchengine, uri);
 		} else {
 			url = parseuri(uri);
 		}
